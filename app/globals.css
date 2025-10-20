@@ -1,26 +1,67 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1a1a1a;
+  --primary-red: #c8102e;
+  --primary-green: #2c5f2d;
+  --accent-green: #1e4620;
+  --neutral-gray: #6b6b6b;
+  --light-gray: #f8f8f8;
+  --dark-gray: #2e2e2e;
+  --hero-bg: #e8ebe8;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary-red);
+  --color-secondary: var(--primary-green);
+  --color-accent: var(--accent-green);
+  --color-neutral: var(--neutral-gray);
+  --color-light: var(--light-gray);
+  --color-dark: var(--dark-gray);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    var(--font-noto-sans-jp),
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 高級感のあるフォント設定 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-noto-sans-jp), sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+/* エレガントなトランジション（パフォーマンス最適化） */
+a,
+button {
+  transition:
+    color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
