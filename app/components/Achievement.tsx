@@ -41,7 +41,7 @@ export default function Achievement() {
       <div className="w-full">
         {/* セクションヘッダー - 上品で控えめ */}
         <div className="text-center mb-12 sm:mb-16 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <p className="text-xs sm:text-sm md:text-base text-[#C8102E] tracking-[0.25em] sm:tracking-[0.3em] uppercase font-light mb-2 sm:mb-3">
+          <p className="text-xs sm:text-sm md:text-base text-[#84ab52] tracking-[0.25em] sm:tracking-[0.3em] uppercase font-light mb-2 sm:mb-3">
             Case Studies
           </p>
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-gray-600 tracking-wide">
@@ -80,10 +80,10 @@ export default function Achievement() {
               <div key={index} className="text-center group">
                 {/* 数値部分 */}
                 <div className="mb-3 sm:mb-4 group-hover:scale-105 transition-transform duration-300">
-                  <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight text-gray-800 tracking-tight group-hover:text-[#C8102E] transition-colors duration-300">
+                  <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight text-gray-800 tracking-tight group-hover:text-[#84ab52] transition-colors duration-300">
                     {stat.value}
                   </span>
-                  <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-gray-700 group-hover:text-[#C8102E] transition-colors duration-300">
+                  <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-gray-700 group-hover:text-[#84ab52] transition-colors duration-300">
                     {stat.suffix}
                   </span>
                 </div>

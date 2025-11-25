@@ -19,7 +19,7 @@ export default function Services() {
       titleLines: ['日本企業の', 'ベトナム進出を', 'ワンストップ支援'],
       description:
         '市場調査・進出戦略・法人設立・許認可・採用・バックオフィスまで。現地の制度と商習慣に精通したチームが、戦略から実行まで伴走します。',
-      borderGradient: 'linear-gradient(135deg, #2C5F2D, #66BB6A) 1',
+      borderGradient: 'linear-gradient(135deg, #84ab52, #a0c870) 1',
       bgClass: '',
       glow: 'rgba(44,95,45,0.22)',
       accentStrong: 'rgba(102,187,106,0.40)',
@@ -32,11 +32,11 @@ export default function Services() {
       titleLines: ['クロスボーダーM&Aを', '戦略立案からPMIまで', '一気通貫で'],
       description:
         'ターゲット探索・DD・バリュエーション・契約実務・PMI設計まで。日本本社とベトナム現地の双方に通じたチームで、意思決定と推進を高速化します。',
-      borderGradient: 'linear-gradient(135deg, #C8102E, #E53935) 1',
+      borderGradient: 'linear-gradient(135deg, #84ab52, #a0c870) 1',
       bgClass: '',
-      glow: 'rgba(200,16,46,0.22)',
-      accentStrong: 'rgba(232,58,77,0.42)',
-      accentSoft: 'rgba(255,127,127,0.22)',
+      glow: 'rgba(132,171,82,0.22)',
+      accentStrong: 'rgba(132,171,82,0.42)',
+      accentSoft: 'rgba(160,200,112,0.22)',
     },
     {
       title: 'ベトナム会計業務',
@@ -56,7 +56,7 @@ export default function Services() {
     <section id="services" className="py-16 sm:py-20 md:py-24 lg:py-32 bg-white">
       {/* セクションヘッダー - 上品で控えめ */}
       <div className="text-center mb-12 sm:mb-16 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <p className="text-xs sm:text-sm md:text-base text-[#C8102E] tracking-[0.25em] sm:tracking-[0.3em] uppercase font-light mb-2 sm:mb-3">
+        <p className="text-xs sm:text-sm md:text-base text-[#84ab52] tracking-[0.25em] sm:tracking-[0.3em] uppercase font-light mb-2 sm:mb-3">
           Services
         </p>
         <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-gray-600 tracking-wide">
@@ -145,7 +145,7 @@ export default function Services() {
           <div className="mt-12 sm:mt-16 flex justify-center">
             <a
               href="/services"
-              className="inline-block px-8 sm:px-10 md:px-12 py-3 sm:py-3.5 md:py-4 bg-[#2C5F2D] text-white text-xs sm:text-sm md:text-base font-light tracking-[0.2em] sm:tracking-widest hover:bg-[#1E4620] transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-block px-8 sm:px-10 md:px-12 py-3 sm:py-3.5 md:py-4 bg-[#84ab52] text-white text-xs sm:text-sm md:text-base font-light tracking-[0.2em] sm:tracking-widest hover:bg-[#6d9143] transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               サービス一覧を表示
             </a>

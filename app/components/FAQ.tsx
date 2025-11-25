@@ -57,7 +57,7 @@ export default function FAQ() {
       <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* セクションヘッダー */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <p className="text-xs sm:text-sm md:text-base text-[#C8102E] tracking-[0.25em] sm:tracking-[0.3em] uppercase font-light mb-2 sm:mb-3">
+          <p className="text-xs sm:text-sm md:text-base text-[#84ab52] tracking-[0.25em] sm:tracking-[0.3em] uppercase font-light mb-2 sm:mb-3">
             FAQ
           </p>
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-gray-600 tracking-wide">
@@ -80,7 +80,7 @@ export default function FAQ() {
                   {faq.question}
                 </span>
                 <svg
-                  className={`w-5 h-5 text-[#C8102E] transition-transform flex-shrink-0 ${
+                  className={`w-5 h-5 text-[#84ab52] transition-transform flex-shrink-0 ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                   fill="none"

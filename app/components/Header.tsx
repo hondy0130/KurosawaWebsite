@@ -2,6 +2,7 @@
 
 import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -87,25 +88,21 @@ export default function Header() {
         <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-gradient-to-br from-[#81C784]/15 to-transparent rounded-full blur-3xl"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-8 lg:px-12 relative z-10">
-        <div className="flex justify-between items-center h-20">
+      <div className="max-w-7xl mx-auto px-10 lg:px-16 relative z-10">
+        <div className="flex justify-between items-center h-24">
           {/* ロゴ */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center flex-shrink-0">
             <div className="flex items-center gap-3">
-              <div className="flex gap-0.5">
-                <div
-                  className={`w-2 h-8 transition-colors duration-300 ${
-                    isScrolled ? 'bg-[#C8102E]' : 'bg-white'
-                  }`}
-                ></div>
-                <div
-                  className={`w-2 h-8 transition-colors duration-300 ${
-                    isScrolled ? 'bg-[#2C5F2D]' : 'bg-white'
-                  }`}
-                ></div>
-              </div>
+              <Image
+                src="/kcv-logo.webp"
+                alt="Kurosawa Consulting Vietnam"
+                width={150}
+                height={40}
+                className="h-10 w-auto"
+                priority
+              />
               <span
-                className={`text-lg font-light tracking-wider transition-colors duration-300 ${
+                className={`text-base lg:text-lg font-light tracking-wide transition-colors duration-300 whitespace-nowrap ${
                   isScrolled ? 'text-[#2E2E2E]' : 'text-white'
                 }`}
               >
@@ -115,11 +112,11 @@ export default function Header() {
           </Link>
 
           {/* デスクトップナビゲーション */}
-          <nav className="hidden lg:flex items-center space-x-10">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-7 2xl:gap-8">
             <Link
               href="/"
-              className={`text-[13px] font-light tracking-wide transition-colors duration-300 ${
-                isScrolled ? 'text-gray-600 hover:text-[#C8102E]' : 'text-white/90 hover:text-white'
+              className={`text-[13px] xl:text-[14px] 2xl:text-[15px] font-light tracking-wide transition-colors duration-300 whitespace-nowrap px-2 py-2 ${
+                isScrolled ? 'text-gray-600 hover:text-[#84ab52]' : 'text-white/90 hover:text-white'
               }`}
             >
               ホーム
@@ -132,9 +129,9 @@ export default function Header() {
               onMouseLeave={scheduleCloseServices}
             >
               <button
-                className={`text-[13px] font-light tracking-wide flex items-center gap-1 transition-colors duration-300 ${
+                className={`text-[13px] xl:text-[14px] 2xl:text-[15px] font-light tracking-wide flex items-center gap-1 transition-colors duration-300 whitespace-nowrap px-2 py-2 ${
                   isScrolled
-                    ? 'text-gray-600 hover:text-[#C8102E]'
+                    ? 'text-gray-600 hover:text-[#84ab52]'
                     : 'text-white/90 hover:text-white'
                 }`}
               >
@@ -176,7 +173,7 @@ export default function Header() {
                       transitionDelay: isServicesOpen ? `${catIndex * 50}ms` : '0ms',
                     }}
                   >
-                    <div className="px-3 pb-2 text-[11px] tracking-[0.2em] text-[#C8102E] font-light">
+                    <div className="px-3 pb-2 text-[11px] tracking-[0.2em] text-[#84ab52] font-light">
                       {cat.title}
                     </div>
                     <ul className="border-t border-gray-50">
@@ -184,7 +181,7 @@ export default function Header() {
                         <li key={item.name}>
                           <Link
                             href={item.href}
-                            className="block px-3 py-2 text-sm font-light text-gray-600 hover:bg-gray-50 hover:text-[#C8102E] tracking-wide transition-colors duration-200"
+                            className="block px-3 py-2 text-sm font-light text-gray-600 hover:bg-gray-50 hover:text-[#84ab52] tracking-wide transition-colors duration-200"
                           >
                             {item.name}
                           </Link>
@@ -198,41 +195,57 @@ export default function Header() {
 
             <Link
               href="/works"
-              className={`text-[13px] font-light tracking-wide transition-colors duration-300 ${
-                isScrolled ? 'text-gray-600 hover:text-[#C8102E]' : 'text-white/90 hover:text-white'
+              className={`text-[13px] xl:text-[14px] 2xl:text-[15px] font-light tracking-wide transition-colors duration-300 whitespace-nowrap px-2 py-2 ${
+                isScrolled ? 'text-gray-600 hover:text-[#84ab52]' : 'text-white/90 hover:text-white'
               }`}
             >
-              実績・お客様の声
+              実績
             </Link>
             <Link
               href="/pricing"
-              className={`text-[13px] font-light tracking-wide transition-colors duration-300 ${
-                isScrolled ? 'text-gray-600 hover:text-[#C8102E]' : 'text-white/90 hover:text-white'
+              className={`text-[13px] xl:text-[14px] 2xl:text-[15px] font-light tracking-wide transition-colors duration-300 whitespace-nowrap px-2 py-2 ${
+                isScrolled ? 'text-gray-600 hover:text-[#84ab52]' : 'text-white/90 hover:text-white'
               }`}
             >
-              料金プラン
+              料金
             </Link>
             <Link
               href="/faq"
-              className={`text-[13px] font-light tracking-wide transition-colors duration-300 ${
-                isScrolled ? 'text-gray-600 hover:text-[#C8102E]' : 'text-white/90 hover:text-white'
+              className={`text-[13px] xl:text-[14px] 2xl:text-[15px] font-light tracking-wide transition-colors duration-300 whitespace-nowrap px-2 py-2 ${
+                isScrolled ? 'text-gray-600 hover:text-[#84ab52]' : 'text-white/90 hover:text-white'
               }`}
             >
-              よくある質問
+              FAQ
             </Link>
             <Link
               href="/about"
-              className={`text-[13px] font-light tracking-wide transition-colors duration-300 ${
-                isScrolled ? 'text-gray-600 hover:text-[#C8102E]' : 'text-white/90 hover:text-white'
+              className={`text-[13px] xl:text-[14px] 2xl:text-[15px] font-light tracking-wide transition-colors duration-300 whitespace-nowrap px-2 py-2 ${
+                isScrolled ? 'text-gray-600 hover:text-[#84ab52]' : 'text-white/90 hover:text-white'
               }`}
             >
               会社概要
             </Link>
             <Link
+              href="/news"
+              className={`text-[13px] xl:text-[14px] 2xl:text-[15px] font-light tracking-wide transition-colors duration-300 whitespace-nowrap px-2 py-2 ${
+                isScrolled ? 'text-gray-600 hover:text-[#84ab52]' : 'text-white/90 hover:text-white'
+              }`}
+            >
+              ニュース
+            </Link>
+            <Link
+              href="/careers"
+              className={`text-[13px] xl:text-[14px] 2xl:text-[15px] font-light tracking-wide transition-colors duration-300 whitespace-nowrap px-2 py-2 ${
+                isScrolled ? 'text-gray-600 hover:text-[#84ab52]' : 'text-white/90 hover:text-white'
+              }`}
+            >
+              採用
+            </Link>
+            <Link
               href="/contact"
-              className={`px-8 py-2.5 text-[13px] font-light tracking-wide transition-all duration-300 ${
+              className={`px-6 xl:px-8 2xl:px-10 py-2.5 xl:py-3 text-[13px] xl:text-[14px] 2xl:text-[15px] font-light tracking-wide transition-all duration-300 whitespace-nowrap ${
                 isScrolled
-                  ? 'bg-[#C8102E] text-white hover:bg-[#A00D24]'
+                  ? 'bg-[#84ab52] text-white hover:bg-[#6d9143]'
                   : 'bg-white text-[#2E2E2E] hover:bg-white/90'
               }`}
             >
@@ -280,7 +293,7 @@ export default function Header() {
                 href="/"
                 className={`text-sm font-light tracking-wide transition-colors duration-300 ${
                   isScrolled
-                    ? 'text-gray-600 hover:text-[#C8102E]'
+                    ? 'text-gray-600 hover:text-[#84ab52]'
                     : 'text-white/90 hover:text-white'
                 }`}
               >
@@ -293,7 +306,7 @@ export default function Header() {
                   onClick={() => setIsServicesOpen(!isServicesOpen)}
                   className={`text-sm font-light tracking-wide flex items-center gap-1 w-full transition-colors duration-300 ${
                     isScrolled
-                      ? 'text-gray-600 hover:text-[#C8102E]'
+                      ? 'text-gray-600 hover:text-[#84ab52]'
                       : 'text-white/90 hover:text-white'
                   }`}
                 >
@@ -331,7 +344,7 @@ export default function Header() {
                     >
                       <div
                         className={`text-xs tracking-[0.2em] font-light mb-2 transition-colors duration-300 ${
-                          isScrolled ? 'text-[#C8102E]' : 'text-white'
+                          isScrolled ? 'text-[#84ab52]' : 'text-white'
                         }`}
                       >
                         {cat.title}
@@ -343,7 +356,7 @@ export default function Header() {
                             href={item.href}
                             className={`block text-sm font-light tracking-wide transition-colors duration-300 ${
                               isScrolled
-                                ? 'text-gray-500 hover:text-[#C8102E]'
+                                ? 'text-gray-500 hover:text-[#84ab52]'
                                 : 'text-white/70 hover:text-white'
                             }`}
                           >
@@ -360,7 +373,7 @@ export default function Header() {
                 href="/works"
                 className={`text-sm font-light tracking-wide transition-colors duration-300 ${
                   isScrolled
-                    ? 'text-gray-600 hover:text-[#C8102E]'
+                    ? 'text-gray-600 hover:text-[#84ab52]'
                     : 'text-white/90 hover:text-white'
                 }`}
               >
@@ -370,7 +383,7 @@ export default function Header() {
                 href="/pricing"
                 className={`text-sm font-light tracking-wide transition-colors duration-300 ${
                   isScrolled
-                    ? 'text-gray-600 hover:text-[#C8102E]'
+                    ? 'text-gray-600 hover:text-[#84ab52]'
                     : 'text-white/90 hover:text-white'
                 }`}
               >
@@ -380,7 +393,7 @@ export default function Header() {
                 href="/faq"
                 className={`text-sm font-light tracking-wide transition-colors duration-300 ${
                   isScrolled
-                    ? 'text-gray-600 hover:text-[#C8102E]'
+                    ? 'text-gray-600 hover:text-[#84ab52]'
                     : 'text-white/90 hover:text-white'
                 }`}
               >
@@ -390,17 +403,37 @@ export default function Header() {
                 href="/about"
                 className={`text-sm font-light tracking-wide transition-colors duration-300 ${
                   isScrolled
-                    ? 'text-gray-600 hover:text-[#C8102E]'
+                    ? 'text-gray-600 hover:text-[#84ab52]'
                     : 'text-white/90 hover:text-white'
                 }`}
               >
                 会社概要
               </Link>
               <Link
+                href="/news"
+                className={`text-sm font-light tracking-wide transition-colors duration-300 ${
+                  isScrolled
+                    ? 'text-gray-600 hover:text-[#84ab52]'
+                    : 'text-white/90 hover:text-white'
+                }`}
+              >
+                ニュース/コラム
+              </Link>
+              <Link
+                href="/careers"
+                className={`text-sm font-light tracking-wide transition-colors duration-300 ${
+                  isScrolled
+                    ? 'text-gray-600 hover:text-[#84ab52]'
+                    : 'text-white/90 hover:text-white'
+                }`}
+              >
+                採用情報
+              </Link>
+              <Link
                 href="/contact"
                 className={`text-sm font-light tracking-wide transition-colors duration-300 ${
                   isScrolled
-                    ? 'text-[#C8102E] hover:text-[#A00D24]'
+                    ? 'text-[#84ab52] hover:text-[#6d9143]'
                     : 'text-white hover:text-white/80'
                 }`}
               >

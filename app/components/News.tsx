@@ -35,13 +35,13 @@ export default function News() {
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'プレスリリース':
-        return 'bg-[#C8102E] text-white';
+        return 'bg-[#84ab52] text-white';
       case 'メディア掲載':
         return 'bg-[#4CAF50] text-white';
       case 'セミナー':
         return 'bg-[#757575] text-white';
       case '受賞':
-        return 'bg-[#C8102E] text-white';
+        return 'bg-[#84ab52] text-white';
       default:
         return 'bg-gray-200 text-gray-700';
     }
@@ -52,7 +52,7 @@ export default function News() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* セクションヘッダー */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <p className="text-xs sm:text-sm md:text-base text-[#C8102E] tracking-[0.25em] sm:tracking-[0.3em] uppercase font-light mb-2 sm:mb-3">
+          <p className="text-xs sm:text-sm md:text-base text-[#84ab52] tracking-[0.25em] sm:tracking-[0.3em] uppercase font-light mb-2 sm:mb-3">
             News
           </p>
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-gray-600 tracking-wide">
@@ -80,7 +80,7 @@ export default function News() {
                   </span>
                 </div>
                 <div className="flex-1 sm:w-2/3">
-                  <h3 className="text-sm sm:text-base md:text-lg font-medium text-gray-900 hover:text-[#C8102E] transition-colors leading-relaxed">
+                  <h3 className="text-sm sm:text-base md:text-lg font-medium text-gray-900 hover:text-[#84ab52] transition-colors leading-relaxed">
                     {news.title}
                   </h3>
                 </div>

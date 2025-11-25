@@ -83,7 +83,7 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* セクションヘッダー */}
         <div className="text-center mb-12 sm:mb-14 md:mb-16">
-          <p className="text-xs sm:text-sm md:text-base text-[#C8102E] tracking-[0.25em] sm:tracking-[0.3em] uppercase font-light mb-2 sm:mb-3">
+          <p className="text-xs sm:text-sm md:text-base text-[#84ab52] tracking-[0.25em] sm:tracking-[0.3em] uppercase font-light mb-2 sm:mb-3">
             Contact
           </p>
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-gray-600 tracking-wide">
@@ -95,7 +95,7 @@ export default function Contact() {
           {/* 連絡先情報 */}
           <div className="md:col-span-1 space-y-6 sm:space-y-7 md:space-y-8">
             <div>
-              <h3 className="text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] uppercase text-[#2C5F2D] mb-2">
+              <h3 className="text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] uppercase text-[#84ab52] mb-2">
                 Ho Chi Minh Office
               </h3>
               <p className="text-xs sm:text-sm text-[#5A5A5A] leading-relaxed">
@@ -111,7 +111,7 @@ export default function Contact() {
             </div>
 
             <div>
-              <h3 className="text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] uppercase text-[#2C5F2D] mb-2">
+              <h3 className="text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] uppercase text-[#84ab52] mb-2">
                 Hanoi Office
               </h3>
               <p className="text-xs sm:text-sm text-[#5A5A5A] leading-relaxed">
@@ -128,7 +128,7 @@ export default function Contact() {
 
             <div className="space-y-4 sm:space-y-5 md:space-y-6">
               <div>
-                <h3 className="text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] uppercase text-[#2C5F2D] mb-2">
+                <h3 className="text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] uppercase text-[#84ab52] mb-2">
                   Email
                 </h3>
                 <a
@@ -139,7 +139,7 @@ export default function Contact() {
                 </a>
               </div>
               <div>
-                <h3 className="text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] uppercase text-[#2C5F2D] mb-2">
+                <h3 className="text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] uppercase text-[#84ab52] mb-2">
                   Website
                 </h3>
                 <div className="flex flex-col gap-2">
@@ -147,7 +147,7 @@ export default function Contact() {
                     href="https://www.kurosawa.gr.jp/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs sm:text-sm text-[#2C5F2D] hover:underline break-all"
+                    className="text-xs sm:text-sm text-[#84ab52] hover:underline break-all"
                   >
                     https://www.kurosawa.gr.jp/
                   </a>
@@ -155,14 +155,14 @@ export default function Contact() {
                     href="http://kurosawa-vn.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs sm:text-sm text-[#2C5F2D] hover:underline break-all"
+                    className="text-xs sm:text-sm text-[#84ab52] hover:underline break-all"
                   >
                     http://kurosawa-vn.com/
                   </a>
                 </div>
               </div>
               <div>
-                <h3 className="text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] uppercase text-[#2C5F2D] mb-2">
+                <h3 className="text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] uppercase text-[#84ab52] mb-2">
                   Facebook
                 </h3>
                 <p className="text-xs sm:text-sm text-[#5A5A5A]">
@@ -184,7 +184,7 @@ export default function Contact() {
                     htmlFor="name"
                     className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2"
                   >
-                    お名前 <span className="text-[#C8102E]">*</span>
+                    お名前 <span className="text-[#84ab52]">*</span>
                   </label>
                   <input
                     type="text"
@@ -193,7 +193,7 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#C8102E] focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#84ab52] focus:border-transparent"
                     placeholder="山田 太郎"
                   />
                 </div>
@@ -203,7 +203,7 @@ export default function Contact() {
                     htmlFor="company"
                     className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2"
                   >
-                    会社名 <span className="text-[#C8102E]">*</span>
+                    会社名 <span className="text-[#84ab52]">*</span>
                   </label>
                   <input
                     type="text"
@@ -212,7 +212,7 @@ export default function Contact() {
                     required
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#C8102E] focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#84ab52] focus:border-transparent"
                     placeholder="株式会社サンプル"
                   />
                 </div>
@@ -224,7 +224,7 @@ export default function Contact() {
                     htmlFor="email"
                     className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2"
                   >
-                    メールアドレス <span className="text-[#C8102E]">*</span>
+                    メールアドレス <span className="text-[#84ab52]">*</span>
                   </label>
                   <input
                     type="email"
@@ -233,7 +233,7 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#C8102E] focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#84ab52] focus:border-transparent"
                     placeholder="example@company.co.jp"
                   />
                 </div>
@@ -251,7 +251,7 @@ export default function Contact() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#C8102E] focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#84ab52] focus:border-transparent"
                     placeholder="03-1234-5678"
                   />
                 </div>
@@ -269,7 +269,7 @@ export default function Contact() {
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#C8102E] focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#84ab52] focus:border-transparent"
                 >
                   <option value="">選択してください</option>
                   <option value="strategy">経営戦略コンサルティング</option>
@@ -287,7 +287,7 @@ export default function Contact() {
                   htmlFor="message"
                   className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2"
                 >
-                  お問い合わせ内容 <span className="text-[#C8102E]">*</span>
+                  お問い合わせ内容 <span className="text-[#84ab52]">*</span>
                 </label>
                 <textarea
                   id="message"
@@ -296,7 +296,7 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   rows={5}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#C8102E] focus:border-transparent resize-none"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#84ab52] focus:border-transparent resize-none"
                   placeholder="ご相談内容をご記入ください"
                 />
               </div>
@@ -322,7 +322,7 @@ export default function Contact() {
                   disabled={!isFormValid}
                   className={`h-10 sm:h-11 md:h-12 text-xs sm:text-sm tracking-[0.2em] sm:tracking-widest transition-all duration-300 flex items-center justify-center gap-2 ${
                     isFormValid
-                      ? 'border-2 border-[#2C5F2D] text-[#2C5F2D] hover:bg-[#2C5F2D] hover:text-white cursor-pointer'
+                      ? 'border-2 border-[#84ab52] text-[#84ab52] hover:bg-[#84ab52] hover:text-white cursor-pointer'
                       : 'border-2 border-gray-300 text-gray-400 cursor-not-allowed opacity-60'
                   }`}
                 >
@@ -343,7 +343,7 @@ export default function Contact() {
               </p>
 
               {!isFormValid && (
-                <p className="text-[10px] sm:text-xs text-[#C8102E] text-center">
+                <p className="text-[10px] sm:text-xs text-[#84ab52] text-center">
                   ※
                   必須項目（お名前・会社名・メールアドレス・お問い合わせ内容）をすべて入力してください
                 </p>

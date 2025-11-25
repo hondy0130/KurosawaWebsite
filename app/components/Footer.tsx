@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Footer() {
   return (
     <footer className="bg-[#2E2E2E] text-white">
@@ -6,10 +8,13 @@ export default function Footer() {
           {/* 会社情報 */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="flex gap-0.5">
-                <div className="w-2 h-8 bg-[#C8102E]"></div>
-                <div className="w-2 h-8 bg-[#2C5F2D]"></div>
-              </div>
+              <Image
+                src="/kcv-logo.webp"
+                alt="Kurosawa Consulting Vietnam"
+                width={150}
+                height={40}
+                className="h-10 w-auto"
+              />
               <span className="text-base font-light tracking-wider text-white">
                 Kurosawa Consulting Vietnam
               </span>
@@ -169,6 +174,22 @@ export default function Footer() {
                   className="text-gray-400 hover:text-white transition-colors font-light tracking-wide"
                 >
                   よくある質問
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/news"
+                  className="text-gray-400 hover:text-white transition-colors font-light tracking-wide"
+                >
+                  ニュース/コラム
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/careers"
+                  className="text-gray-400 hover:text-white transition-colors font-light tracking-wide"
+                >
+                  採用情報
                 </a>
               </li>
               <li>

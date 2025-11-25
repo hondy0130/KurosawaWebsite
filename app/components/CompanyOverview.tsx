@@ -3,7 +3,7 @@ export default function CompanyOverview() {
     <section id="why-us" className="bg-white py-16 sm:py-20 md:py-24 lg:py-32">
       {/* Section header (like Services/Case Studies) */}
       <div className="text-center mb-12 sm:mb-16 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <p className="text-xs sm:text-sm md:text-base text-[#C8102E] tracking-[0.25em] sm:tracking-[0.3em] uppercase font-light mb-2 sm:mb-3">
+        <p className="text-xs sm:text-sm md:text-base text-[#84ab52] tracking-[0.25em] sm:tracking-[0.3em] uppercase font-light mb-2 sm:mb-3">
           Company Overview
         </p>
         <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-gray-600 tracking-wide">
@@ -40,31 +40,31 @@ export default function CompanyOverview() {
             {/* Right: link rows */}
             <div className="md:col-span-6 space-y-6 sm:space-y-7 md:space-y-8">
               <a href="/about#strengths" className="block group">
-                <div className="border-b border-[#2C5F2D]/30 pb-3 sm:pb-4 flex items-center justify-between">
-                  <span className="text-[#2C5F2D] text-base sm:text-lg md:text-xl lg:text-2xl">
+                <div className="border-b border-[#84ab52]/30 pb-3 sm:pb-4 flex items-center justify-between">
+                  <span className="text-[#84ab52] text-base sm:text-lg md:text-xl lg:text-2xl">
                     Strengths
                   </span>
-                  <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-[#2C5F2D]/40 grid place-items-center text-[#2C5F2D]/70 group-hover:translate-x-1 transition-transform text-sm sm:text-base">
+                  <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-[#84ab52]/40 grid place-items-center text-[#84ab52]/70 group-hover:translate-x-1 transition-transform text-sm sm:text-base">
                     →
                   </span>
                 </div>
               </a>
               <a href="/about#members" className="block group">
-                <div className="border-b border-[#2C5F2D]/30 pb-3 sm:pb-4 flex items-center justify-between">
-                  <span className="text-[#2C5F2D] text-base sm:text-lg md:text-xl lg:text-2xl">
+                <div className="border-b border-[#84ab52]/30 pb-3 sm:pb-4 flex items-center justify-between">
+                  <span className="text-[#84ab52] text-base sm:text-lg md:text-xl lg:text-2xl">
                     Member
                   </span>
-                  <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-[#2C5F2D]/40 grid place-items-center text-[#2C5F2D]/70 group-hover:translate-x-1 transition-transform text-sm sm:text-base">
+                  <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-[#84ab52]/40 grid place-items-center text-[#84ab52]/70 group-hover:translate-x-1 transition-transform text-sm sm:text-base">
                     →
                   </span>
                 </div>
               </a>
               <a href="/about#company-info" className="block group">
-                <div className="border-b border-[#2C5F2D]/30 pb-3 sm:pb-4 flex items-center justify-between">
-                  <span className="text-[#2C5F2D] text-base sm:text-lg md:text-xl lg:text-2xl">
+                <div className="border-b border-[#84ab52]/30 pb-3 sm:pb-4 flex items-center justify-between">
+                  <span className="text-[#84ab52] text-base sm:text-lg md:text-xl lg:text-2xl">
                     Company Overview
                   </span>
-                  <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-[#2C5F2D]/40 grid place-items-center text-[#2C5F2D]/70 group-hover:translate-x-1 transition-transform text-sm sm:text-base">
+                  <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-[#84ab52]/40 grid place-items-center text-[#84ab52]/70 group-hover:translate-x-1 transition-transform text-sm sm:text-base">
                     →
                   </span>
                 </div>

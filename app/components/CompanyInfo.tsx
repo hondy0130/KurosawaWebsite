@@ -14,7 +14,7 @@ export default function CompanyInfo() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* セクションヘッダー */}
         <div className="text-center mb-14">
-          <p className="text-sm text-[#C8102E] tracking-[0.3em] uppercase font-light mb-2">
+          <p className="text-sm text-[#84ab52] tracking-[0.3em] uppercase font-light mb-2">
             Company Information
           </p>
           <h2 className="text-xl md:text-2xl font-light text-gray-600 tracking-wide">企業情報</h2>
@@ -64,7 +64,7 @@ export default function CompanyInfo() {
               <div className="flex flex-col gap-2">
                 <a
                   href="https://www.kurosawa.gr.jp/"
-                  className="text-[#2C5F2D] hover:underline break-all"
+                  className="text-[#84ab52] hover:underline break-all"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -72,7 +72,7 @@ export default function CompanyInfo() {
                 </a>
                 <a
                   href="http://kurosawa-vn.com/"
-                  className="text-[#2C5F2D] hover:underline break-all"
+                  className="text-[#84ab52] hover:underline break-all"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
