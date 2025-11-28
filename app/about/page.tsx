@@ -1,4 +1,5 @@
 import Strengths from '../components/Strengths';
+import Achievement from '../components/Achievement';
 import Members from '../components/Members';
 import CompanyInfo from '../components/CompanyInfo';
 
@@ -17,6 +18,9 @@ export default function AboutPage() {
 
       {/* Strengths */}
       <Strengths />
+
+      {/* Case Studies */}
+      <Achievement />
 
       {/* Member */}
       <Members />
