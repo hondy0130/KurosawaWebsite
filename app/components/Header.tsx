@@ -44,6 +44,10 @@ export default function Header() {
 
   const serviceItems = [
     {
+      name: 'サービス一覧',
+      href: '/services',
+    },
+    {
       name: 'ベトナム拠点設立',
       subtext: '現地法人/駐在員事務所/支店',
       href: '/services/establishment',
@@ -58,7 +62,9 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white border-b border-gray-100' : 'bg-transparent border-b border-white/10'
+        isScrolled
+          ? 'bg-white border-b border-gray-100'
+          : 'bg-transparent border-b border-transparent'
       }`}
     >
       {/* 背景装飾 - さわやかな緑のグラデーション（スクロール時のみ） */}
@@ -185,12 +191,20 @@ export default function Header() {
               FAQ
             </Link>
             <Link
-              href="/news"
+              href="/#news"
               className={`text-[13px] xl:text-[14px] 2xl:text-[15px] font-light tracking-wide transition-colors duration-300 whitespace-nowrap px-1.5 py-2 ${
                 isScrolled ? 'text-gray-600 hover:text-[#84ab52]' : 'text-white/90 hover:text-white'
               }`}
             >
               ニュース
+            </Link>
+            <Link
+              href="/articles"
+              className={`text-[13px] xl:text-[14px] 2xl:text-[15px] font-light tracking-wide transition-colors duration-300 whitespace-nowrap px-1.5 py-2 ${
+                isScrolled ? 'text-gray-600 hover:text-[#84ab52]' : 'text-white/90 hover:text-white'
+              }`}
+            >
+              記事コラム
             </Link>
             <Link
               href="/careers"
@@ -244,7 +258,7 @@ export default function Header() {
         <div
           className={`lg:hidden overflow-hidden transition-all duration-300 ease-out absolute left-0 right-0 top-full ${
             isMenuOpen ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'
-          } ${isScrolled ? 'border-t border-gray-100 bg-white' : 'border-t border-white/10 bg-black/30 backdrop-blur-lg'}`}
+          } ${isScrolled ? 'border-t border-gray-100 bg-white' : 'border-t border-transparent bg-black/30 backdrop-blur-lg'}`}
         >
           <div className="py-6 px-10">
             <nav className="flex flex-col space-y-4">
@@ -338,14 +352,24 @@ export default function Header() {
                 よくある質問
               </Link>
               <Link
-                href="/news"
+                href="/#news"
                 className={`text-sm font-light tracking-wide transition-colors duration-300 ${
                   isScrolled
                     ? 'text-gray-600 hover:text-[#84ab52]'
                     : 'text-white/90 hover:text-white'
                 }`}
               >
-                ニュース/コラム
+                ニュース
+              </Link>
+              <Link
+                href="/articles"
+                className={`text-sm font-light tracking-wide transition-colors duration-300 ${
+                  isScrolled
+                    ? 'text-gray-600 hover:text-[#84ab52]'
+                    : 'text-white/90 hover:text-white'
+                }`}
+              >
+                記事コラム
               </Link>
               <Link
                 href="/careers"

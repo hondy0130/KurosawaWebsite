@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 
 type ServiceItem = {
   title: string;
@@ -19,7 +19,9 @@ type ServiceItem = {
 
 export default function Services() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [desktopIndex, setDesktopIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const desktopCarouselRef = useRef<HTMLDivElement>(null);
 
   const services: ServiceItem[] = [
     {
@@ -104,7 +106,7 @@ export default function Services() {
     },
   ];
 
-  // スクロール位置に基づいてcurrentIndexを更新
+  // モバイル: スクロール位置に基づいてcurrentIndexを更新
   useEffect(() => {
     const carousel = carouselRef.current;
     if (!carousel) return;
@@ -120,7 +122,23 @@ export default function Services() {
     return () => carousel.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // インジケータークリックでスクロール
+  // デスクトップ: スクロール位置に基づいてdesktopIndexを更新
+  useEffect(() => {
+    const carousel = desktopCarouselRef.current;
+    if (!carousel) return;
+
+    const handleScroll = () => {
+      const scrollLeft = carousel.scrollLeft;
+      const cardWidth = carousel.offsetWidth;
+      const newIndex = Math.round(scrollLeft / cardWidth);
+      setDesktopIndex(newIndex);
+    };
+
+    carousel.addEventListener('scroll', handleScroll);
+    return () => carousel.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // モバイル: インジケータークリックでスクロール
   const scrollToIndex = (index: number) => {
     const carousel = carouselRef.current;
     if (!carousel) return;
@@ -128,16 +146,68 @@ export default function Services() {
     carousel.scrollTo({ left: cardWidth * index, behavior: 'smooth' });
   };
 
+  // デスクトップ: インジケータークリックでスクロール
+  const scrollToDesktopIndex = useCallback((index: number) => {
+    const carousel = desktopCarouselRef.current;
+    if (!carousel) return;
+    const cardWidth = carousel.offsetWidth;
+    carousel.scrollTo({ left: cardWidth * index, behavior: 'smooth' });
+  }, []);
+
+  // デスクトップ: 前へ
+  const goToPrev = useCallback(() => {
+    const newIndex = desktopIndex > 0 ? desktopIndex - 1 : services.length - 1;
+    scrollToDesktopIndex(newIndex);
+  }, [desktopIndex, scrollToDesktopIndex, services.length]);
+
+  // デスクトップ: 次へ
+  const goToNext = useCallback(() => {
+    const newIndex = desktopIndex < services.length - 1 ? desktopIndex + 1 : 0;
+    scrollToDesktopIndex(newIndex);
+  }, [desktopIndex, scrollToDesktopIndex, services.length]);
+
+  // サービスナビゲーションクリック
+  const handleServiceClick = (index: number) => {
+    // 画面幅でモバイル/デスクトップを判定
+    const isMobile = window.innerWidth < 768; // md breakpoint
+
+    if (isMobile) {
+      // モバイル: カルーセルを該当スライドにスクロール
+      scrollToIndex(index);
+    } else {
+      // デスクトップ: カルーセルを該当スライドにスクロール
+      scrollToDesktopIndex(index);
+    }
+  };
+
   return (
     <section id="services" className="py-16 sm:py-20 md:py-24 lg:py-32 bg-white">
       {/* セクションヘッダー - 上品で控えめ */}
-      <div className="text-center mb-8 sm:mb-12 md:mb-16 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="text-center mb-8 sm:mb-10 md:mb-12 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <p className="text-xs sm:text-sm md:text-base text-[#84ab52] tracking-[0.25em] sm:tracking-[0.3em] uppercase font-light mb-2 sm:mb-3">
           Services
         </p>
-        <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-gray-600 tracking-wide">
+        <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-gray-600 tracking-wide mb-8 sm:mb-10 md:mb-12">
           サービス紹介
         </h2>
+
+        {/* サービス一覧ナビゲーション */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 max-w-3xl mx-auto">
+          {services.map((service, index) => (
+            <button
+              key={index}
+              onClick={() => handleServiceClick(index)}
+              className="group flex flex-col items-center p-4 sm:p-5 rounded-lg border border-gray-100 hover:border-[#84ab52]/30 hover:bg-[#84ab52]/5 transition-all duration-300"
+            >
+              <span className="text-xs sm:text-sm text-[#84ab52] tracking-widest font-medium mb-2">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <span className="text-sm sm:text-base text-gray-700 group-hover:text-[#84ab52] transition-colors text-center font-normal leading-snug">
+                {service.title}
+              </span>
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* モバイル用カルーセル (md未満で表示) */}
@@ -234,17 +304,60 @@ export default function Services() {
         </div>
       </div>
 
-      {/* デスクトップ用 交互レイアウト (md以上で表示) */}
-      <div className="hidden md:block px-6 sm:px-8 lg:px-12">
-        <div className="space-y-0 max-w-none">
-          {services.map((service, index) => {
-            const isEven = index % 2 === 0; // 0,2,4: Text Left / Media Right
-            return (
-              <section key={index} className="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
+      {/* デスクトップ用カルーセル (md以上で表示) */}
+      <div className="hidden md:block relative">
+        {/* 左矢印ボタン */}
+        <button
+          onClick={goToPrev}
+          className="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-white/90 backdrop-blur-sm shadow-lg border border-gray-100 flex items-center justify-center text-gray-600 hover:text-[#84ab52] hover:border-[#84ab52]/30 transition-all duration-300 group"
+          aria-label="前のサービスへ"
+        >
+          <svg
+            className="w-5 h-5 lg:w-6 lg:h-6 group-hover:-translate-x-0.5 transition-transform"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </button>
+
+        {/* 右矢印ボタン */}
+        <button
+          onClick={goToNext}
+          className="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-white/90 backdrop-blur-sm shadow-lg border border-gray-100 flex items-center justify-center text-gray-600 hover:text-[#84ab52] hover:border-[#84ab52]/30 transition-all duration-300 group"
+          aria-label="次のサービスへ"
+        >
+          <svg
+            className="w-5 h-5 lg:w-6 lg:h-6 group-hover:translate-x-0.5 transition-transform"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+
+        {/* カルーセルコンテナ */}
+        <div
+          ref={desktopCarouselRef}
+          className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          {services.map((service, index) => (
+            <div
+              key={index}
+              id={`service-${index + 1}`}
+              className="flex-shrink-0 w-full snap-center"
+            >
+              <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center px-16 lg:px-24">
                 {/* Text block */}
-                <div
-                  className={`${isEven ? 'md:order-1' : 'md:order-2'} h-[450px] lg:h-[520px] flex`}
-                >
+                <div className="h-[450px] lg:h-[520px] flex">
                   <div className="space-y-4 md:space-y-5 lg:space-y-6 my-auto">
                     <p className="text-[11px] md:text-xs tracking-[0.3em] sm:tracking-[0.35em] uppercase text-black/60">
                       {service.subtitle}
@@ -291,43 +404,57 @@ export default function Services() {
                 </div>
 
                 {/* Media block（抽象グラデーション） */}
-                <div className={`${isEven ? 'md:order-2' : 'md:order-1'} h-[520px]`}>
-                  <div className="relative h-full w-full overflow-hidden">
-                    {/* Hero風：白ベース＋大きなボケ足のカラーブロブ（角丸・枠なし） */}
-                    <div className="absolute inset-0 bg-white"></div>
+                <div className="h-[450px] lg:h-[520px]">
+                  <div className="relative h-full w-full overflow-hidden rounded-2xl">
+                    {/* Hero風：白ベース＋大きなボケ足のカラーブロブ */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white"></div>
                     <div
-                      className="absolute top-0 right-0 w-[900px] h-[900px] rounded-full blur-3xl"
+                      className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full blur-3xl"
                       style={{
                         background: `radial-gradient(closest-side, ${service.accentStrong}, transparent)`,
                       }}
                     ></div>
                     <div
-                      className="absolute bottom-0 left-0 w-[700px] h-[700px] rounded-full blur-3xl"
+                      className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full blur-3xl"
                       style={{
                         background: `radial-gradient(closest-side, ${service.accentSoft}, transparent)`,
                       }}
                     ></div>
                     <div
-                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] rounded-full blur-3xl"
+                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full blur-3xl"
                       style={{
                         background: `radial-gradient(closest-side, ${service.accentSoft}, transparent)`,
                       }}
                     ></div>
-                    {/* ごく薄いライン */}
-                    <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-black/10 to-transparent"></div>
                   </div>
                 </div>
-              </section>
-            );
-          })}
-          <div className="mt-12 sm:mt-16 flex justify-center">
-            <a
-              href="/services"
-              className="inline-block px-8 sm:px-10 md:px-12 py-3 sm:py-3.5 md:py-4 bg-[#84ab52] text-white text-xs sm:text-sm md:text-base font-light tracking-[0.2em] sm:tracking-widest hover:bg-[#6d9143] transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              サービス一覧を表示
-            </a>
-          </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* インジケーター（ドット） */}
+        <div className="flex justify-center gap-2 mt-8">
+          {services.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => scrollToDesktopIndex(index)}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                desktopIndex === index ? 'bg-[#84ab52] w-8' : 'bg-gray-300 hover:bg-gray-400 w-2'
+              }`}
+              aria-label={`サービス ${index + 1} へ移動`}
+            />
+          ))}
+        </div>
+
+        {/* サービス一覧ボタン */}
+        <div className="mt-10 flex justify-center">
+          <a
+            href="/services"
+            className="inline-block px-8 sm:px-10 md:px-12 py-3 sm:py-3.5 md:py-4 bg-[#84ab52] text-white text-xs sm:text-sm md:text-base font-light tracking-[0.2em] sm:tracking-widest hover:bg-[#6d9143] transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            サービス一覧を表示
+          </a>
         </div>
       </div>
     </section>

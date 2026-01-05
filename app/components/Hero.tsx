@@ -27,7 +27,7 @@ export default function Hero() {
             </div>
 
             {/* メインコピー */}
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-light text-white leading-relaxed tracking-wide px-4 animate-fade-in-delay-1">
+            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-light text-white leading-relaxed tracking-wide px-4 animate-fade-in-delay-1 whitespace-nowrap">
               Creating the future through trust and{' '}
               <span className="font-normal bg-gradient-to-r from-white to-white/90 bg-clip-text">
                 proven results
