@@ -130,14 +130,6 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#news"
-                  className="text-gray-400 hover:text-white transition-colors font-light tracking-wide"
-                >
-                  お知らせ
-                </a>
-              </li>
-              <li>
-                <a
                   href="#articles"
                   className="text-gray-400 hover:text-white transition-colors font-light tracking-wide"
                 >

@@ -1,16 +1,16 @@
 export default function Strengths() {
   const items = [
     {
-      title: 'ローカル知見と実行力',
-      body: '現地法令・商習慣に通じた実務チームが、戦略から実行まで伴走します。',
+      title: '品質は大手並み、料金はリーズナブル',
+      body: '我々スタッフの大半はBig4と呼ばれる大手コンサルティングファームで専門知識を積んできたメンバーです。　品質は大手並みを遵守しつつリーズナブルな料金体系でサービスをご提供しております。',
     },
     {
-      title: '日系ガバナンス準拠',
-      body: '日本本社の意思決定に耐える透明なレポーティングと内部統制を徹底。',
+      title: '言語の壁を完全に払拭したサポート体制',
+      body: '日本人3名がベトナムに常駐、N2（日本語検定2級）以上の日本語能力を持ったベトナム人会計士および専門家が5名以上在籍しており、クライアントに言語の壁を感じさせないサポート体制をご用意しております。',
     },
     {
-      title: 'ワンストップ対応',
-      body: '進出・設立・会計税務・採用・PMOまで一気通貫。スピードと確実性を両立。',
+      title: '確かなベトナム当局交渉力、ワンストップサポート',
+      body: '自社で会計士と弁護士が在籍しているためワンストップでサポート可能です。　またベトナム当局で勤務経験のある弁護士も在籍しているため、確かな当局交渉力でサポートさせていただきます。',
     },
   ];
 
@@ -32,7 +32,9 @@ export default function Strengths() {
               key={idx}
               className="border border-gray-100 rounded-xl p-6 hover:shadow-sm transition-shadow"
             >
-              <h3 className="text-base font-medium text-[#2E2E2E] mb-3">{item.title}</h3>
+              <h3 className="text-base font-medium text-[#2E2E2E] mb-3">
+                <span className="text-[#84ab52] font-bold">{item.title}</span>
+              </h3>
               <p className="text-sm text-[#5A5A5A] leading-relaxed">{item.body}</p>
             </div>
           ))}
