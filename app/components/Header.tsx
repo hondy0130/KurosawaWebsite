@@ -67,7 +67,7 @@ export default function Header() {
           : 'bg-transparent border-b border-transparent'
       }`}
     >
-      {/* 背景装飾 - さわやかな緑のグラデーション（スクロール時のみ） */}
+      {/* 背景装飾 */}
       <div
         className={`absolute inset-0 overflow-hidden pointer-events-none transition-opacity duration-300 ${
           isScrolled ? 'opacity-100' : 'opacity-0'
@@ -144,7 +144,7 @@ export default function Header() {
                 </svg>
               </button>
 
-              {/* ドロップダウンメニュー - アニメーション付き */}
+              {/* ドロップダウンメニュー */}
               <div
                 className={`absolute top-full left-0 mt-2 w-[320px] bg-white border border-gray-100 shadow-lg py-2 origin-top transition-all duration-300 ease-out ${
                   isServicesOpen
@@ -175,21 +175,14 @@ export default function Header() {
             </div>
 
             <Link
-              href="/pricing"
+              href="/about#members"
               className={`text-[13px] xl:text-[14px] 2xl:text-[15px] font-light tracking-wide transition-colors duration-300 whitespace-nowrap px-1.5 py-2 ${
                 isScrolled ? 'text-gray-600 hover:text-[#84ab52]' : 'text-white/90 hover:text-white'
               }`}
             >
-              料金
+              メンバー
             </Link>
-            <Link
-              href="/#news"
-              className={`text-[13px] xl:text-[14px] 2xl:text-[15px] font-light tracking-wide transition-colors duration-300 whitespace-nowrap px-1.5 py-2 ${
-                isScrolled ? 'text-gray-600 hover:text-[#84ab52]' : 'text-white/90 hover:text-white'
-              }`}
-            >
-              ニュース
-            </Link>
+
             <Link
               href="/articles"
               className={`text-[13px] xl:text-[14px] 2xl:text-[15px] font-light tracking-wide transition-colors duration-300 whitespace-nowrap px-1.5 py-2 ${
@@ -218,7 +211,7 @@ export default function Header() {
             </Link>
           </nav>
 
-          {/* モバイルメニューボタン - アニメーション強化 */}
+          {/* モバイルメニューボタン */}
           <button
             className={`lg:hidden p-2 rounded transition-colors duration-300 ml-auto ${
               isScrolled ? 'hover:bg-gray-50' : 'hover:bg-white/10'
@@ -246,7 +239,7 @@ export default function Header() {
           </button>
         </div>
 
-        {/* モバイルメニュー - アニメーション付き */}
+        {/* モバイルメニュー */}
         <div
           className={`lg:hidden overflow-hidden transition-all duration-300 ease-out absolute left-0 right-0 top-full ${
             isMenuOpen ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'
@@ -256,120 +249,60 @@ export default function Header() {
             <nav className="flex flex-col space-y-4">
               <Link
                 href="/"
-                className={`text-sm font-light tracking-wide transition-colors duration-300 ${
-                  isScrolled
-                    ? 'text-gray-600 hover:text-[#84ab52]'
-                    : 'text-white/90 hover:text-white'
-                }`}
+                className="text-sm font-light tracking-wide text-gray-800 hover:text-[#84ab52] transition-colors"
+                onClick={() => setIsMenuOpen(false)}
               >
                 ホーム
               </Link>
-
-              {/* モバイル用サービスメニュー - アニメーション付き */}
-              <div>
-                <button
-                  onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className={`text-sm font-light tracking-wide flex items-center gap-1 w-full transition-colors duration-300 ${
-                    isScrolled
-                      ? 'text-gray-600 hover:text-[#84ab52]'
-                      : 'text-white/90 hover:text-white'
-                  }`}
-                >
+              <Link
+                href="/about"
+                className="text-sm font-light tracking-wide text-gray-800 hover:text-[#84ab52] transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                会社概要
+              </Link>
+              <div className="border-t border-gray-100 pt-4 mt-2">
+                <p className="text-xs font-semibold text-gray-400 tracking-[0.25em] uppercase mb-2">
                   サービス
-                  <svg
-                    className={`w-3 h-3 transition-transform duration-300 ease-out ${
-                      isServicesOpen ? 'rotate-180' : 'rotate-0'
-                    }`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
-                <div
-                  className={`ml-4 space-y-1 overflow-hidden transition-all duration-300 ease-out ${
-                    isServicesOpen ? 'max-h-[400px] mt-2 opacity-100' : 'max-h-0 mt-0 opacity-0'
-                  }`}
-                >
-                  {serviceItems.map((item, index) => (
+                </p>
+                <div className="space-y-2">
+                  {serviceItems.map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}
-                      className={`block py-1.5 text-sm font-light tracking-wide transition-all duration-300 ${
-                        isScrolled
-                          ? 'text-gray-500 hover:text-[#84ab52]'
-                          : 'text-white/70 hover:text-white'
-                      } ${isServicesOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-2'}`}
-                      style={{
-                        transitionDelay: isServicesOpen ? `${index * 30}ms` : '0ms',
-                      }}
+                      className="block text-sm font-light tracking-wide text-gray-800 hover:text-[#84ab52] transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}
-                      {item.subtext && (
-                        <span
-                          className={`text-xs ml-1 ${isScrolled ? 'text-gray-400' : 'text-white/50'}`}
-                        >
-                          ({item.subtext})
-                        </span>
-                      )}
                     </Link>
                   ))}
                 </div>
               </div>
-
               <Link
-                href="/pricing"
-                className={`text-sm font-light tracking-wide transition-colors duration-300 ${
-                  isScrolled
-                    ? 'text-gray-600 hover:text-[#84ab52]'
-                    : 'text-white/90 hover:text-white'
-                }`}
+                href="/about#members"
+                className="text-sm font-light tracking-wide text-gray-800 hover:text-[#84ab52] transition-colors border-t border-gray-100 pt-4 mt-2"
+                onClick={() => setIsMenuOpen(false)}
               >
-                料金プラン
-              </Link>
-              <Link
-                href="/#news"
-                className={`text-sm font-light tracking-wide transition-colors duration-300 ${
-                  isScrolled
-                    ? 'text-gray-600 hover:text-[#84ab52]'
-                    : 'text-white/90 hover:text-white'
-                }`}
-              >
-                ニュース
+                メンバー
               </Link>
               <Link
                 href="/articles"
-                className={`text-sm font-light tracking-wide transition-colors duration-300 ${
-                  isScrolled
-                    ? 'text-gray-600 hover:text-[#84ab52]'
-                    : 'text-white/90 hover:text-white'
-                }`}
+                className="text-sm font-light tracking-wide text-gray-800 hover:text-[#84ab52] transition-colors"
+                onClick={() => setIsMenuOpen(false)}
               >
                 記事コラム
               </Link>
               <Link
                 href="/careers"
-                className={`text-sm font-light tracking-wide transition-colors duration-300 ${
-                  isScrolled
-                    ? 'text-gray-600 hover:text-[#84ab52]'
-                    : 'text-white/90 hover:text-white'
-                }`}
+                className="text-sm font-light tracking-wide text-gray-800 hover:text-[#84ab52] transition-colors"
+                onClick={() => setIsMenuOpen(false)}
               >
                 採用情報
               </Link>
               <Link
                 href="/contact"
-                className={`text-sm font-light tracking-wide transition-colors duration-300 ${
-                  isScrolled
-                    ? 'text-[#84ab52] hover:text-[#6d9143]'
-                    : 'text-white hover:text-white/80'
-                }`}
+                className="inline-flex items-center justify-center mt-4 px-6 py-3 bg-[#84ab52] text-white text-sm font-light tracking-wide hover:bg-[#6d9143] transition-colors"
+                onClick={() => setIsMenuOpen(false)}
               >
                 無料相談
               </Link>

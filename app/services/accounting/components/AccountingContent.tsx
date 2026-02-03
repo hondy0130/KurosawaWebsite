@@ -241,20 +241,6 @@ export default function AccountingContent() {
                   ベトナム会計基準（VAS）と日本基準の両方に精通したスタッフが、
                   現地基準での適正な処理と日本本社への円滑なレポーティングを実現します。
                 </p>
-                <div className="grid sm:grid-cols-3 gap-6 mt-8">
-                  <div className="text-center p-6 bg-gray-50 rounded-xl">
-                    <p className="text-3xl font-light text-[#84ab52] mb-2">200+</p>
-                    <p className="text-sm text-gray-600">顧問先企業数</p>
-                  </div>
-                  <div className="text-center p-6 bg-gray-50 rounded-xl">
-                    <p className="text-3xl font-light text-[#84ab52] mb-2">15+</p>
-                    <p className="text-sm text-gray-600">年の経験</p>
-                  </div>
-                  <div className="text-center p-6 bg-gray-50 rounded-xl">
-                    <p className="text-3xl font-light text-[#84ab52] mb-2">99%</p>
-                    <p className="text-sm text-gray-600">継続率</p>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -349,7 +335,7 @@ export default function AccountingContent() {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                     <h3 className="text-lg font-medium text-gray-800">記帳代行（月額）</h3>
                     <span className="inline-flex items-center px-4 py-2 bg-[#84ab52] text-white text-sm font-medium rounded-lg">
-                      USD 300〜800/月
+                      USD 300〜/月
                     </span>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">月次の記帳業務を代行</p>
@@ -377,7 +363,7 @@ export default function AccountingContent() {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                     <h3 className="text-lg font-medium text-gray-800">決算・税務申告（年額）</h3>
                     <span className="inline-flex items-center px-4 py-2 bg-[#84ab52] text-white text-sm font-medium rounded-lg">
-                      USD 1,500〜3,000/年
+                      USD 1,000〜/年
                     </span>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">年次決算処理と税務申告を代行</p>
@@ -405,7 +391,7 @@ export default function AccountingContent() {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                     <h3 className="text-lg font-medium text-gray-800">会計顧問（月額）</h3>
                     <span className="inline-flex items-center px-4 py-2 bg-[#84ab52] text-white text-sm font-medium rounded-lg">
-                      USD 500〜1,500/月
+                      USD 200〜/月
                     </span>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">記帳代行＋月次決算＋税務相談を含む包括サービス</p>

@@ -289,20 +289,6 @@ export default function EstablishmentContent() {
                   スムーズな拠点設立を実現します。現地での豊富な実績と日本語でのきめ細かいサポートで、
                   初めてのベトナム進出でも安心してお任せいただけます。
                 </p>
-                <div className="grid sm:grid-cols-3 gap-6 mt-8">
-                  <div className="text-center p-6 bg-gray-50 rounded-xl">
-                    <p className="text-3xl font-light text-[#84ab52] mb-2">100+</p>
-                    <p className="text-sm text-gray-600">設立支援実績</p>
-                  </div>
-                  <div className="text-center p-6 bg-gray-50 rounded-xl">
-                    <p className="text-3xl font-light text-[#84ab52] mb-2">15+</p>
-                    <p className="text-sm text-gray-600">年の経験</p>
-                  </div>
-                  <div className="text-center p-6 bg-gray-50 rounded-xl">
-                    <p className="text-3xl font-light text-[#84ab52] mb-2">98%</p>
-                    <p className="text-sm text-gray-600">顧客満足度</p>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -410,7 +396,7 @@ export default function EstablishmentContent() {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                     <h3 className="text-lg font-medium text-gray-800">現地法人設立</h3>
                     <span className="inline-flex items-center px-4 py-2 bg-[#84ab52] text-white text-sm font-medium rounded-lg">
-                      USD 3,000〜5,000
+                      USD 3,000〜
                     </span>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">投資登録証明書・事業登録証明書の取得、定款作成等を含む</p>
@@ -438,7 +424,7 @@ export default function EstablishmentContent() {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                     <h3 className="text-lg font-medium text-gray-800">駐在員事務所設立</h3>
                     <span className="inline-flex items-center px-4 py-2 bg-[#84ab52] text-white text-sm font-medium rounded-lg">
-                      USD 2,000〜3,000
+                      USD 2,000〜
                     </span>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">駐在員事務所設立許可の取得手続きを含む</p>
@@ -466,7 +452,7 @@ export default function EstablishmentContent() {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                     <h3 className="text-lg font-medium text-gray-800">支店設立</h3>
                     <span className="inline-flex items-center px-4 py-2 bg-[#84ab52] text-white text-sm font-medium rounded-lg">
-                      USD 2,500〜4,000
+                      USD 2,500〜
                     </span>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">支店設立許可の取得手続きを含む</p>

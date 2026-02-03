@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function EstablishmentHero() {
   return (
@@ -47,24 +48,12 @@ export default function EstablishmentHero() {
 
           {/* イメージエリア */}
           <div className="relative h-[300px] lg:h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-[#84ab52]/20 to-[#84ab52]/5">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <svg
-                  className="w-24 h-24 text-[#84ab52]/40 mx-auto mb-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1}
-                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                  />
-                </svg>
-                <p className="text-[#84ab52]/60 text-sm">Vietnam Office Establishment</p>
-              </div>
-            </div>
+            <Image
+              src="/images/service-establishment.svg"
+              alt="ベトナム拠点設立"
+              fill
+              className="object-contain md:object-cover opacity-90"
+            />
           </div>
         </div>
       </div>

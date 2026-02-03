@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function AccountingHero() {
   return (
@@ -48,24 +49,12 @@ export default function AccountingHero() {
 
           {/* イメージエリア */}
           <div className="relative h-[300px] lg:h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-[#84ab52]/20 to-[#84ab52]/5">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <svg
-                  className="w-24 h-24 text-[#84ab52]/40 mx-auto mb-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1}
-                    d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
-                  />
-                </svg>
-                <p className="text-[#84ab52]/60 text-sm">Accounting & Tax Services</p>
-              </div>
-            </div>
+            <Image
+              src="/images/service-accounting.svg"
+              alt="会計税務コンサルティング"
+              fill
+              className="object-contain md:object-cover opacity-90"
+            />
           </div>
         </div>
       </div>

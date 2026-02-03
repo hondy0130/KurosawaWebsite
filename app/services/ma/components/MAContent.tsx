@@ -38,14 +38,14 @@ const flowSteps: FlowStep[] = [
   },
   {
     number: '02',
-    title: '初期交渉・基本合意',
+    title: '現地視察・基本合意',
     description: 'ターゲット企業との交渉開始',
     duration: '1〜2ヶ月',
     details: [
       '秘密保持契約（NDA）の締結',
-      '初期情報交換・トップ面談',
+      '現地視察・トップ面談',
       '基本条件の交渉',
-      '基本合意書（LOI/MOU）の締結',
+      'LOI提出、基本合意書（ＭＯＵ）の締結',
     ],
   },
   {
@@ -78,10 +78,10 @@ const flowSteps: FlowStep[] = [
     description: '買収後の統合支援',
     duration: '3〜12ヶ月',
     details: [
-      '統合計画の策定',
-      '組織・人事の統合',
-      'システム・業務プロセスの統合',
-      'シナジー効果の実現',
+      'システムおよび業務プロセスの統合',
+      '連結会計の実施',
+      'J-sox対応',
+      '人員および労務計画の整備',
     ],
   },
 ];
@@ -142,7 +142,12 @@ const supportItems: SupportItem[] = [
     ),
     title: 'バリュエーション',
     description: '適正な企業価値を算定します。',
-    features: ['DCF法による評価', '類似会社比較法', '純資産法', '交渉サポート'],
+    features: [
+      'DCF法による算定',
+      'EBITDAマルチプル法による算定',
+      '年買法による算定',
+      '売主との交渉サポート',
+    ],
   },
   {
     icon: (
@@ -157,7 +162,12 @@ const supportItems: SupportItem[] = [
     ),
     title: 'PMI支援',
     description: '買収後の統合を成功に導きます。',
-    features: ['統合計画策定', '組織・人事統合', 'シナジー実現支援', 'モニタリング'],
+    features: [
+      '連結会計パッケージ作成支援',
+      'IFRS導入支援',
+      'J-sox運用構築支援',
+      '労務整備',
+    ],
   },
 ];
 
@@ -273,30 +283,37 @@ export default function MAContent() {
               </h2>
               <div className="prose prose-lg max-w-none text-gray-600">
                 <p className="leading-relaxed mb-6">
-                  Kurosawa Consulting
-                  Vietnamは、日本企業のベトナムにおけるM&Aを総合的にサポートします。
-                  ターゲット企業の探索から、デューデリジェンス、バリュエーション、契約交渉、
-                  そしてPMI（買収後統合）まで、一気通貫でサービスを提供します。
+                  Kurosawa Consuluting Vietnamは日本とベトナムを繋ぐクロスボーダーM&Aの精鋭集団です。
                 </p>
-                <p className="leading-relaxed mb-6">
-                  日本本社とベトナム現地の双方に通じたバイリンガルチームが、
-                  クロスボーダーM&Aの複雑なプロセスをスムーズに進行し、
-                  M&Aの成功と価値創造を実現します。
+                <ul className="space-y-3 mb-6 list-none pl-0">
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#84ab52] font-medium flex-shrink-0">①</span>
+                    <span className="leading-relaxed">
+                      Big4会計事務所の日本拠点およびホーチミン拠点で会計税務デューデリジェンスおよびPMI業務に関する専門的な会計知識を有する日本人会計士
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#84ab52] font-medium flex-shrink-0">②</span>
+                    <span className="leading-relaxed">
+                      日系企業からの出資ニーズを持つ企業と幅広い繋がりを持つベトナム人弁護士
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#84ab52] font-medium flex-shrink-0">③</span>
+                    <span className="leading-relaxed">
+                      上場M&A仲介企業で複数のM&A成約経験を有するコンサルタント
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#84ab52] font-medium flex-shrink-0">④</span>
+                    <span className="leading-relaxed">
+                      ベトナム語⇔日本語のビジネス通訳業務において5年以上の経験を有するマネージャー
+                    </span>
+                  </li>
+                </ul>
+                <p className="leading-relaxed">
+                  チーム総動員で貴社のべトナムにおけるM&Aをご支援させていただきます。
                 </p>
-                <div className="grid sm:grid-cols-3 gap-6 mt-8">
-                  <div className="text-center p-6 bg-gray-50 rounded-xl">
-                    <p className="text-3xl font-light text-[#84ab52] mb-2">50+</p>
-                    <p className="text-sm text-gray-600">M&A支援実績</p>
-                  </div>
-                  <div className="text-center p-6 bg-gray-50 rounded-xl">
-                    <p className="text-3xl font-light text-[#84ab52] mb-2">10+</p>
-                    <p className="text-sm text-gray-600">年の経験</p>
-                  </div>
-                  <div className="text-center p-6 bg-gray-50 rounded-xl">
-                    <p className="text-3xl font-light text-[#84ab52] mb-2">95%</p>
-                    <p className="text-sm text-gray-600">成約率</p>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -399,7 +416,7 @@ export default function MAContent() {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                     <h3 className="text-lg font-medium text-gray-800">ターゲット探索・初期検討</h3>
                     <span className="inline-flex items-center px-4 py-2 bg-[#84ab52] text-white text-sm font-medium rounded-lg">
-                      USD 5,000〜15,000
+                      無料
                     </span>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">ターゲット企業の探索・選定、初期分析を含む</p>
@@ -427,7 +444,7 @@ export default function MAContent() {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                     <h3 className="text-lg font-medium text-gray-800">デューデリジェンス</h3>
                     <span className="inline-flex items-center px-4 py-2 bg-[#84ab52] text-white text-sm font-medium rounded-lg">
-                      USD 10,000〜30,000
+                      USD 4,000〜
                     </span>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">財務・法務・税務・事業デューデリジェンスを含む</p>

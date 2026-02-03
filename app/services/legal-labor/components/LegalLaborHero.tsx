@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function LegalLaborHero() {
   return (
@@ -43,24 +44,12 @@ export default function LegalLaborHero() {
           </div>
 
           <div className="relative h-[300px] lg:h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-[#84ab52]/20 to-[#84ab52]/5">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <svg
-                  className="w-24 h-24 text-[#84ab52]/40 mx-auto mb-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1}
-                    d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"
-                  />
-                </svg>
-                <p className="text-[#84ab52]/60 text-sm">Legal & Labor Services</p>
-              </div>
-            </div>
+            <Image
+              src="/images/service-legal-labor.svg"
+              alt="法務及び労務相談"
+              fill
+              className="object-contain md:object-cover opacity-90"
+            />
           </div>
         </div>
       </div>

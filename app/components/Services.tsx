@@ -165,24 +165,10 @@ export default function Services() {
     scrollToDesktopIndex(newIndex);
   }, [desktopIndex, scrollToDesktopIndex, services.length]);
 
-  // サービスナビゲーションクリック
-  const handleServiceClick = (index: number) => {
-    // 画面幅でモバイル/デスクトップを判定
-    const isMobile = window.innerWidth < 768; // md breakpoint
-
-    if (isMobile) {
-      // モバイル: カルーセルを該当スライドにスクロール
-      scrollToIndex(index);
-    } else {
-      // デスクトップ: カルーセルを該当スライドにスクロール
-      scrollToDesktopIndex(index);
-    }
-  };
-
   return (
-    <section id="services" className="py-16 sm:py-20 md:py-24 lg:py-32 bg-white">
+    <section id="services" className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-b from-white via-[#f3f8f1] to-white">
       {/* セクションヘッダー - 上品で控えめ */}
-      <div className="text-center mb-8 sm:mb-10 md:mb-12 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="text-center mb-10 sm:mb-12 md:mb-14 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <p className="text-xs sm:text-sm md:text-base text-[#84ab52] tracking-[0.25em] sm:tracking-[0.3em] uppercase font-light mb-2 sm:mb-3">
           Services
         </p>
@@ -191,21 +177,72 @@ export default function Services() {
         </h2>
 
         {/* サービス一覧ナビゲーション */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 max-w-3xl mx-auto">
-          {services.map((service, index) => (
-            <button
-              key={index}
-              onClick={() => handleServiceClick(index)}
-              className="group flex flex-col items-center p-4 sm:p-5 rounded-lg border border-gray-100 hover:border-[#84ab52]/30 hover:bg-[#84ab52]/5 transition-all duration-300"
-            >
-              <span className="text-xs sm:text-sm text-[#84ab52] tracking-widest font-medium mb-2">
-                {String(index + 1).padStart(2, '0')}
-              </span>
-              <span className="text-sm sm:text-base text-gray-700 group-hover:text-[#84ab52] transition-colors text-center font-normal leading-snug">
-                {service.title}
-              </span>
-            </button>
-          ))}
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
+          {services.map((service, index) => {
+            // 各サービスに適したアイコンを定義
+            const getServiceIcon = () => {
+              switch (index) {
+                case 0: // ベトナム拠点設立
+                  return (
+                    <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  );
+                case 1: // M&Aアドバイザリー
+                  return (
+                    <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  );
+                case 2: // 会計税務コンサルティング
+                  return (
+                    <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  );
+                case 3: // 法務及び労務相談
+                  return (
+                    <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                  );
+                case 4: // 各種ライセンス申請
+                  return (
+                    <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                    </svg>
+                  );
+                case 5: // その他業務
+                  return (
+                    <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  );
+                default:
+                  return null;
+              }
+            };
+
+            return (
+              <a
+                key={index}
+                href={service.href}
+                className="group flex flex-col items-center p-7 sm:p-9 md:p-10 rounded-2xl bg-white border border-[#deead5] shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 min-h-[160px] sm:min-h-[190px] md:min-h-[210px]"
+              >
+                {/* アイコン */}
+                <div className="w-18 h-18 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-[#84ab52] to-[#6d9143] flex items-center justify-center text-white mb-4 sm:mb-5 group-hover:scale-110 transition-transform duration-300">
+                  {getServiceIcon()}
+                </div>
+                <span className="text-xs sm:text-sm md:text-base text-[#84ab52] tracking-[0.3em] font-medium mb-1 sm:mb-2 uppercase">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <span className="text-sm sm:text-base md:text-lg text-gray-800 group-hover:text-[#84ab52] transition-colors text-center font-medium leading-snug">
+                  {service.title}
+                </span>
+              </a>
+            );
+          })}
         </div>
       </div>
 

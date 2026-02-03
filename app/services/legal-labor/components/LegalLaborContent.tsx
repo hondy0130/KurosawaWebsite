@@ -217,20 +217,6 @@ export default function LegalLaborContent() {
                 <p className="leading-relaxed mb-6">
                   ベトナムの法規制に精通した専門家が、リスクを最小化し、円滑な事業運営を支援します。
                 </p>
-                <div className="grid sm:grid-cols-3 gap-6 mt-8">
-                  <div className="text-center p-6 bg-gray-50 rounded-xl">
-                    <p className="text-3xl font-light text-[#84ab52] mb-2">500+</p>
-                    <p className="text-sm text-gray-600">契約書レビュー実績</p>
-                  </div>
-                  <div className="text-center p-6 bg-gray-50 rounded-xl">
-                    <p className="text-3xl font-light text-[#84ab52] mb-2">100+</p>
-                    <p className="text-sm text-gray-600">就業規則作成実績</p>
-                  </div>
-                  <div className="text-center p-6 bg-gray-50 rounded-xl">
-                    <p className="text-3xl font-light text-[#84ab52] mb-2">24h</p>
-                    <p className="text-sm text-gray-600">緊急対応</p>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -324,7 +310,7 @@ export default function LegalLaborContent() {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                     <h3 className="text-lg font-medium text-gray-800">契約書作成・レビュー</h3>
                     <span className="inline-flex items-center px-4 py-2 bg-[#84ab52] text-white text-sm font-medium rounded-lg">
-                      USD 300〜1,000/件
+                      USD 300〜/件
                     </span>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">各種契約書の作成・レビューを行います</p>
@@ -352,7 +338,7 @@ export default function LegalLaborContent() {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                     <h3 className="text-lg font-medium text-gray-800">就業規則作成・改訂</h3>
                     <span className="inline-flex items-center px-4 py-2 bg-[#84ab52] text-white text-sm font-medium rounded-lg">
-                      USD 1,500〜3,000
+                      USD 1,000〜
                     </span>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">就業規則・社内規程の作成・改訂</p>
@@ -380,7 +366,7 @@ export default function LegalLaborContent() {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                     <h3 className="text-lg font-medium text-gray-800">法務・労務顧問（月額）</h3>
                     <span className="inline-flex items-center px-4 py-2 bg-[#84ab52] text-white text-sm font-medium rounded-lg">
-                      USD 500〜1,500/月
+                      USD 200〜/月
                     </span>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">継続的な法務・労務相談サービス</p>

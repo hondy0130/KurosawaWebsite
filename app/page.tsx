@@ -1,7 +1,6 @@
 import Hero from './components/Hero';
 import Achievement from './components/Achievement';
 import Services from './components/Services';
-import CompanyOverview from './components/CompanyOverview';
 import Articles from './components/Articles';
 import Contact from './components/Contact';
 import FAQ from './components/FAQ';
@@ -15,9 +14,8 @@ export default function Home() {
     <div className="min-h-screen">
       <main>
         <Hero />
-        <Achievement />
         <Services />
-        <CompanyOverview />
+        <Achievement />
         <Articles />
         <Contact />
         <FAQ />

@@ -217,20 +217,6 @@ export default function LicenseContent() {
                 <p className="leading-relaxed mb-6">
                   ベトナムの許認可制度に精通した専門家が、複雑な申請手続きを代行し、スムーズな事業開始を実現します。
                 </p>
-                <div className="grid sm:grid-cols-3 gap-6 mt-8">
-                  <div className="text-center p-6 bg-gray-50 rounded-xl">
-                    <p className="text-3xl font-light text-[#84ab52] mb-2">300+</p>
-                    <p className="text-sm text-gray-600">ライセンス取得実績</p>
-                  </div>
-                  <div className="text-center p-6 bg-gray-50 rounded-xl">
-                    <p className="text-3xl font-light text-[#84ab52] mb-2">98%</p>
-                    <p className="text-sm text-gray-600">取得成功率</p>
-                  </div>
-                  <div className="text-center p-6 bg-gray-50 rounded-xl">
-                    <p className="text-3xl font-light text-[#84ab52] mb-2">50+</p>
-                    <p className="text-sm text-gray-600">対応業種</p>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -324,7 +310,7 @@ export default function LicenseContent() {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                     <h3 className="text-lg font-medium text-gray-800">投資登録証明書（IRC）変更</h3>
                     <span className="inline-flex items-center px-4 py-2 bg-[#84ab52] text-white text-sm font-medium rounded-lg">
-                      USD 500〜1,500
+                      USD 800〜
                     </span>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">IRCの各種変更手続き</p>
@@ -352,7 +338,7 @@ export default function LicenseContent() {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                     <h3 className="text-lg font-medium text-gray-800">労働許可証（ワークパーミット）</h3>
                     <span className="inline-flex items-center px-4 py-2 bg-[#84ab52] text-white text-sm font-medium rounded-lg">
-                      USD 400〜800/人
+                      USD 1,000〜/人
                     </span>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">外国人従業員の労働許可証取得</p>
@@ -380,7 +366,7 @@ export default function LicenseContent() {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                     <h3 className="text-lg font-medium text-gray-800">業種別ライセンス</h3>
                     <span className="inline-flex items-center px-4 py-2 bg-[#84ab52] text-white text-sm font-medium rounded-lg">
-                      USD 1,000〜5,000
+                      応相談（種類により大きく異なります）
                     </span>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">業種に応じた各種許認可の取得</p>

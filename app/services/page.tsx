@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Contact from '@/app/components/Contact';
 
 export const metadata = {
@@ -109,25 +110,36 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen">
       <main>
-        {/* ヒーローセクション */}
-        <section className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
-          {/* 背景装飾 */}
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full blur-3xl bg-[#84ab52]/10"></div>
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full blur-3xl bg-[#84ab52]/5"></div>
+        {/* ヒーローセクション：Entrance画像＋Our companyと同テイスト */}
+        <section className="relative pt-32 pb-16 sm:pt-40 sm:pb-24 bg-white overflow-hidden">
+          <div className="relative max-w-7xl mx-auto rounded-3xl overflow-hidden shadow-xl">
+            <div className="relative h-[260px] sm:h-[320px] md:h-[380px] lg:h-[420px]">
+              <Image
+                src="/images/Entrance.jpg"
+                alt="Entrance of Kurosawa Consulting Vietnam office"
+                fill
+                priority
+                className="object-cover"
+              />
+              {/* グラデーションオーバーレイ */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/20" />
 
-          <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-            <div className="text-center">
-              <p className="text-xs sm:text-sm text-[#84ab52] tracking-[0.3em] uppercase font-light mb-4">
-                Services
-              </p>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light text-gray-800 tracking-wide mb-6">
-                サービス一覧
-              </h1>
-              <p className="text-base sm:text-lg text-gray-600 font-light max-w-2xl mx-auto leading-relaxed">
-                ベトナムでのビジネス展開に必要なあらゆるサポートを
-                <br className="hidden sm:block" />
-                ワンストップでご提供いたします
-              </p>
+              {/* フローティングカード（左上・少し小さめ） */}
+              <div className="absolute inset-0 flex items-start justify-start px-4 sm:px-8 pt-8 sm:pt-10 md:pt-16">
+                <div className="w-[82%] sm:w-[60%] md:w-[50%] lg:w-[45%] bg-white/14 border border-white/25 rounded-3xl backdrop-blur-md px-6 py-6 sm:px-8 sm:py-7 md:px-9 md:py-8 text-left shadow-[0_20px_45px_rgba(0,0,0,0.35)]">
+                  <p className="text-xs sm:text-sm text-[#d7e8c2] tracking-[0.3em] uppercase font-light mb-2 sm:mb-3">
+                    Services
+                  </p>
+                  <h1 className="text-2xl sm:text-3xl lg:text-4xl font-light text-white tracking-wide mb-3 sm:mb-4">
+                    サービス一覧
+                  </h1>
+                  <p className="text-xs sm:text-sm sm:text-base text-white/90 font-light max-w-xl leading-relaxed">
+                    ベトナムでのビジネス展開に必要なあらゆるサポートを
+                    <br className="hidden sm:block" />
+                    ワンストップでご提供いたします
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

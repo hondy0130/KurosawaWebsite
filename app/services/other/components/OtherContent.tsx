@@ -215,20 +215,6 @@ export default function OtherContent() {
                   「こんなことは頼めるだろうか」と思われることでも、まずはお気軽にご相談ください。
                   ベトナムでのビジネスを総合的にサポートするパートナーとして、可能な限りお応えします。
                 </p>
-                <div className="grid sm:grid-cols-3 gap-6 mt-8">
-                  <div className="text-center p-6 bg-gray-50 rounded-xl">
-                    <p className="text-3xl font-light text-[#84ab52] mb-2">1000+</p>
-                    <p className="text-sm text-gray-600">翻訳実績</p>
-                  </div>
-                  <div className="text-center p-6 bg-gray-50 rounded-xl">
-                    <p className="text-3xl font-light text-[#84ab52] mb-2">50+</p>
-                    <p className="text-sm text-gray-600">不動産紹介実績</p>
-                  </div>
-                  <div className="text-center p-6 bg-gray-50 rounded-xl">
-                    <p className="text-3xl font-light text-[#84ab52] mb-2">24h</p>
-                    <p className="text-sm text-gray-600">緊急対応可能</p>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -272,7 +258,7 @@ export default function OtherContent() {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                     <h3 className="text-lg font-medium text-gray-800">翻訳サービス</h3>
                     <span className="inline-flex items-center px-4 py-2 bg-[#84ab52] text-white text-sm font-medium rounded-lg">
-                      USD 15〜25/ページ
+                      USD 15〜/ページ
                     </span>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">各種ビジネス文書の翻訳</p>
@@ -300,7 +286,7 @@ export default function OtherContent() {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                     <h3 className="text-lg font-medium text-gray-800">通訳サービス</h3>
                     <span className="inline-flex items-center px-4 py-2 bg-[#84ab52] text-white text-sm font-medium rounded-lg">
-                      USD 150〜300/半日
+                      USD 150〜/半日
                     </span>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">会議・商談の通訳サービス</p>
@@ -328,7 +314,7 @@ export default function OtherContent() {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                     <h3 className="text-lg font-medium text-gray-800">市場調査・信用調査</h3>
                     <span className="inline-flex items-center px-4 py-2 bg-[#84ab52] text-white text-sm font-medium rounded-lg">
-                      USD 500〜3,000
+                      USD 500〜
                     </span>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">ベトナム市場・企業の調査サービス</p>

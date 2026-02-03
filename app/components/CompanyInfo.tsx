@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function CompanyInfo() {
   const history = [
     '1969年: 創業者(現・会長) 黒澤功記が司法書士登録',
@@ -10,18 +12,36 @@ export default function CompanyInfo() {
   ];
 
   return (
-    <section id="company-info" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id="company-info"
+      className="py-20 bg-gradient-to-b from-white via-[#f3f8f1] to-white"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* サイドのビルディング画像（デスクトップのみ表示） */}
+        <div className="pointer-events-none hidden lg:block absolute top-16 right-10">
+          <div className="w-64 xl:w-72 h-80 rounded-3xl overflow-hidden shadow-[0_24px_48px_rgba(0,0,0,0.22)] border border-white/70 flex items-center justify-center">
+            <Image
+              src="/images/Building.jpg"
+              alt="Office building in Ho Chi Minh City"
+              width={360}
+              height={260}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
         {/* セクションヘッダー */}
-        <div className="text-center mb-14">
-          <p className="text-sm text-[#84ab52] tracking-[0.3em] uppercase font-light mb-2">
-            Company Information
+        <div className="text-center mb-12 sm:mb-14">
+          <p className="text-xs sm:text-sm md:text-base text-[#84ab52] tracking-[0.25em] sm:tracking-[0.3em] uppercase font-light mb-2 sm:mb-3">
+            Company Overview
           </p>
-          <h2 className="text-xl md:text-2xl font-light text-gray-600 tracking-wide">企業情報</h2>
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-light text-gray-700 tracking-wide">
+            会社概要
+          </h2>
         </div>
 
         {/* 基本情報 */}
-        <div className="divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden bg-white">
+        <div className="divide-y divide-gray-100 rounded-3xl overflow-hidden bg-white/95 border border-[#dde7d7] shadow-lg">
           <div className="p-6 md:p-8 grid md:grid-cols-12 gap-4 md:gap-8">
             <div className="md:col-span-3 text-xs tracking-[0.2em] text-gray-500 uppercase">
               日本親会社

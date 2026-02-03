@@ -28,19 +28,16 @@ export default function Hero() {
 
             {/* メインコピー */}
             <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-light text-white leading-relaxed tracking-wide px-4 animate-fade-in-delay-1 whitespace-nowrap">
-              Creating the future through trust and{' '}
-              <span className="font-normal bg-gradient-to-r from-white to-white/90 bg-clip-text">
-                proven results
-              </span>
+              -YOUR BRIDGE BETWEEN JAPAN AND VIETNAM-
             </h1>
 
             {/* サブコピー */}
             <div className="max-w-3xl mx-auto animate-fade-in-delay-2">
               <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white/85 font-light tracking-wide leading-relaxed px-4">
-                ベトナム進出から現地法人設立、市場調査、人材採用まで
+                ベトナム進出設立・雇用代行から、進出後の運営にかかわるご不安の解消まで
               </p>
               <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white/85 font-light tracking-wide leading-relaxed mt-1.5 sm:mt-2 px-4">
-                日本企業のベトナムビジネスを包括的に支援します
+                経理・税務・リーガル・労務を問わず、貴社のベトナムビジネスを包括的に支援
               </p>
             </div>
 
