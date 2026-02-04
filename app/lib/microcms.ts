@@ -84,9 +84,10 @@ export async function fetchMicroCmsBlogs(params?: {
       'X-MICROCMS-API-KEY': getApiKey(),
     },
     // タグベースキャッシュ + Webhook で即時更新
-    cache: 'no-store',
+    // ISR: 30秒ごとに再検証（ページレベルのrevalidateと合わせる）
     next: {
       tags: ['blogs'],
+      revalidate: 30,
     },
   });
 
@@ -136,9 +137,10 @@ export async function fetchMicroCmsNews(params?: {
 
   const res = await fetch(`${MICROCMS_API_BASE}/news?${search.toString()}`, {
     headers: { 'X-MICROCMS-API-KEY': getApiKey() },
-    cache: 'no-store',
+    // ISR: 30秒ごとに再検証（ページレベルのrevalidateと合わせる）
     next: {
       tags: ['news'],
+      revalidate: 30,
     },
   });
   if (!res.ok) {
