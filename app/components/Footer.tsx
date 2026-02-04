@@ -148,8 +148,7 @@ export default function Footer() {
               <li className="text-gray-400">
                 <div className="font-light text-white mb-2 tracking-wide">Ho Chi Minh Office</div>
                 <div className="font-light">
-                  Floor 1B, 116-118, Nguyen Thi Minh Khai Street, Vo Thi Sau Ward, District 3, Ho
-                  Chi Minh City
+                  4th Floor, Phuong Long Building, 506 Nguyen Dinh Chieu Street, Ban Co Ward, Ho Chi Minh City, Vietnam
                 </div>
                 <a
                   href="tel:+842835200043"

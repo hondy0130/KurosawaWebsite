@@ -34,7 +34,7 @@ export default function Hero() {
             {/* サブコピー */}
             <div className="max-w-3xl mx-auto animate-fade-in-delay-2">
               <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white/85 font-light tracking-wide leading-relaxed px-4">
-                ベトナム進出設立・雇用代行から、進出後の運営にかかわるご不安の解消まで
+                ベトナム進出設立・M＆A・雇用代行から、進出後の運営にかかわるご不安の解消まで
               </p>
               <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white/85 font-light tracking-wide leading-relaxed mt-1.5 sm:mt-2 px-4">
                 経理・税務・リーガル・労務を問わず、貴社のベトナムビジネスを包括的に支援

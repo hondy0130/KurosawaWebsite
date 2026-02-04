@@ -99,8 +99,7 @@ export default function Contact() {
                 Ho Chi Minh Office
               </h3>
               <p className="text-xs sm:text-sm text-[#5A5A5A] leading-relaxed">
-                Floor 1B, 116-118, Nguyen Thi Minh Khai Street, Vo Thi Sau Ward, District 3, Ho Chi
-                Minh City
+                4th Floor, Phuong Long Building, 506 Nguyen Dinh Chieu Street, Ban Co Ward, Ho Chi Minh City, Vietnam
               </p>
               <a
                 href="tel:+842835200043"
