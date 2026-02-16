@@ -56,12 +56,25 @@ RESEND_FROM_EMAIL=onboarding@resend.dev
    - 作成されたAPIキーをコピー（`re_`で始まる文字列）
    - `.env.local`の`RESEND_API_KEY`に設定
 
-3. **送信元メールアドレスの設定（本番環境）**
-   - 本番環境では、Resendでドメインを認証する必要があります
+3. **送信元メールアドレスの設定**
+   
+   **重要**: Resendでは、送信元（`from`）のドメインが認証されている必要があります。
+   
+   **オプション1: デフォルトの送信元を使用（推奨・簡単）**
+   - `RESEND_FROM_EMAIL` 環境変数を**設定しない**（削除する）
+   - コードが自動的に `onboarding@resend.dev` を使用します
+   - これはResendが提供する認証済みドメインなので、追加設定不要です
+   
+   **オプション2: 独自ドメインを使用する場合**
    - Resendダッシュボードの「Domains」セクションでドメインを追加
    - DNSレコードを設定してドメインを認証
    - 認証後、`RESEND_FROM_EMAIL`に認証済みドメインのメールアドレスを設定
    - 例: `noreply@yourdomain.com` または `info@yourdomain.com`
+   
+   **注意**: 
+   - 「all domains」設定はAPIキーの権限設定であり、ドメイン認証とは別です
+   - 送信先（`to`）のドメインは認証不要です
+   - 送信元（`from`）のドメインのみ認証が必要です
 
 ## Quality tools
 

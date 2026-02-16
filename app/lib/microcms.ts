@@ -3,6 +3,10 @@
 // microCMS からブログ記事（blogs）とニュース（news）を取得するクライアント
 // 依存を増やさないため fetch で実装（microcms-js-sdk 不使用）
 
+import { getMicroCmsApiKey, getMicroCmsServiceDomain } from './env';
+
+// ─── 型定義 ───
+
 type MicroCmsListResponse<T> = {
   contents: T[];
   totalCount: number;
@@ -46,17 +50,13 @@ export type MicroCmsNews = {
   category?: string | null;
 };
 
-const MICROCMS_SERVICE_DOMAIN = process.env.MICROCMS_SERVICE_DOMAIN || 'kurosawa0130';
-const MICROCMS_API_BASE = `https://${MICROCMS_SERVICE_DOMAIN}.microcms.io/api/v1` as const;
+// ─── API ベース URL ───
 
-// セキュリティ上、環境変数から取得
-function getApiKey(): string {
-  const key = process.env.MICROCMS_API_KEY;
-  if (!key) {
-    throw new Error('MICROCMS_API_KEY が未設定です');
-  }
-  return key;
+function getMicroCmsApiBase(): string {
+  return `https://${getMicroCmsServiceDomain()}.microcms.io/api/v1`;
 }
+
+// ─── ブログ ───
 
 export async function fetchMicroCmsBlogs(params?: {
   limit?: number;
@@ -76,12 +76,12 @@ export async function fetchMicroCmsBlogs(params?: {
     search.set('filters', `category[equals]${categoryId}`);
   }
 
-  const url = `${MICROCMS_API_BASE}/blogs?${search.toString()}`;
+  const url = `${getMicroCmsApiBase()}/blogs?${search.toString()}`;
   console.log('🔍 microCMS API リクエスト:', url);
 
   const res = await fetch(url, {
     headers: {
-      'X-MICROCMS-API-KEY': getApiKey(),
+      'X-MICROCMS-API-KEY': getMicroCmsApiKey(),
     },
     // タグベースキャッシュ + Webhook で即時更新
     // ISR: 30秒ごとに再検証（ページレベルのrevalidateと合わせる）
@@ -107,9 +107,9 @@ export async function fetchMicroCmsBlogs(params?: {
 }
 
 export async function fetchMicroCmsBlogById(contentId: string): Promise<MicroCmsBlog | null> {
-  const res = await fetch(`${MICROCMS_API_BASE}/blogs/${encodeURIComponent(contentId)}`, {
+  const res = await fetch(`${getMicroCmsApiBase()}/blogs/${encodeURIComponent(contentId)}`, {
     headers: {
-      'X-MICROCMS-API-KEY': getApiKey(),
+      'X-MICROCMS-API-KEY': getMicroCmsApiKey(),
     },
     // タグベースキャッシュ + Webhook で即時更新
     next: {
@@ -123,7 +123,8 @@ export async function fetchMicroCmsBlogById(contentId: string): Promise<MicroCms
   return (await res.json()) as MicroCmsBlog;
 }
 
-// ニュース一覧取得（最新順）
+// ─── ニュース ───
+
 export async function fetchMicroCmsNews(params?: {
   limit?: number;
   offset?: number;
@@ -135,8 +136,8 @@ export async function fetchMicroCmsNews(params?: {
     orders: '-publishedAt',
   });
 
-  const res = await fetch(`${MICROCMS_API_BASE}/news?${search.toString()}`, {
-    headers: { 'X-MICROCMS-API-KEY': getApiKey() },
+  const res = await fetch(`${getMicroCmsApiBase()}/news?${search.toString()}`, {
+    headers: { 'X-MICROCMS-API-KEY': getMicroCmsApiKey() },
     // ISR: 30秒ごとに再検証（ページレベルのrevalidateと合わせる）
     next: {
       tags: ['news'],

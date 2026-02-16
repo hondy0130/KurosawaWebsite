@@ -2,21 +2,63 @@
 
 ## 送信に失敗する場合の確認事項
 
-### 1. Vercelのログを確認する
+### 1. VercelのRuntime Logsを確認する
 
-Vercelダッシュボードでエラーの詳細を確認：
+Vercelダッシュボードでエラーの詳細を確認する方法：
 
-1. Vercelダッシュボードにログイン
-2. プロジェクトを選択
-3. 「Deployments」タブを開く
-4. 最新のデプロイメントを選択
-5. 「Functions」タブをクリック
-6. `/api/contact` のログを確認
+#### 方法1: Runtime Logsタブから確認（推奨）
+
+1. **Vercelダッシュボードにログイン**
+   - https://vercel.com にアクセスしてログイン
+
+2. **プロジェクトを選択**
+   - ダッシュボードから `kurosawa-website` プロジェクトを選択
+
+3. **デプロイメントを選択**
+   - 上部の「Deployments」タブをクリック
+   - 最新のデプロイメント（「Latest」と表示されているもの）をクリック
+
+4. **Runtime Logsを開く**
+   - デプロイメント詳細ページで「Runtime Logs」タブをクリック
+   - または、ページ下部の「View and debug runtime logs & errors」セクションから「Runtime Logs」をクリック
+
+5. **問い合わせフォームから送信**
+   - 別のタブでサイトを開き、問い合わせフォームから送信を試す
+   - Runtime Logsタブに戻ると、リアルタイムでログが表示されます
+
+#### 方法2: Functionsタブから確認
+
+1. **デプロイメント詳細ページを開く**（上記の手順1-3と同じ）
+
+2. **Functionsタブをクリック**
+   - デプロイメント詳細ページで「Functions」タブを選択
+
+3. **APIルートを選択**
+   - `/api/contact` をクリック
+   - その関数のログが表示されます
+
+#### 方法3: プロジェクト全体のログを確認
+
+1. **プロジェクトページを開く**
+   - プロジェクトのメインページに戻る
+
+2. **「Logs」タブをクリック**
+   - 左サイドバーまたは上部タブから「Logs」を選択
+   - プロジェクト全体のログが時系列で表示されます
 
 **ログで確認すべきポイント：**
+- `Environment check:` - 環境変数の設定状況が表示されます
+  - `hasApiKey: true/false`
+  - `recipientEmailEnv: ***set***` または `NOT SET`
+  - `fromEmailEnv: ...` または `using default`
 - `❌` マークが付いているエラーメッセージ
-- `Environment check:` の出力内容
-- `Resend error:` の詳細情報
+- `Resend error:` - Resend APIからのエラー詳細
+- `Sending email:` - メール送信時の詳細情報
+
+**ログの見方：**
+- 緑色のログ: 正常な動作
+- 黄色/オレンジ色のログ: 警告
+- 赤色のログ: エラー（`❌` マークが付いている）
 
 ### 2. 環境変数の確認
 
@@ -61,13 +103,32 @@ Vercelダッシュボードで以下を確認：
 
 **原因：**
 - `RESEND_FROM_EMAIL` に認証されていないドメインのメールアドレスを設定している
-- テスト環境で `onboarding@resend.dev` 以外のアドレスを使用している
+- Resendの「all domains」設定はAPIキーの権限設定であり、ドメイン認証とは別の概念です
 
-**解決方法：**
-1. Resendダッシュボードの「Domains」セクションでドメインを認証
-2. DNSレコードを正しく設定
-3. 認証が完了するまで `onboarding@resend.dev` を使用
-4. 認証後、`RESEND_FROM_EMAIL` を更新
+**解決方法（推奨）：**
+
+**方法1: デフォルトの送信元を使用（最も簡単）**
+1. Vercelの環境変数設定で `RESEND_FROM_EMAIL` を**削除**する
+2. コードが自動的に `onboarding@resend.dev` を使用します（これはResendが提供する認証済みドメイン）
+3. 再デプロイ
+
+**方法2: 独自ドメインを認証する**
+1. Resendダッシュボード（https://resend.com/domains）にアクセス
+2. 「Add Domain」をクリック
+3. ドメインを入力（例: `yourdomain.com`）
+4. 表示されたDNSレコードをDNS設定に追加：
+   - SPFレコード
+   - DKIMレコード
+   - DMARCレコード（オプション）
+5. DNS設定が反映されるまで数分〜数時間待つ
+6. Resendダッシュボードで「Verify」をクリックして認証を確認
+7. 認証後、`RESEND_FROM_EMAIL` に認証済みドメインのメールアドレスを設定（例: `noreply@yourdomain.com`）
+8. 再デプロイ
+
+**注意事項：**
+- 送信先（`to`）のドメインは認証不要です
+- 送信元（`from`）のドメインのみ認証が必要です
+- 「all domains」設定はAPIキーの権限設定であり、ドメイン認証とは別です
 
 #### ❌ "送信先メールアドレスの形式が正しくありません"
 

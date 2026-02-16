@@ -1,16 +1,16 @@
 'use client';
 
 import { useState, useMemo } from 'react';
+import {
+  type ContactFormData,
+  INITIAL_FORM_DATA,
+  STATUS_MESSAGE_TIMEOUT_MS,
+  CONTACT_MESSAGES,
+  isContactFormFilled,
+} from '../lib/contact';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    company: '',
-    email: '',
-    phone: '',
-    service: '',
-    message: '',
-  });
+  const [formData, setFormData] = useState<ContactFormData>({ ...INITIAL_FORM_DATA });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
@@ -19,14 +19,7 @@ export default function Contact() {
   }>({ type: null, message: '' });
 
   // 必須項目がすべて入力されているかチェック
-  const isFormValid = useMemo(() => {
-    return (
-      formData.name.trim() !== '' &&
-      formData.company.trim() !== '' &&
-      formData.email.trim() !== '' &&
-      formData.message.trim() !== ''
-    );
-  }, [formData]);
+  const isFormValid = useMemo(() => isContactFormFilled(formData), [formData]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -49,34 +42,27 @@ export default function Contact() {
       if (response.ok && data.success) {
         setSubmitStatus({
           type: 'success',
-          message: 'お問い合わせを受け付けました。担当者より折り返しご連絡いたします。',
+          message: CONTACT_MESSAGES.SUCCESS,
         });
 
         // フォームをリセット
-        setFormData({
-          name: '',
-          company: '',
-          email: '',
-          phone: '',
-          service: '',
-          message: '',
-        });
+        setFormData({ ...INITIAL_FORM_DATA });
 
-        // 5秒後にステータスメッセージをクリア
+        // ステータスメッセージをクリア
         setTimeout(() => {
           setSubmitStatus({ type: null, message: '' });
-        }, 5000);
+        }, STATUS_MESSAGE_TIMEOUT_MS);
       } else {
         setSubmitStatus({
           type: 'error',
-          message: data.message || '送信に失敗しました。もう一度お試しください。',
+          message: data.message || CONTACT_MESSAGES.GENERIC_ERROR,
         });
       }
     } catch (error) {
       console.error('Contact form error:', error);
       setSubmitStatus({
         type: 'error',
-        message: 'ネットワークエラーが発生しました。しばらくしてからもう一度お試しください。',
+        message: CONTACT_MESSAGES.NETWORK_ERROR,
       });
     } finally {
       setIsSubmitting(false);
@@ -87,7 +73,7 @@ export default function Contact() {
     e.preventDefault();
     if (!isFormValid) return;
 
-    // TODO: AWS SES経由でinfoにダウンロード通知を送信
+    // TODO: Resend経由でダウンロード通知を送信（送信ボタンと同じ /api/contact を利用可能）
     console.log('Download requested:', formData);
 
     // ダミーPDFダウンロード（将来的に実際のPDFに置き換え）
