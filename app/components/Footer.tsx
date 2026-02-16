@@ -125,15 +125,15 @@ export default function Footer() {
                   href="/careers"
                   className="text-gray-400 hover:text-white transition-colors font-light tracking-wide"
                 >
-                  採用情報
+                  採用
                 </a>
               </li>
               <li>
                 <a
-                  href="#articles"
+                  href="/articles"
                   className="text-gray-400 hover:text-white transition-colors font-light tracking-wide"
                 >
-                  記事・コラム
+                  記事コラム
                 </a>
               </li>
             </ul>
@@ -214,7 +214,7 @@ export default function Footer() {
         <div className="border-t border-gray-700 pt-10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-xs text-gray-500 font-light tracking-wide">
-              © 2025 Kurosawa Consulting Vietnam. All rights reserved.
+              © {new Date().getFullYear()} Kurosawa Consulting Vietnam. All rights reserved.
             </div>
             <div className="flex gap-8 text-xs">
               <a

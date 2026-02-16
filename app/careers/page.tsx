@@ -1,3 +1,20 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: '採用',
+  description:
+    'Kurosawa Consulting Vietnam（KCV）の採用情報ページです。ベトナムで日系企業を支援するコンサルティングファームの求人をご案内します。',
+  alternates: {
+    canonical: 'https://www.kurosawa-vn.net/careers',
+  },
+  openGraph: {
+    title: '採用 | Kurosawa Consulting Vietnam',
+    description:
+      'Kurosawa Consulting Vietnam（KCV）の採用情報ページです。ベトナムで日系企業を支援するコンサルティングファームの求人をご案内します。',
+    url: 'https://www.kurosawa-vn.net/careers',
+  },
+};
+
 export default function CareersPage() {
   return (
     <main>
@@ -18,9 +35,9 @@ export default function CareersPage() {
             <p className="text-xs sm:text-sm md:text-base text-[#84ab52] tracking-[0.25em] sm:tracking-[0.3em] uppercase font-light mb-2 sm:mb-3">
               Careers
             </p>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-700 tracking-wide">
-              採用情報
-            </h2>
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-700 tracking-wide">
+              採用
+            </h1>
           </div>
 
           <div className="max-w-3xl mx-auto">

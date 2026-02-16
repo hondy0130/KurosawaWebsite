@@ -3,9 +3,18 @@ import Image from 'next/image';
 import Contact from '@/app/components/Contact';
 
 export const metadata = {
-  title: 'サービス一覧 | Kurosawa Consulting Vietnam',
+  title: 'サービス一覧',
   description:
     'ベトナム拠点設立、M&Aアドバイザリー、会計税務コンサルティング、法務及び労務相談、各種ライセンス申請など、ベトナムビジネスを総合的にサポートします。',
+  alternates: {
+    canonical: 'https://www.kurosawa-vn.net/services',
+  },
+  openGraph: {
+    title: 'サービス一覧 | Kurosawa Consulting Vietnam',
+    description:
+      'ベトナム拠点設立、M&Aアドバイザリー、会計税務コンサルティング、法務及び労務相談、各種ライセンス申請など、ベトナムビジネスを総合的にサポートします。',
+    url: 'https://www.kurosawa-vn.net/services',
+  },
 };
 
 type ServiceItem = {

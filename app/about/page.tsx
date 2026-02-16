@@ -1,7 +1,23 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Strengths from '../components/Strengths';
 import Members from '../components/Members';
 import CompanyInfo from '../components/CompanyInfo';
+
+export const metadata: Metadata = {
+  title: '会社概要',
+  description:
+    'Kurosawa Consulting Vietnam（KCV）の会社概要。黒澤合同事務所グループのベトナム現地法人として、ホーチミン・ハノイの2拠点で日系企業のベトナムビジネスを総合支援しています。',
+  alternates: {
+    canonical: 'https://www.kurosawa-vn.net/about',
+  },
+  openGraph: {
+    title: '会社概要 | Kurosawa Consulting Vietnam',
+    description:
+      'Kurosawa Consulting Vietnam（KCV）の会社概要。黒澤合同事務所グループのベトナム現地法人として、ホーチミン・ハノイの2拠点で日系企業のベトナムビジネスを総合支援しています。',
+    url: 'https://www.kurosawa-vn.net/about',
+  },
+};
 
 export default function AboutPage() {
   return (
@@ -29,7 +45,10 @@ export default function AboutPage() {
                     Professional
                   </p>
                   <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white mb-1 sm:mb-2">
-                    Our company
+                    会社概要
+                    <span className="block text-sm sm:text-base md:text-lg font-light tracking-wide mt-1 text-white/80">
+                      Our company
+                    </span>
                   </h1>
                   <p className="text-xs sm:text-sm md:text-base text-white/85 leading-relaxed max-w-xl">
                     ベトナムビジネスの拡大を伴走型パートナーとしてご支援いたします。

@@ -1,9 +1,25 @@
+import type { Metadata } from 'next';
 import { fetchMicroCmsBlogs } from '../lib/microcms';
 import Link from 'next/link';
 import Image from 'next/image';
 
 // ISR + Webhook のハイブリッド戦略
 export const revalidate = 30;
+
+export const metadata: Metadata = {
+  title: '記事コラム',
+  description:
+    'ベトナムビジネスに関する最新情報やノウハウをお届けします。ベトナム進出、M&A、会計税務、法務労務など幅広いテーマの記事を掲載。',
+  alternates: {
+    canonical: 'https://www.kurosawa-vn.net/articles',
+  },
+  openGraph: {
+    title: '記事コラム | Kurosawa Consulting Vietnam',
+    description:
+      'ベトナムビジネスに関する最新情報やノウハウをお届けします。ベトナム進出、M&A、会計税務、法務労務など幅広いテーマの記事を掲載。',
+    url: 'https://www.kurosawa-vn.net/articles',
+  },
+};
 
 export default async function ArticlesPage() {
   const data = await fetchMicroCmsBlogs({
@@ -23,7 +39,7 @@ export default async function ArticlesPage() {
               Articles & Blog
             </p>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light tracking-wide">
-              記事・コラム
+              記事コラム
             </h1>
             <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg text-white/90 max-w-2xl mx-auto font-light leading-relaxed">
               ベトナムビジネスに関する最新情報やノウハウをお届けします

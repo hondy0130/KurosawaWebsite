@@ -28,12 +28,25 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
     };
   }
 
+  const description = blog.content?.substring(0, 160).replace(/<[^>]*>/g, '') || '';
+
   return {
-    title: `${blog.title || blog.name} | Kurosawa Consulting Vietnam`,
-    description: blog.content?.substring(0, 160).replace(/<[^>]*>/g, '') || '',
+    title: blog.title || blog.name,
+    description,
+    alternates: {
+      canonical: `https://www.kurosawa-vn.net/articles/${params.id}`,
+    },
     openGraph: {
+      title: `${blog.title || blog.name} | Kurosawa Consulting Vietnam`,
+      description,
+      url: `https://www.kurosawa-vn.net/articles/${params.id}`,
+      type: 'article',
+      images: blog.eyecatch?.url ? [blog.eyecatch.url] : [],
+    },
+    twitter: {
+      card: 'summary_large_image',
       title: blog.title || blog.name,
-      description: blog.content?.substring(0, 160).replace(/<[^>]*>/g, '') || '',
+      description,
       images: blog.eyecatch?.url ? [blog.eyecatch.url] : [],
     },
   };

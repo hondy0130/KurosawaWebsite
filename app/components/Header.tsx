@@ -297,7 +297,7 @@ export default function Header() {
                 className="text-sm font-light tracking-wide text-gray-800 hover:text-[#84ab52] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                採用情報
+                採用
               </Link>
               <Link
                 href="/contact"
