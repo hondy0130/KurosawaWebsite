@@ -33,8 +33,14 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // 送信先メールアドレス（環境変数から取得、デフォルトはinfo@example.com）
-    const recipientEmail = process.env.CONTACT_RECIPIENT_EMAIL || 'info@example.com';
+    // 送信先メールアドレス（環境変数から取得、カンマ区切りで複数指定可能）
+    const recipientEmailEnv = process.env.CONTACT_RECIPIENT_EMAIL || 'info@example.com';
+    // カンマ区切りのメールアドレスを配列に変換し、空白を除去
+    const recipientEmails = recipientEmailEnv
+      .split(',')
+      .map((email) => email.trim())
+      .filter((email) => email.length > 0);
+    
     const fromEmail = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
 
     // メール本文の作成
@@ -60,10 +66,10 @@ ${body.message}
 送信日時: ${new Date().toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' })}
 `;
 
-    // Resendでメール送信
+    // Resendでメール送信（複数のメールアドレスに対応）
     const { data, error } = await resend.emails.send({
       from: fromEmail,
-      to: recipientEmail,
+      to: recipientEmails.length === 1 ? recipientEmails[0] : recipientEmails,
       replyTo: body.email,
       subject: `【お問い合わせ】${body.company}様より`,
       text: emailBody,

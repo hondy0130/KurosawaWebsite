@@ -46,34 +46,37 @@ export default function Contact() {
 
       const data = await response.json();
 
-      if (!response.ok) {
-        throw new Error(data.message || '送信に失敗しました');
+      if (response.ok && data.success) {
+        setSubmitStatus({
+          type: 'success',
+          message: 'お問い合わせを受け付けました。担当者より折り返しご連絡いたします。',
+        });
+
+        // フォームをリセット
+        setFormData({
+          name: '',
+          company: '',
+          email: '',
+          phone: '',
+          service: '',
+          message: '',
+        });
+
+        // 5秒後にステータスメッセージをクリア
+        setTimeout(() => {
+          setSubmitStatus({ type: null, message: '' });
+        }, 5000);
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: data.message || '送信に失敗しました。もう一度お試しください。',
+        });
       }
-
-      setSubmitStatus({
-        type: 'success',
-        message: 'お問い合わせを受け付けました。担当者より折り返しご連絡いたします。',
-      });
-
-      // フォームをリセット
-      setFormData({
-        name: '',
-        company: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: '',
-      });
-
-      // 3秒後にステータスメッセージをクリア
-      setTimeout(() => {
-        setSubmitStatus({ type: null, message: '' });
-      }, 5000);
     } catch (error) {
-      console.error('Form submission error:', error);
+      console.error('Contact form error:', error);
       setSubmitStatus({
         type: 'error',
-        message: error instanceof Error ? error.message : '送信に失敗しました。しばらくしてから再度お試しください。',
+        message: 'ネットワークエラーが発生しました。しばらくしてからもう一度お試しください。',
       });
     } finally {
       setIsSubmitting(false);
@@ -342,7 +345,7 @@ export default function Contact() {
               {/* 送信ステータスメッセージ */}
               {submitStatus.type && (
                 <div
-                  className={`p-4 rounded-md text-xs sm:text-sm ${
+                  className={`p-3 sm:p-4 rounded-md text-xs sm:text-sm ${
                     submitStatus.type === 'success'
                       ? 'bg-green-50 text-green-800 border border-green-200'
                       : 'bg-red-50 text-red-800 border border-red-200'
