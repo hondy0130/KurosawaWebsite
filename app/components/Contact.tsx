@@ -12,6 +12,12 @@ export default function Contact() {
     message: '',
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
+
   // 必須項目がすべて入力されているかチェック
   const isFormValid = useMemo(() => {
     return (
@@ -22,23 +28,56 @@ export default function Contact() {
     );
   }, [formData]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!isFormValid) return;
+    if (!isFormValid || isSubmitting) return;
 
-    // TODO: AWS SES経由でinfoに送信
-    console.log('Form submitted:', formData);
-    alert('お問い合わせを受け付けました。担当者より折り返しご連絡いたします。');
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
 
-    // フォームをリセット
-    setFormData({
-      name: '',
-      company: '',
-      email: '',
-      phone: '',
-      service: '',
-      message: '',
-    });
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || '送信に失敗しました');
+      }
+
+      setSubmitStatus({
+        type: 'success',
+        message: 'お問い合わせを受け付けました。担当者より折り返しご連絡いたします。',
+      });
+
+      // フォームをリセット
+      setFormData({
+        name: '',
+        company: '',
+        email: '',
+        phone: '',
+        service: '',
+        message: '',
+      });
+
+      // 3秒後にステータスメッセージをクリア
+      setTimeout(() => {
+        setSubmitStatus({ type: null, message: '' });
+      }, 5000);
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus({
+        type: 'error',
+        message: error instanceof Error ? error.message : '送信に失敗しました。しばらくしてから再度お試しください。',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleDownload = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -300,18 +339,31 @@ export default function Contact() {
                 />
               </div>
 
+              {/* 送信ステータスメッセージ */}
+              {submitStatus.type && (
+                <div
+                  className={`p-4 rounded-md text-xs sm:text-sm ${
+                    submitStatus.type === 'success'
+                      ? 'bg-green-50 text-green-800 border border-green-200'
+                      : 'bg-red-50 text-red-800 border border-red-200'
+                  }`}
+                >
+                  {submitStatus.message}
+                </div>
+              )}
+
               <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {/* 送信ボタン */}
                 <button
                   type="submit"
-                  disabled={!isFormValid}
+                  disabled={!isFormValid || isSubmitting}
                   className={`h-10 sm:h-11 md:h-12 text-white text-xs sm:text-sm tracking-[0.2em] sm:tracking-widest transition-all duration-300 ${
-                    isFormValid
+                    isFormValid && !isSubmitting
                       ? 'bg-[#2E2E2E] hover:bg-black cursor-pointer'
                       : 'bg-gray-300 cursor-not-allowed opacity-60'
                   }`}
                 >
-                  送信する
+                  {isSubmitting ? '送信中...' : '送信する'}
                 </button>
 
                 {/* 企業資料ダウンロードボタン */}

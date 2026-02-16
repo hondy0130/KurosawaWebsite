@@ -14,6 +14,28 @@ pnpm dev
 bun dev
 ```
 
+### 環境変数の設定
+
+プロジェクトルートに `.env.local` ファイルを作成し、以下の環境変数を設定してください：
+
+```env
+# Resend API設定
+# Resendのダッシュボード（https://resend.com/api-keys）からAPIキーを取得してください
+RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+# 問い合わせフォームの送信先メールアドレス
+# 問い合わせフォームから送信されるメールの受信先を指定します
+CONTACT_RECIPIENT_EMAIL=info@example.com
+
+# Resendの送信元メールアドレス（オプション）
+# Resendで認証済みのドメインから送信する場合は、そのメールアドレスを指定してください
+# 例: noreply@yourdomain.com
+# 未設定の場合は、Resendのデフォルトアドレス（onboarding@resend.dev）が使用されます
+RESEND_FROM_EMAIL=onboarding@resend.dev
+```
+
+**重要**: `.env.local` ファイルは `.gitignore` に含まれているため、Gitにコミットされません。本番環境では、Vercelなどのホスティングサービスの環境変数設定から同様の値を設定してください。
+
 ## Quality tools
 
 Run checks:
