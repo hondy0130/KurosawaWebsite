@@ -27,7 +27,7 @@ export default function Hero() {
             </div>
 
             {/* メインコピー */}
-            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-light text-white leading-relaxed tracking-wide px-4 animate-fade-in-delay-1 whitespace-nowrap">
+            <h1 className="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-light text-white leading-relaxed tracking-wide px-4 animate-fade-in-delay-1 text-center">
               -YOUR BRIDGE BETWEEN JAPAN AND VIETNAM-
             </h1>
 

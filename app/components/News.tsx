@@ -1,36 +1,21 @@
-export default function News() {
-  const newsItems = [
-    {
-      date: '2025.10.05',
-      category: 'プレスリリース',
-      title: '新オフィス開設のお知らせ - 大阪支社オープン',
-      link: '#',
-    },
-    {
-      date: '2025.09.28',
-      category: 'メディア掲載',
-      title: '日経ビジネス誌にてDX推進事例が紹介されました',
-      link: '#',
-    },
-    {
-      date: '2025.09.15',
-      category: 'セミナー',
-      title: '経営戦略セミナー「2025年の成長戦略」開催のご案内',
-      link: '#',
-    },
-    {
-      date: '2025.09.01',
-      category: 'お知らせ',
-      title: '採用情報を更新しました - 経験者採用強化中',
-      link: '#',
-    },
-    {
-      date: '2025.08.20',
-      category: '受賞',
-      title: 'ベストコンサルティング企業賞2025を受賞',
-      link: '#',
-    },
-  ];
+import { fetchNiltoNews } from '../lib/nilto';
+
+export default async function News() {
+  let newsItems: { id: number; date: string; title: string; category: string }[] = [];
+
+  try {
+    const data = await fetchNiltoNews({ limit: 8 });
+    newsItems = data.map((n) => ({
+      id: n._id,
+      title: n.title || n._title || '無題',
+      date: new Date(n.date || n._published_at)
+        .toLocaleDateString('ja-JP', { year: 'numeric', month: '2-digit', day: '2-digit' })
+        .replace(/\//g, '.'),
+      category: n.category ?? 'お知らせ',
+    }));
+  } catch (error) {
+    console.error('NILTO news 取得失敗:', error);
+  }
 
   const getCategoryColor = (category: string) => {
     switch (category) {
@@ -47,6 +32,8 @@ export default function News() {
     }
   };
 
+  if (newsItems.length === 0) return null;
+
   return (
     <section id="news" className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
@@ -62,11 +49,10 @@ export default function News() {
 
         {/* ニュースリスト */}
         <div className="bg-white rounded-xl shadow-sm overflow-hidden">
-          {newsItems.map((news, index) => (
-            <a
-              key={index}
-              href={news.link}
-              className="block border-b border-gray-100 last:border-b-0 hover:bg-gray-50 transition-colors"
+          {newsItems.map((news) => (
+            <div
+              key={news.id}
+              className="block border-b border-gray-100 last:border-b-0"
             >
               <div className="p-4 sm:p-5 md:p-6 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
                 <div className="flex items-center gap-3 sm:gap-4 sm:w-1/3">
@@ -80,30 +66,16 @@ export default function News() {
                   </span>
                 </div>
                 <div className="flex-1 sm:w-2/3">
-                  <h3 className="text-sm sm:text-base md:text-lg font-medium text-gray-900 hover:text-[#84ab52] transition-colors leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-lg font-medium text-gray-900 leading-relaxed">
                     {news.title}
-                  </h3>
-                </div>
-                <div className="hidden sm:block">
-                  <svg
-                    className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
+                  </p>
                 </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
     </section>
   );
 }
+

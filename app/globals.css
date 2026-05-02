@@ -38,10 +38,6 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
 
 /* 高級感のあるフォント設定 */
 h1,

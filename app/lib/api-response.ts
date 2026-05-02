@@ -6,18 +6,11 @@ import { NextResponse } from 'next/server';
 
 // ─── 型定義 ───
 
-export type ApiSuccessResponse<T = unknown> = {
-  success: true;
-  message: string;
-} & (T extends undefined ? object : { data?: T });
-
-export type ApiErrorResponse = {
+type ApiErrorResponse = {
   success: false;
   message: string;
-  error?: string; // 開発環境のみ
+  error?: string;
 };
-
-export type ApiResponse<T = unknown> = ApiSuccessResponse<T> | ApiErrorResponse;
 
 // ─── レスポンスビルダー ───
 

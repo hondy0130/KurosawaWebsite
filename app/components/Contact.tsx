@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import {
   type ContactFormData,
   INITIAL_FORM_DATA,
@@ -11,6 +11,15 @@ import {
 
 export default function Contact() {
   const [formData, setFormData] = useState<ContactFormData>({ ...INITIAL_FORM_DATA });
+
+  // ハニーポット：botが入力するための見えないフィールド
+  const [honeypot, setHoneypot] = useState('');
+  // フォーム表示時刻（タイムスタンプチェック用）
+  const formLoadTimeRef = useRef<number>(Date.now());
+
+  useEffect(() => {
+    formLoadTimeRef.current = Date.now();
+  }, []);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
@@ -34,7 +43,11 @@ export default function Contact() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          _honeypot: honeypot,
+          _formLoadTime: formLoadTimeRef.current,
+        }),
       });
 
       const data = await response.json();
@@ -73,19 +86,9 @@ export default function Contact() {
     e.preventDefault();
     if (!isFormValid) return;
 
-    // TODO: Resend経由でダウンロード通知を送信（送信ボタンと同じ /api/contact を利用可能）
-    console.log('Download requested:', formData);
-
-    // ダミーPDFダウンロード（将来的に実際のPDFに置き換え）
     alert(
       `${formData.name}様\n\n企業資料のダウンロードを開始します。\n\nご入力いただいた情報を記録させていただきました。`
     );
-
-    // 実際のダウンロード処理（将来実装）
-    // const link = document.createElement('a');
-    // link.href = '/documents/company-profile.pdf';
-    // link.download = 'Kurosawa_Consulting_Vietnam_Company_Profile.pdf';
-    // link.click();
   };
 
   const handleChange = (
@@ -205,6 +208,34 @@ export default function Contact() {
               onSubmit={handleSubmit}
               className="bg-white/70 backdrop-blur-sm p-6 sm:p-8 md:p-10 border border-gray-200 space-y-5 sm:space-y-6"
             >
+              {/*
+                ハニーポット：CSSで人間には見えないが、botが自動入力してしまうフィールド。
+                display:none は使わない（一部botが検知するため position/opacity で隠す）。
+                autocomplete="off" でブラウザの自動補完を無効化。
+              */}
+              <div
+                aria-hidden="true"
+                style={{
+                  position: 'absolute',
+                  left: '-9999px',
+                  width: '1px',
+                  height: '1px',
+                  overflow: 'hidden',
+                  opacity: 0,
+                  pointerEvents: 'none',
+                }}
+              >
+                <label htmlFor="website">ウェブサイト（入力しないでください）</label>
+                <input
+                  type="text"
+                  id="website"
+                  name="website"
+                  value={honeypot}
+                  onChange={(e) => setHoneypot(e.target.value)}
+                  autoComplete="off"
+                  tabIndex={-1}
+                />
+              </div>
               <div className="grid md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
                 <div>
                   <label
@@ -220,7 +251,7 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#84ab52] focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#84ab52] focus:border-transparent text-base"
                     placeholder="山田 太郎"
                   />
                 </div>
@@ -239,7 +270,7 @@ export default function Contact() {
                     required
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#84ab52] focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#84ab52] focus:border-transparent text-base"
                     placeholder="株式会社サンプル"
                   />
                 </div>
@@ -260,7 +291,7 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#84ab52] focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#84ab52] focus:border-transparent text-base"
                     placeholder="example@company.co.jp"
                   />
                 </div>
@@ -278,7 +309,7 @@ export default function Contact() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#84ab52] focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#84ab52] focus:border-transparent text-base"
                     placeholder="03-1234-5678"
                   />
                 </div>
@@ -296,7 +327,7 @@ export default function Contact() {
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#84ab52] focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#84ab52] focus:border-transparent text-base"
                 >
                   <option value="">選択してください</option>
                   <option value="strategy">経営戦略コンサルティング</option>

@@ -59,7 +59,7 @@ export function getOrganizationJsonLd() {
 
 /**
  * WebSite 構造化データ
- * サイト情報とサイト内検索（将来対応可能）
+ * サイト情報 + Sitelinks Searchbox（Googleサイトリンク検索ボックス対応）
  */
 export function getWebSiteJsonLd() {
   return {
@@ -75,6 +75,14 @@ export function getWebSiteJsonLd() {
         '@type': 'ImageObject',
         url: `${SITE_URL}/kcv-logo.webp`,
       },
+    },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${SITE_URL}/articles?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
     },
   };
 }
@@ -167,5 +175,52 @@ export function getBreadcrumbJsonLd(
       name: item.name,
       item: item.url,
     })),
+  };
+}
+
+/**
+ * Article 構造化データ生成ヘルパー
+ * 記事詳細ページのリッチリザルト対応
+ */
+export function getArticleJsonLd(article: {
+  id: number;
+  title: string;
+  description?: string;
+  publishedAt: string;
+  updatedAt: string;
+  imageUrl?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.title,
+    ...(article.description ? { description: article.description } : {}),
+    datePublished: article.publishedAt,
+    dateModified: article.updatedAt,
+    author: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/kcv-logo.webp`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${SITE_URL}/articles/${article.id}`,
+    },
+    ...(article.imageUrl
+      ? {
+          image: {
+            '@type': 'ImageObject',
+            url: article.imageUrl,
+          },
+        }
+      : {}),
   };
 }

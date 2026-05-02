@@ -36,18 +36,8 @@ export function getContactRecipientEmail(): string {
   return requireEnv('CONTACT_RECIPIENT_EMAIL');
 }
 
-// ─── microCMS ───
+// ─── NILTO ───
 
-export function getMicroCmsApiKey(): string {
-  return requireEnv('MICROCMS_API_KEY');
-}
-
-export function getMicroCmsServiceDomain(): string {
-  return getEnv('MICROCMS_SERVICE_DOMAIN', 'kurosawa0130');
-}
-
-// ─── Webhook ───
-
-export function getRevalidateSecret(): string {
-  return requireEnv('REVALIDATE_SECRET');
+export function getNiltoApiKey(): string {
+  return requireEnv('NILTO_API_KEY');
 }

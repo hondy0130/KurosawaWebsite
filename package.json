@@ -12,6 +12,7 @@
     "format:write": "prettier --write ."
   },
   "dependencies": {
+    "lenis": "^1.3.23",
     "next": "^15.5.7",
     "next-intl": "^4.8.2",
     "react": "19.1.0",

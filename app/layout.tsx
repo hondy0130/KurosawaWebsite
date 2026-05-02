@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Noto_Sans_JP } from 'next/font/google';
 import './globals.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import LenisProvider from './components/LenisProvider';
 import {
   getOrganizationJsonLd,
   getWebSiteJsonLd,
@@ -124,11 +125,6 @@ export const metadata: Metadata = {
     },
   },
 
-  /* ─── Google Search Console 認証（取得後に設定） ─── */
-  // verification: {
-  //   google: 'YOUR_GSC_VERIFICATION_CODE',
-  // },
-
   /* ─── その他 ─── */
   category: 'business',
 };
@@ -178,9 +174,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${notoSansJP.variable} antialiased`}
       >
         <GoogleAnalytics />
-        <Header />
-        {children}
-        <Footer />
+        <LenisProvider>
+          <Header />
+          {children}
+          <Footer />
+        </LenisProvider>
       </body>
     </html>
   );

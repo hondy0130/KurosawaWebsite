@@ -10,7 +10,11 @@ const nextConfig = {
       remotePatterns: [
         {
           protocol: 'https',
-          hostname: 'images.microcms-assets.io',
+          hostname: 'media.nilto.com',
+        },
+        {
+          protocol: 'https',
+          hostname: '**.nilto.com',
         },
       ],
     },

@@ -78,7 +78,7 @@ export default function Header() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-20">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
           {/* ロゴ */}
           <Link href="/" className="flex items-center flex-shrink-0 -ml-2 lg:-ml-4">
             <Image
@@ -213,11 +213,12 @@ export default function Header() {
 
           {/* モバイルメニューボタン */}
           <button
-            className={`lg:hidden p-2 rounded transition-colors duration-300 ml-auto ${
+            className={`lg:hidden p-3 rounded transition-colors duration-300 ml-auto ${
               isScrolled ? 'hover:bg-gray-50' : 'hover:bg-white/10'
             }`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="メニュー"
+            aria-expanded={isMenuOpen}
           >
             <div className="w-6 h-5 flex flex-col justify-between">
               <span
@@ -245,32 +246,32 @@ export default function Header() {
             isMenuOpen ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'
           } ${isScrolled ? 'border-t border-gray-100 bg-white' : 'border-t border-transparent bg-black/30 backdrop-blur-lg'}`}
         >
-          <div className="py-6 px-10">
-            <nav className="flex flex-col space-y-4">
+          <div className="py-4 px-6 sm:px-8">
+            <nav className="flex flex-col">
               <Link
                 href="/"
-                className="text-sm font-light tracking-wide text-gray-800 hover:text-[#84ab52] transition-colors"
+                className="text-sm font-light tracking-wide text-gray-800 hover:text-[#84ab52] transition-colors py-3 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 ホーム
               </Link>
               <Link
                 href="/about"
-                className="text-sm font-light tracking-wide text-gray-800 hover:text-[#84ab52] transition-colors"
+                className="text-sm font-light tracking-wide text-gray-800 hover:text-[#84ab52] transition-colors py-3 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 会社概要
               </Link>
-              <div className="border-t border-gray-100 pt-4 mt-2">
+              <div className="py-3 border-b border-gray-100">
                 <p className="text-xs font-semibold text-gray-400 tracking-[0.25em] uppercase mb-2">
                   サービス
                 </p>
-                <div className="space-y-2">
+                <div className="flex flex-col">
                   {serviceItems.map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="block text-sm font-light tracking-wide text-gray-800 hover:text-[#84ab52] transition-colors"
+                      className="text-sm font-light tracking-wide text-gray-800 hover:text-[#84ab52] transition-colors py-2.5 pl-2"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}
@@ -280,28 +281,28 @@ export default function Header() {
               </div>
               <Link
                 href="/about#members"
-                className="text-sm font-light tracking-wide text-gray-800 hover:text-[#84ab52] transition-colors border-t border-gray-100 pt-4 mt-2"
+                className="text-sm font-light tracking-wide text-gray-800 hover:text-[#84ab52] transition-colors py-3 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 メンバー
               </Link>
               <Link
                 href="/articles"
-                className="text-sm font-light tracking-wide text-gray-800 hover:text-[#84ab52] transition-colors"
+                className="text-sm font-light tracking-wide text-gray-800 hover:text-[#84ab52] transition-colors py-3 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 記事コラム
               </Link>
               <Link
                 href="/careers"
-                className="text-sm font-light tracking-wide text-gray-800 hover:text-[#84ab52] transition-colors"
+                className="text-sm font-light tracking-wide text-gray-800 hover:text-[#84ab52] transition-colors py-3 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 採用
               </Link>
               <Link
-                href="/contact"
-                className="inline-flex items-center justify-center mt-4 px-6 py-3 bg-[#84ab52] text-white text-sm font-light tracking-wide hover:bg-[#6d9143] transition-colors"
+                href="/#contact"
+                className="inline-flex items-center justify-center mt-4 px-6 py-3.5 bg-[#84ab52] text-white text-sm font-light tracking-wide hover:bg-[#6d9143] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 無料相談

@@ -38,7 +38,7 @@ export const CONTACT_MESSAGES = {
 // ─── バリデーション ───
 
 /** メールアドレスの形式チェック正規表現 */
-export const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /** メールアドレスの形式をチェックする */
 export function isValidEmail(email: string): boolean {
@@ -46,7 +46,7 @@ export function isValidEmail(email: string): boolean {
 }
 
 /** 問い合わせフォームのバリデーション結果 */
-export type ContactValidationResult = {
+type ContactValidationResult = {
   isValid: boolean;
   errors: string[];
 };

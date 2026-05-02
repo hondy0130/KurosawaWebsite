@@ -3,19 +3,19 @@ import Image from 'next/image';
 export default function Footer() {
   return (
     <footer className="bg-[#2E2E2E] text-white">
-      <div className="max-w-7xl mx-auto px-8 lg:px-12 py-16">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-12 sm:py-16">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 mb-10 sm:mb-12">
           {/* 会社情報 */}
-          <div className="md:col-span-1">
-            <div className="flex items-center gap-3 mb-6">
+          <div className="md:col-span-1 sm:col-span-2">
+            <div className="flex flex-wrap items-center gap-3 mb-4 sm:mb-6">
               <Image
                 src="/kcv-logo.webp"
                 alt="Kurosawa Consulting Vietnam"
                 width={150}
                 height={40}
-                className="h-10 w-auto"
+                className="h-9 sm:h-10 w-auto flex-shrink-0"
               />
-              <span className="text-base font-light tracking-wider text-white">
+              <span className="text-sm font-light tracking-wider text-white leading-snug">
                 Kurosawa Consulting Vietnam
               </span>
             </div>

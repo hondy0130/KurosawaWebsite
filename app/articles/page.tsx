@@ -1,133 +1,135 @@
 import type { Metadata } from 'next';
-import { fetchMicroCmsBlogs } from '../lib/microcms';
+import { fetchNiltoArticles } from '../lib/nilto';
 import Link from 'next/link';
 import Image from 'next/image';
 
-// ISR + Webhook のハイブリッド戦略
-export const revalidate = 30;
-
 export const metadata: Metadata = {
-  title: '記事コラム',
-  description:
-    'ベトナムビジネスに関する最新情報やノウハウをお届けします。ベトナム進出、M&A、会計税務、法務労務など幅広いテーマの記事を掲載。',
-  alternates: {
-    canonical: 'https://www.kurosawa-vn.net/articles',
-  },
-  openGraph: {
-    title: '記事コラム | Kurosawa Consulting Vietnam',
-    description:
-      'ベトナムビジネスに関する最新情報やノウハウをお届けします。ベトナム進出、M&A、会計税務、法務労務など幅広いテーマの記事を掲載。',
-    url: 'https://www.kurosawa-vn.net/articles',
-  },
+  title: '記事・コラム | Kurosawa Consulting Vietnam',
+  description: 'ベトナムビジネスに関する記事・コラムを掲載しています。',
+  alternates: { canonical: 'https://www.kurosawa-vn.net/articles' },
 };
 
-export default async function ArticlesPage() {
-  const data = await fetchMicroCmsBlogs({
-    limit: 12,
-    orderBy: 'publishedAt',
-  });
+const LIMIT = 12;
 
-  const blogs = data.contents;
+export default async function ArticlesPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ page?: string }>;
+}) {
+  const { page } = await searchParams;
+  const currentPage = Math.max(1, parseInt(page ?? '1', 10));
+  const offset = (currentPage - 1) * LIMIT;
+
+  let articles: {
+    id: number;
+    title: string;
+    date: string;
+    thumb: string;
+    alt: string;
+  }[] = [];
+  let total = 0;
+
+  try {
+    const data = await fetchNiltoArticles({ limit: LIMIT, offset, order: '-_published_at' });
+    total = data.total;
+    articles = data.data.map((a) => ({
+      id: a._id,
+      title: a.title || a._title || '無題',
+      date: new Date(a._published_at)
+        .toLocaleDateString('ja-JP', { year: 'numeric', month: '2-digit', day: '2-digit' })
+        .replace(/\//g, '-'),
+      thumb: a.eyecatch?.url ?? '',
+      alt: a.eyecatch?.alt ?? '',
+    }));
+  } catch (error) {
+    console.error('NILTO articles 取得失敗:', error);
+  }
+
+  const totalPages = Math.ceil(total / LIMIT);
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* ヒーローセクション */}
-      <section className="bg-gradient-to-br from-[#84ab52] to-[#6d9143] text-white py-16 sm:py-20 md:py-24">
+    <div className="min-h-screen bg-white">
+      <div className="pt-24 sm:pt-28 pb-16 sm:pb-20 md:pb-24 lg:pb-32">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="text-center">
-            <p className="text-xs sm:text-sm md:text-base tracking-[0.3em] uppercase font-light mb-3 sm:mb-4">
-              Articles & Blog
+          {/* ヘッダー */}
+          <div className="text-center mb-12 sm:mb-16">
+            <p className="text-xs sm:text-sm text-[#84ab52] tracking-[0.25em] uppercase font-light mb-2 sm:mb-3">
+              Articles
             </p>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light tracking-wide">
-              記事コラム
+            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-gray-600 tracking-wide">
+              記事・コラム
             </h1>
-            <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg text-white/90 max-w-2xl mx-auto font-light leading-relaxed">
-              ベトナムビジネスに関する最新情報やノウハウをお届けします
-            </p>
           </div>
-        </div>
-      </section>
 
-      {/* 記事一覧 */}
-      <section className="py-12 sm:py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          {blogs.length === 0 ? (
-            <div className="text-center py-20">
-              <p className="text-gray-500 text-base sm:text-lg">記事がまだありません。</p>
-            </div>
+          {/* 記事グリッド */}
+          {articles.length === 0 ? (
+            <p className="text-center text-gray-500 py-20">記事はまだありません。</p>
           ) : (
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-              {blogs.map((blog) => {
-                const categoryName = blog.category?.name || '未分類';
-                const formattedDate = new Date(blog.publishedAt).toLocaleDateString('ja-JP', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                });
-
-                return (
-                  <Link
-                    key={blog.id}
-                    href={`/articles/${blog.id}`}
-                    className="group bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-xl transition-all duration-300"
-                  >
-                    {/* アイキャッチ画像 */}
-                    <div className="aspect-video w-full bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden relative">
-                      {blog.eyecatch?.url ? (
-                        <Image
-                          src={blog.eyecatch.url}
-                          alt={blog.title || blog.name || ''}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-300"
-                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        />
-                      ) : (
-                        <div className="w-full h-full flex items-center justify-center">
-                          <svg
-                            className="w-16 h-16 text-gray-300"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={1.5}
-                              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                            />
-                          </svg>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* 記事情報 */}
-                    <div className="p-5 sm:p-6">
-                      <div className="flex items-center gap-3 text-xs text-gray-500 mb-3">
-                        <span className="px-3 py-1 rounded-full bg-[#84ab52]/10 text-[#84ab52] font-medium">
-                          {categoryName}
-                        </span>
-                        <time className="font-light">{formattedDate}</time>
-                      </div>
-                      <h2 className="text-lg sm:text-xl font-medium text-gray-900 leading-snug line-clamp-2 group-hover:text-[#84ab52] transition-colors">
-                        {blog.title || blog.name || '無題'}
-                      </h2>
-                    </div>
-                  </Link>
-                );
-              })}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+              {articles.map((a) => (
+                <Link
+                  key={a.id}
+                  href={`/articles/${a.id}`}
+                  className="group bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow"
+                >
+                  <div className="aspect-video w-full bg-gradient-to-br from-gray-100 to-gray-200 relative">
+                    {a.thumb ? (
+                      <Image
+                        src={a.thumb}
+                        alt={a.alt || a.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    ) : null}
+                  </div>
+                  <div className="p-4 sm:p-5">
+                    <time className="text-xs text-gray-400 mb-2 block">{a.date}</time>
+                    <h2 className="text-sm sm:text-base font-medium text-gray-900 leading-snug line-clamp-2 group-hover:text-[#84ab52] transition-colors">
+                      {a.title}
+                    </h2>
+                  </div>
+                </Link>
+              ))}
             </div>
           )}
 
-          {/* ページネーション（将来的に実装） */}
-          {data.totalCount > 12 && (
-            <div className="mt-12 flex justify-center">
-              <p className="text-sm text-gray-500">
-                全{data.totalCount}件中 {Math.min(12, data.totalCount)}件を表示
-              </p>
+          {/* ページネーション */}
+          {totalPages > 1 && (
+            <div className="mt-12 flex justify-center gap-2">
+              {currentPage > 1 && (
+                <Link
+                  href={`/articles?page=${currentPage - 1}`}
+                  className="px-4 py-2 border border-gray-300 text-sm text-gray-600 hover:border-[#84ab52] hover:text-[#84ab52] transition-colors"
+                >
+                  前へ
+                </Link>
+              )}
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
+                <Link
+                  key={p}
+                  href={`/articles?page=${p}`}
+                  className={`px-4 py-2 border text-sm transition-colors ${
+                    p === currentPage
+                      ? 'border-[#84ab52] bg-[#84ab52] text-white'
+                      : 'border-gray-300 text-gray-600 hover:border-[#84ab52] hover:text-[#84ab52]'
+                  }`}
+                >
+                  {p}
+                </Link>
+              ))}
+              {currentPage < totalPages && (
+                <Link
+                  href={`/articles?page=${currentPage + 1}`}
+                  className="px-4 py-2 border border-gray-300 text-sm text-gray-600 hover:border-[#84ab52] hover:text-[#84ab52] transition-colors"
+                >
+                  次へ
+                </Link>
+              )}
             </div>
           )}
         </div>
-      </section>
+      </div>
     </div>
   );
 }

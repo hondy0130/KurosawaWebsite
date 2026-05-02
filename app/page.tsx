@@ -1,14 +1,11 @@
 import type { Metadata } from 'next';
 import Hero from './components/Hero';
+import News from './components/News';
 import Achievement from './components/Achievement';
 import Services from './components/Services';
 import Articles from './components/Articles';
 import Contact from './components/Contact';
 import FAQ from './components/FAQ';
-
-// ISR + Webhook のハイブリッド戦略
-// 通常時は30秒キャッシュ、webhook で即時更新
-export const revalidate = 30;
 
 export const metadata: Metadata = {
   title: {
@@ -26,6 +23,7 @@ export default function Home() {
     <div className="min-h-screen">
       <main>
         <Hero />
+        <News />
         <Services />
         <Achievement />
         <Articles />

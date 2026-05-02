@@ -7,14 +7,10 @@ type ServiceItem = {
   subtitle: string;
   titleLines?: string[];
   description: string;
-  borderGradient: string;
-  bgClass: string;
-  glow: string;
   accentStrong: string;
   accentSoft: string;
   notes?: string[];
   href: string;
-  specialPageHref?: string; // 特設ページへのリンク（オプション）
 };
 
 export default function Services() {
@@ -30,9 +26,6 @@ export default function Services() {
       titleLines: ['現地法人・駐在員事務所', '支店設立を', 'ワンストップ支援'],
       description:
         '市場調査・進出戦略・法人設立・許認可・採用・バックオフィスまで。現地の制度と商習慣に精通したチームが、戦略から実行まで伴走します。',
-      borderGradient: 'linear-gradient(135deg, #84ab52, #a0c870) 1',
-      bgClass: '',
-      glow: 'rgba(44,95,45,0.22)',
       accentStrong: 'rgba(102,187,106,0.40)',
       accentSoft: 'rgba(165,214,167,0.25)',
       notes: [],
@@ -44,9 +37,6 @@ export default function Services() {
       titleLines: ['クロスボーダーM&Aを', '戦略立案からPMIまで', '一気通貫で'],
       description:
         'ターゲット探索・DD・バリュエーション・契約実務・PMI設計まで。日本本社とベトナム現地の双方に通じたチームで、意思決定と推進を高速化します。',
-      borderGradient: 'linear-gradient(135deg, #84ab52, #a0c870) 1',
-      bgClass: '',
-      glow: 'rgba(132,171,82,0.22)',
       accentStrong: 'rgba(132,171,82,0.42)',
       accentSoft: 'rgba(160,200,112,0.22)',
       href: '/services/ma',
@@ -57,9 +47,6 @@ export default function Services() {
       titleLines: ['ベトナム会計・税務を', '現地基準で', '正確かつスムーズに'],
       description:
         '帳簿作成・月次/年次決算・税務申告・監査対応・日本連結レポーティングまで。現地基準と日本基準の「橋渡し」をワンチームで提供します。',
-      borderGradient: 'linear-gradient(135deg, #2E7D32, #66BB6A) 1',
-      bgClass: '',
-      glow: 'rgba(46,125,50,0.22)',
       accentStrong: 'rgba(76,175,80,0.40)',
       accentSoft: 'rgba(129,199,132,0.25)',
       href: '/services/accounting',
@@ -70,9 +57,6 @@ export default function Services() {
       titleLines: ['ベトナムの法務・労務を', '専門家チームが', 'トータルサポート'],
       description:
         '契約書レビュー・労働法対応・就業規則整備・労務トラブル対応まで。現地法規制を熟知した専門家が、リスク管理と円滑な事業運営を支援します。',
-      borderGradient: 'linear-gradient(135deg, #1565C0, #42A5F5) 1',
-      bgClass: '',
-      glow: 'rgba(21,101,192,0.22)',
       accentStrong: 'rgba(33,150,243,0.40)',
       accentSoft: 'rgba(100,181,246,0.25)',
       href: '/services/legal-labor',
@@ -83,9 +67,6 @@ export default function Services() {
       titleLines: ['事業に必要な', '各種許認可を', '迅速に取得'],
       description:
         '投資登録証明書・事業登録証明書・業種別ライセンス・労働許可証まで。複雑な申請手続きを代行し、スムーズな事業開始をサポートします。',
-      borderGradient: 'linear-gradient(135deg, #F57C00, #FFB74D) 1',
-      bgClass: '',
-      glow: 'rgba(245,124,0,0.22)',
       accentStrong: 'rgba(255,152,0,0.40)',
       accentSoft: 'rgba(255,183,77,0.25)',
       href: '/services/license',
@@ -96,9 +77,6 @@ export default function Services() {
       titleLines: ['多様なニーズに', '柔軟に対応する', 'サポート体制'],
       description:
         '翻訳・通訳サービス、不動産コンサルティング、信用調査、秘書代行など。ベトナムでのビジネスに関わる様々なご要望にお応えします。',
-      borderGradient: 'linear-gradient(135deg, #424242, #9E9E9E) 1',
-      bgClass: '',
-      glow: 'rgba(120,120,120,0.22)',
       accentStrong: 'rgba(158,158,158,0.40)',
       accentSoft: 'rgba(224,224,224,0.25)',
       href: '/services/other',
@@ -300,14 +278,6 @@ export default function Services() {
                     >
                       View more
                     </a>
-                    {service.specialPageHref && (
-                      <a
-                        href={service.specialPageHref}
-                        className="inline-flex items-center justify-center bg-[#84ab52] text-white px-6 py-2.5 text-xs tracking-wide transition-colors hover:bg-[#6d9143] select-none"
-                      >
-                        特設ページ
-                      </a>
-                    )}
                   </div>
                 </div>
               </div>
@@ -415,14 +385,6 @@ export default function Services() {
                       >
                         View more
                       </a>
-                      {service.specialPageHref && (
-                        <a
-                          href={service.specialPageHref}
-                          className="inline-flex items-center justify-center bg-[#84ab52] text-white px-8 sm:px-10 py-2.5 sm:py-3 text-xs sm:text-sm tracking-wide transition-colors hover:bg-[#6d9143] select-none"
-                        >
-                          特設ページ
-                        </a>
-                      )}
                     </div>
                     {Array.isArray(service.notes) && service.notes.length > 0 && (
                       <div className="pt-2 sm:pt-3 space-y-1">

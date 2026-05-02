@@ -79,7 +79,29 @@ function parseRecipientEmails(raw: string): string[] {
 
 export async function POST(request: NextRequest) {
   try {
-    const body = (await request.json()) as ContactFormData;
+    const body = (await request.json()) as ContactFormData & {
+      _honeypot?: string;
+      _formLoadTime?: number;
+    };
+
+    // ─── Bot 検出 ───
+
+    // ① ハニーポット：隠しフィールドに値があればbot
+    if (body._honeypot) {
+      console.warn('🍯 Honeypot triggered — bot submission rejected');
+      // botに気づかれないよう成功レスポンスを返す（サイレント拒否）
+      return successResponse('お問い合わせを受け付けました');
+    }
+
+    // ② タイムスタンプ：フォーム表示から3秒未満の送信はbot
+    const MIN_FILL_MS = 3000;
+    if (
+      body._formLoadTime &&
+      Date.now() - body._formLoadTime < MIN_FILL_MS
+    ) {
+      console.warn('⏱ Form submitted too fast — bot submission rejected');
+      return successResponse('お問い合わせを受け付けました');
+    }
 
     // 環境変数の確認（デバッグ用）
     console.log('Environment check:', {
