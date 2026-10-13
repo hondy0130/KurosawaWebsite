@@ -20,9 +20,21 @@ import {
 
 // ─── メール本文の組み立て ───
 
-function buildEmailBody(data: ContactFormData): string {
+// サイトの表示言語（返信言語の目安としてメールに記載）
+const LOCALE_NAMES: Record<string, string> = {
+  ja: '日本語',
+  en: '英語 (English)',
+  vi: 'ベトナム語 (Tiếng Việt)',
+  zh: '中国語 (中文)',
+};
+
+function buildEmailBody(data: ContactFormData & { locale?: string }): string {
+  const localeName = data.locale ? (LOCALE_NAMES[data.locale] ?? data.locale) : '日本語';
   return `
 お問い合わせがありました。
+
+【閲覧言語】
+${localeName}
 
 【お名前】
 ${data.name}
@@ -82,6 +94,7 @@ export async function POST(request: NextRequest) {
     const body = (await request.json()) as ContactFormData & {
       _honeypot?: string;
       _formLoadTime?: number;
+      locale?: string;
     };
 
     // ─── Bot 検出 ───

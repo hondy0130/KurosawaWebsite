@@ -1,22 +1,31 @@
+import { getLocale, getTranslations } from 'next-intl/server';
 import { fetchNiltoNews } from '../lib/nilto';
+import { DATE_LOCALES, type Locale } from '@/i18n/routing';
 
 export default async function News() {
+  const t = await getTranslations('News');
+  const locale = (await getLocale()) as Locale;
   let newsItems: { id: number; date: string; title: string; category: string }[] = [];
 
   try {
     const data = await fetchNiltoNews({ limit: 8 });
     newsItems = data.map((n) => ({
       id: n._id,
-      title: n.title || n._title || '無題',
+      title: n.title || n._title || t('untitled'),
       date: new Date(n.date || n._published_at)
-        .toLocaleDateString('ja-JP', { year: 'numeric', month: '2-digit', day: '2-digit' })
+        .toLocaleDateString(DATE_LOCALES[locale], {
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+        })
         .replace(/\//g, '.'),
-      category: n.category ?? 'お知らせ',
+      category: n.category ?? t('defaultCategory'),
     }));
   } catch (error) {
     console.error('NILTO news 取得失敗:', error);
   }
 
+  // カテゴリ名はCMS（日本語）の値で判定
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'プレスリリース':
@@ -43,7 +52,7 @@ export default async function News() {
             News
           </p>
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-gray-600 tracking-wide">
-            お知らせ
+            {t('heading')}
           </h2>
         </div>
 
@@ -78,4 +87,3 @@ export default async function News() {
     </section>
   );
 }
-

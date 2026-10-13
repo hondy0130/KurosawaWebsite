@@ -1,15 +1,17 @@
 'use client';
 
 import { useState, useMemo, useRef, useEffect } from 'react';
+import { useLocale, useTranslations } from 'next-intl';
 import {
   type ContactFormData,
   INITIAL_FORM_DATA,
   STATUS_MESSAGE_TIMEOUT_MS,
-  CONTACT_MESSAGES,
   isContactFormFilled,
 } from '../lib/contact';
 
 export default function Contact() {
+  const t = useTranslations('Contact');
+  const locale = useLocale();
   const [formData, setFormData] = useState<ContactFormData>({ ...INITIAL_FORM_DATA });
 
   // ハニーポット：botが入力するための見えないフィールド
@@ -47,6 +49,7 @@ export default function Contact() {
           ...formData,
           _honeypot: honeypot,
           _formLoadTime: formLoadTimeRef.current,
+          locale,
         }),
       });
 
@@ -55,7 +58,7 @@ export default function Contact() {
       if (response.ok && data.success) {
         setSubmitStatus({
           type: 'success',
-          message: CONTACT_MESSAGES.SUCCESS,
+          message: t('success'),
         });
 
         // フォームをリセット
@@ -68,14 +71,14 @@ export default function Contact() {
       } else {
         setSubmitStatus({
           type: 'error',
-          message: data.message || CONTACT_MESSAGES.GENERIC_ERROR,
+          message: t('genericError'),
         });
       }
     } catch (error) {
       console.error('Contact form error:', error);
       setSubmitStatus({
         type: 'error',
-        message: CONTACT_MESSAGES.NETWORK_ERROR,
+        message: t('networkError'),
       });
     } finally {
       setIsSubmitting(false);
@@ -86,9 +89,7 @@ export default function Contact() {
     e.preventDefault();
     if (!isFormValid) return;
 
-    alert(
-      `${formData.name}様\n\n企業資料のダウンロードを開始します。\n\nご入力いただいた情報を記録させていただきました。`
-    );
+    alert(t('downloadAlert', { name: formData.name }));
   };
 
   const handleChange = (
@@ -118,7 +119,7 @@ export default function Contact() {
             Contact
           </p>
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-gray-600 tracking-wide">
-            お問い合わせ
+            {t('heading')}
           </h2>
         </div>
 
@@ -196,7 +197,7 @@ export default function Contact() {
                   Facebook
                 </h3>
                 <p className="text-xs sm:text-sm text-[#5A5A5A]">
-                  Kurosawa Consulting Vietnam（クロサワコンサルティングベトナム）
+                  {t('facebookName')}
                 </p>
               </div>
             </div>
@@ -225,7 +226,7 @@ export default function Contact() {
                   pointerEvents: 'none',
                 }}
               >
-                <label htmlFor="website">ウェブサイト（入力しないでください）</label>
+                <label htmlFor="website">{t('honeypotLabel')}</label>
                 <input
                   type="text"
                   id="website"
@@ -242,7 +243,7 @@ export default function Contact() {
                     htmlFor="name"
                     className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2"
                   >
-                    お名前 <span className="text-[#84ab52]">*</span>
+                    {t('name')} <span className="text-[#84ab52]">*</span>
                   </label>
                   <input
                     type="text"
@@ -252,7 +253,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#84ab52] focus:border-transparent text-base"
-                    placeholder="山田 太郎"
+                    placeholder={t('namePlaceholder')}
                   />
                 </div>
 
@@ -261,7 +262,7 @@ export default function Contact() {
                     htmlFor="company"
                     className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2"
                   >
-                    会社名 <span className="text-[#84ab52]">*</span>
+                    {t('company')} <span className="text-[#84ab52]">*</span>
                   </label>
                   <input
                     type="text"
@@ -271,7 +272,7 @@ export default function Contact() {
                     value={formData.company}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#84ab52] focus:border-transparent text-base"
-                    placeholder="株式会社サンプル"
+                    placeholder={t('companyPlaceholder')}
                   />
                 </div>
               </div>
@@ -282,7 +283,7 @@ export default function Contact() {
                     htmlFor="email"
                     className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2"
                   >
-                    メールアドレス <span className="text-[#84ab52]">*</span>
+                    {t('email')} <span className="text-[#84ab52]">*</span>
                   </label>
                   <input
                     type="email"
@@ -292,7 +293,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#84ab52] focus:border-transparent text-base"
-                    placeholder="example@company.co.jp"
+                    placeholder={t('emailPlaceholder')}
                   />
                 </div>
 
@@ -301,7 +302,7 @@ export default function Contact() {
                     htmlFor="phone"
                     className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2"
                   >
-                    電話番号
+                    {t('phone')}
                   </label>
                   <input
                     type="tel"
@@ -310,7 +311,7 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#84ab52] focus:border-transparent text-base"
-                    placeholder="03-1234-5678"
+                    placeholder={t('phonePlaceholder')}
                   />
                 </div>
               </div>
@@ -320,7 +321,7 @@ export default function Contact() {
                   htmlFor="service"
                   className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2"
                 >
-                  ご希望のサービス
+                  {t('service')}
                 </label>
                 <select
                   id="service"
@@ -329,14 +330,14 @@ export default function Contact() {
                   onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#84ab52] focus:border-transparent text-base"
                 >
-                  <option value="">選択してください</option>
-                  <option value="strategy">経営戦略コンサルティング</option>
-                  <option value="dx">業務改革・DX支援</option>
-                  <option value="organization">組織・人材開発</option>
-                  <option value="it">IT戦略・PMO</option>
-                  <option value="marketing">マーケティング戦略</option>
-                  <option value="risk">リスクマネジメント</option>
-                  <option value="other">その他</option>
+                  <option value="">{t('serviceSelect')}</option>
+                  <option value="strategy">{t('serviceOptions.strategy')}</option>
+                  <option value="dx">{t('serviceOptions.dx')}</option>
+                  <option value="organization">{t('serviceOptions.organization')}</option>
+                  <option value="it">{t('serviceOptions.it')}</option>
+                  <option value="marketing">{t('serviceOptions.marketing')}</option>
+                  <option value="risk">{t('serviceOptions.risk')}</option>
+                  <option value="other">{t('serviceOptions.other')}</option>
                 </select>
               </div>
 
@@ -345,7 +346,7 @@ export default function Contact() {
                   htmlFor="message"
                   className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2"
                 >
-                  お問い合わせ内容 <span className="text-[#84ab52]">*</span>
+                  {t('message')} <span className="text-[#84ab52]">*</span>
                 </label>
                 <textarea
                   id="message"
@@ -355,7 +356,7 @@ export default function Contact() {
                   onChange={handleChange}
                   rows={5}
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#84ab52] focus:border-transparent resize-none"
-                  placeholder="ご相談内容をご記入ください"
+                  placeholder={t('messagePlaceholder')}
                 />
               </div>
 
@@ -383,7 +384,7 @@ export default function Contact() {
                       : 'bg-gray-300 cursor-not-allowed opacity-60'
                   }`}
                 >
-                  {isSubmitting ? '送信中...' : '送信する'}
+                  {isSubmitting ? t('submitting') : t('submit')}
                 </button>
 
                 {/* 企業資料ダウンロードボタン */}
@@ -405,18 +406,17 @@ export default function Contact() {
                       d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                     />
                   </svg>
-                  企業資料ダウンロード
+                  {t('download')}
                 </button>
               </div>
 
               <p className="text-[10px] sm:text-xs text-gray-500 text-center">
-                ご入力いただいた情報は、お問い合わせへの対応および資料提供の目的のみに使用いたします
+                {t('privacyNote')}
               </p>
 
               {!isFormValid && (
                 <p className="text-[10px] sm:text-xs text-[#84ab52] text-center">
-                  ※
-                  必須項目（お名前・会社名・メールアドレス・お問い合わせ内容）をすべて入力してください
+                  {t('requiredNote')}
                 </p>
               )}
             </form>

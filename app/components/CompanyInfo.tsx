@@ -1,15 +1,9 @@
 import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
 
-export default function CompanyInfo() {
-  const history = [
-    '1969年: 創業者(現・会長) 黒澤功記が司法書士登録',
-    '1972年: 東京都中野区中野に司法書士事務所を設立',
-    '2009年: 業容拡大に伴い、司法書士部門を法人化し黒澤合同事務所を設立、同時に横浜事務所を開設',
-    '2015年: 業容拡大に伴い、土地家屋調査士部門を法人化',
-    '2016年: 相続・成年後見業務に特化した相続サポート室を開設',
-    '2016年: KCVをホーチミンに設立',
-    '2025年: 「高品質かつリーズナブル」が評判となり、顧問社数75社超、取引実績280社超まで成長',
-  ];
+export default async function CompanyInfo() {
+  const t = await getTranslations('CompanyInfo');
+  const history = t.raw('history') as string[];
 
   return (
     <section
@@ -36,7 +30,7 @@ export default function CompanyInfo() {
             Company Overview
           </p>
           <h2 className="text-xl md:text-2xl lg:text-3xl font-light text-gray-700 tracking-wide">
-            会社概要
+            {t('heading')}
           </h2>
         </div>
 
@@ -44,41 +38,41 @@ export default function CompanyInfo() {
         <div className="divide-y divide-gray-100 rounded-3xl overflow-hidden bg-white/95 border border-[#dde7d7] shadow-lg">
           <div className="p-6 md:p-8 grid md:grid-cols-12 gap-4 md:gap-8">
             <div className="md:col-span-3 text-xs tracking-[0.2em] text-gray-500 uppercase">
-              日本親会社
+              {t('parentLabel')}
             </div>
             <div className="md:col-span-9 text-[#2E2E2E]">
-              <div className="text-base">黒澤合同事務所グループ</div>
+              <div className="text-base">{t('parentName')}</div>
               <div className="text-sm text-[#6B6B6B] mt-1">
-                （東京都で業歴55年・司法書士を中心とした士業集団）
+                {t('parentNote')}
               </div>
             </div>
           </div>
 
           <div className="p-6 md:p-8 grid md:grid-cols-12 gap-4 md:gap-8">
             <div className="md:col-span-3 text-xs tracking-[0.2em] text-gray-500 uppercase">
-              現地法人
+              {t('localLabel')}
             </div>
             <div className="md:col-span-9 text-[#2E2E2E]">
               <div className="text-base">Kurosawa Consulting Vietnam (KCV)</div>
               <div className="text-sm text-[#6B6B6B] mt-1">
-                （クロサワ・コンサルティング・ベトナム）
+                {t('localNote')}
               </div>
             </div>
           </div>
 
           <div className="p-6 md:p-8 grid md:grid-cols-12 gap-4 md:gap-8">
             <div className="md:col-span-3 text-xs tracking-[0.2em] text-gray-500 uppercase">
-              従業員数
+              {t('employeesLabel')}
             </div>
             <div className="md:col-span-9 text-[#2E2E2E]">
-              <div className="text-base">95名</div>
-              <div className="text-sm text-[#6B6B6B] mt-1">（日本：55名、ベトナム：40名）</div>
+              <div className="text-base">{t('employeesValue')}</div>
+              <div className="text-sm text-[#6B6B6B] mt-1">{t('employeesNote')}</div>
             </div>
           </div>
 
           <div className="p-6 md:p-8 grid md:grid-cols-12 gap-4 md:gap-8">
             <div className="md:col-span-3 text-xs tracking-[0.2em] text-gray-500 uppercase">
-              Webサイト
+              {t('websiteLabel')}
             </div>
             <div className="md:col-span-9">
               <div className="flex flex-col gap-2">
@@ -104,7 +98,7 @@ export default function CompanyInfo() {
 
           <div className="p-6 md:p-8 grid md:grid-cols-12 gap-4 md:gap-8">
             <div className="md:col-span-3 text-xs tracking-[0.2em] text-gray-500 uppercase">
-              沿革
+              {t('historyLabel')}
             </div>
             <div className="md:col-span-9">
               <ul className="space-y-2">

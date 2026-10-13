@@ -1,16 +1,10 @@
-'use client';
+import { getTranslations } from 'next-intl/server';
 
-export default function Achievement() {
-  const stats = [
-    { value: '40', suffix: '名', label: 'スタッフ人数' },
-    { value: '8', suffix: '名', label: '日本語話者' },
-    { value: '280', suffix: '社超', label: '取引実績' },
-    { value: '75', suffix: '社超', label: '顧問先' },
-    { value: '70', suffix: '％', label: '日系企業取引（中華系20％、韓国＆欧米系10％）' },
-    { value: '5', suffix: '名', label: '公認会計士数（うち日本国2名）' },
-    { value: '2', suffix: '名', label: '弁護士数' },
-    { value: '7', suffix: '％', label: '過去5年平均 年間顧問契約純増率' },
-  ];
+type Stat = { value: string; suffix: string; label: string };
+
+export default async function Achievement() {
+  const t = await getTranslations('Achievement');
+  const stats = t.raw('stats') as Stat[];
 
   return (
     <section

@@ -38,6 +38,40 @@ body {
   letter-spacing: 0.02em;
 }
 
+/* ─── 言語別フォント ─── */
+/* ベトナム語：声調記号付き文字を Noto Sans で表示 */
+html:lang(vi) body,
+html:lang(vi) h1,
+html:lang(vi) h2,
+html:lang(vi) h3,
+html:lang(vi) h4,
+html:lang(vi) h5,
+html:lang(vi) h6 {
+  font-family:
+    var(--font-noto-sans),
+    var(--font-noto-sans-jp),
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+}
+
+/* 中国語（簡体字）：簡体字の字形で表示 */
+html:lang(zh-Hans) body,
+html:lang(zh-Hans) h1,
+html:lang(zh-Hans) h2,
+html:lang(zh-Hans) h3,
+html:lang(zh-Hans) h4,
+html:lang(zh-Hans) h5,
+html:lang(zh-Hans) h6 {
+  font-family:
+    var(--font-noto-sans-sc),
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+}
+
 
 /* 高級感のあるフォント設定 */
 h1,

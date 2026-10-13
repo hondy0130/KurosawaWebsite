@@ -1,4 +1,8 @@
-export default function Hero() {
+import { getTranslations } from 'next-intl/server';
+
+export default async function Hero() {
+  const t = await getTranslations('Hero');
+
   return (
     <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
       {/* 背景画像 */}
@@ -6,8 +10,7 @@ export default function Hero() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage:
-              "url('/u8124795841_Panoramic_view_of_Ho_Chi_Minh_City_skyline_at_gol_4f218260-c434-48c1-b720-6f017e6256a1_0.png')",
+            backgroundImage: "url('/u8124795841_Panoramic_view_of_Ho_Chi_Minh_City_skyline_at_gol_4f218260-c434-48c1-b720-6f017e6256a1_0.png')",
           }}
         >
           {/* オーバーレイ - 画像を少し暗くしてテキストを読みやすく */}
@@ -32,12 +35,12 @@ export default function Hero() {
             </h1>
 
             {/* サブコピー */}
-            <div className="max-w-3xl mx-auto animate-fade-in-delay-2">
+            <div className="max-w-3xl mx-auto animate-fade-in-delay-2 text-center">
               <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white/85 font-light tracking-wide leading-relaxed px-4">
-                ベトナム進出設立・M＆A・雇用代行から、進出後の運営にかかわるご不安の解消まで
+                {t('lead1')}
               </p>
               <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white/85 font-light tracking-wide leading-relaxed mt-1.5 sm:mt-2 px-4">
-                経理・税務・リーガル・労務を問わず、貴社のベトナムビジネスを包括的に支援
+                {t('lead2')}
               </p>
             </div>
 
@@ -45,15 +48,15 @@ export default function Hero() {
             <div className="pt-3 sm:pt-4 md:pt-5 lg:pt-6 xl:pt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto animate-fade-in-delay-3">
               <a
                 href="#contact"
-                className="w-full sm:w-auto inline-block px-6 sm:px-8 md:px-10 lg:px-12 py-3 sm:py-3.5 md:py-4 border-2 border-white text-white text-xs sm:text-sm lg:text-base font-light tracking-[0.2em] hover:bg-white hover:text-[#2E2E2E] transition-all duration-300 backdrop-blur-sm"
+                className="w-full sm:w-auto inline-block text-center px-6 sm:px-8 md:px-10 lg:px-12 py-3 sm:py-3.5 md:py-4 border-2 border-white text-white text-xs sm:text-sm lg:text-base font-light tracking-[0.2em] hover:bg-white hover:text-[#2E2E2E] transition-all duration-300 backdrop-blur-sm"
               >
-                無料相談を予約
+                {t('ctaConsult')}
               </a>
               <a
                 href="#services"
-                className="w-full sm:w-auto inline-block px-6 sm:px-8 md:px-10 lg:px-12 py-3 sm:py-3.5 md:py-4 border-2 border-white/70 text-white/90 text-xs sm:text-sm lg:text-base font-light tracking-[0.2em] hover:bg-white hover:text-[#2E2E2E] hover:border-white transition-all duration-300 backdrop-blur-sm"
+                className="w-full sm:w-auto inline-block text-center px-6 sm:px-8 md:px-10 lg:px-12 py-3 sm:py-3.5 md:py-4 border-2 border-white/70 text-white/90 text-xs sm:text-sm lg:text-base font-light tracking-[0.2em] hover:bg-white hover:text-[#2E2E2E] hover:border-white transition-all duration-300 backdrop-blur-sm"
               >
-                サービス詳細
+                {t('ctaServices')}
               </a>
             </div>
           </div>

@@ -10,7 +10,7 @@ const SITE_NAME = 'Kurosawa Consulting Vietnam';
  * Organization 構造化データ
  * 企業情報をGoogleに伝える
  */
-export function getOrganizationJsonLd() {
+export function getOrganizationJsonLd(description: string) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -18,8 +18,7 @@ export function getOrganizationJsonLd() {
     alternateName: ['KCV', 'クロサワ・コンサルティング・ベトナム'],
     url: SITE_URL,
     logo: `${SITE_URL}/kcv-logo.webp`,
-    description:
-      '日本企業のベトナム進出・現地法人運営を支援する総合コンサルティングファーム',
+    description,
     foundingDate: '2016',
     parentOrganization: {
       '@type': 'Organization',
@@ -61,13 +60,13 @@ export function getOrganizationJsonLd() {
  * WebSite 構造化データ
  * サイト情報 + Sitelinks Searchbox（Googleサイトリンク検索ボックス対応）
  */
-export function getWebSiteJsonLd() {
+export function getWebSiteJsonLd(locale = 'ja') {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: SITE_NAME,
     url: SITE_URL,
-    inLanguage: 'ja',
+    inLanguage: locale === 'zh' ? 'zh-Hans' : locale,
     publisher: {
       '@type': 'Organization',
       name: SITE_NAME,

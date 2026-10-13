@@ -1,0 +1,1020 @@
+{
+  "Meta": {
+    "defaultTitle": "Kurosawa Consulting Vietnam | Tư vấn kinh doanh tại Việt Nam",
+    "description": "Công ty tư vấn tổng hợp hỗ trợ doanh nghiệp Nhật Bản và nước ngoài gia nhập thị trường và vận hành pháp nhân tại Việt Nam — từ thành lập công ty, tư vấn M&A đến kế toán, thuế, pháp lý và lao động.",
+    "keywords": [
+      "đầu tư vào Việt Nam",
+      "tư vấn doanh nghiệp Việt Nam",
+      "doanh nghiệp Nhật Bản tại Việt Nam",
+      "M&A Việt Nam",
+      "thành lập công ty tại Việt Nam",
+      "dịch vụ kế toán",
+      "tư vấn thuế",
+      "tư vấn tại TP. Hồ Chí Minh",
+      "tư vấn tại Hà Nội",
+      "Kurosawa Consulting Vietnam"
+    ],
+    "orgDescription": "Công ty tư vấn tổng hợp hỗ trợ doanh nghiệp gia nhập thị trường và vận hành pháp nhân tại Việt Nam"
+  },
+  "LanguageSwitcher": {
+    "label": "Chọn ngôn ngữ"
+  },
+  "ServiceNames": {
+    "list": "Danh sách dịch vụ",
+    "establishment": "Thành lập cơ sở tại Việt Nam",
+    "establishmentSub": "Công ty con / Văn phòng đại diện / Chi nhánh",
+    "ma": "Tư vấn M&A",
+    "accounting": "Tư vấn kế toán và thuế",
+    "legalLabor": "Tư vấn pháp lý và lao động",
+    "license": "Xin cấp các loại giấy phép",
+    "other": "Dịch vụ khác"
+  },
+  "ServiceDescriptions": {
+    "establishment": "Từ khảo sát thị trường, chiến lược gia nhập, thành lập pháp nhân, xin giấy phép, tuyển dụng đến thiết lập bộ phận hành chính – kế toán. Đội ngũ am hiểu chế độ và tập quán kinh doanh địa phương sẽ đồng hành cùng quý doanh nghiệp từ chiến lược đến thực thi.",
+    "ma": "Từ tìm kiếm đối tượng, thẩm định (DD), định giá, thực hiện hợp đồng đến thiết kế PMI. Với đội ngũ am hiểu cả trụ sở chính tại Nhật Bản lẫn thị trường Việt Nam, chúng tôi giúp đẩy nhanh việc ra quyết định và triển khai.",
+    "accounting": "Từ ghi sổ, quyết toán tháng/năm, kê khai thuế, hỗ trợ kiểm toán đến báo cáo hợp nhất cho Nhật Bản. Một đội ngũ thống nhất làm \"cầu nối\" giữa chuẩn mực Việt Nam và chuẩn mực Nhật Bản.",
+    "legalLabor": "Từ rà soát hợp đồng, tuân thủ luật lao động, xây dựng nội quy lao động đến xử lý tranh chấp lao động. Các chuyên gia am hiểu pháp luật địa phương hỗ trợ quản trị rủi ro và vận hành doanh nghiệp thuận lợi.",
+    "license": "Từ Giấy chứng nhận đăng ký đầu tư, Giấy chứng nhận đăng ký doanh nghiệp, giấy phép chuyên ngành đến giấy phép lao động. Chúng tôi thay mặt thực hiện các thủ tục phức tạp, giúp quý doanh nghiệp khởi động kinh doanh suôn sẻ.",
+    "other": "Biên dịch – phiên dịch, tư vấn bất động sản, điều tra tín dụng, dịch vụ thư ký và nhiều hơn nữa. Chúng tôi đáp ứng đa dạng nhu cầu liên quan đến hoạt động kinh doanh tại Việt Nam."
+  },
+  "Header": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "services": "Dịch vụ",
+    "members": "Đội ngũ",
+    "articles": "Bài viết",
+    "careers": "Tuyển dụng",
+    "consultation": "Tư vấn miễn phí",
+    "menu": "Menu"
+  },
+  "Footer": {
+    "tagline": "Công ty tư vấn tổng hợp hỗ trợ hoạt động kinh doanh tại Việt Nam của doanh nghiệp Nhật Bản",
+    "companyInfo": "Thông tin công ty",
+    "members": "Đội ngũ",
+    "faq": "Câu hỏi thường gặp",
+    "news": "Tin tức / Chuyên mục",
+    "careers": "Tuyển dụng",
+    "articles": "Bài viết",
+    "facebookName": "Kurosawa Consulting Vietnam",
+    "privacy": "Chính sách bảo mật",
+    "sitemap": "Sơ đồ trang"
+  },
+  "Hero": {
+    "lead1": "Từ thành lập pháp nhân, M&A, dịch vụ tuyển dụng hộ đến giải quyết các vấn đề trong quá trình vận hành sau khi gia nhập thị trường,",
+    "lead2": "chúng tôi hỗ trợ toàn diện hoạt động kinh doanh tại Việt Nam của quý doanh nghiệp trên mọi lĩnh vực kế toán, thuế, pháp lý và lao động.",
+    "ctaConsult": "Đặt lịch tư vấn miễn phí",
+    "ctaServices": "Chi tiết dịch vụ"
+  },
+  "News": {
+    "heading": "Thông báo",
+    "defaultCategory": "Thông báo",
+    "untitled": "Không có tiêu đề"
+  },
+  "HomeServices": {
+    "heading": "Giới thiệu dịch vụ",
+    "titleLines": {
+      "establishment": ["Hỗ trợ trọn gói", "thành lập công ty con,", "văn phòng đại diện, chi nhánh"],
+      "ma": ["M&A xuyên biên giới", "từ hoạch định chiến lược đến PMI", "một cách xuyên suốt"],
+      "accounting": ["Kế toán – thuế Việt Nam", "theo chuẩn mực địa phương", "chính xác và suôn sẻ"],
+      "legalLabor": ["Pháp lý và lao động tại Việt Nam", "được đội ngũ chuyên gia", "hỗ trợ toàn diện"],
+      "license": ["Nhanh chóng xin cấp", "các loại giấy phép", "cần thiết cho kinh doanh"],
+      "other": ["Hệ thống hỗ trợ", "linh hoạt đáp ứng", "mọi nhu cầu đa dạng"]
+    },
+    "viewMore": "Xem thêm",
+    "showAll": "Xem tất cả dịch vụ",
+    "goTo": "Đến dịch vụ {number}",
+    "prev": "Dịch vụ trước",
+    "next": "Dịch vụ tiếp theo"
+  },
+  "Achievement": {
+    "stats": [
+      { "value": "40", "suffix": "", "label": "Nhân viên" },
+      { "value": "8", "suffix": "", "label": "Nhân viên nói tiếng Nhật" },
+      { "value": "280", "suffix": "+", "label": "Khách hàng đã giao dịch" },
+      { "value": "75", "suffix": "+", "label": "Khách hàng tư vấn thường xuyên" },
+      { "value": "70", "suffix": "%", "label": "Khách hàng Nhật Bản (Trung Quốc/Hoa kiều 20%, Hàn Quốc & Âu Mỹ 10%)" },
+      { "value": "5", "suffix": "", "label": "Kiểm toán viên / Kế toán viên công chứng (trong đó 2 người Nhật Bản)" },
+      { "value": "2", "suffix": "", "label": "Luật sư" },
+      { "value": "7", "suffix": "%", "label": "Tỷ lệ tăng ròng hợp đồng tư vấn thường xuyên bình quân năm (5 năm gần nhất)" }
+    ]
+  },
+  "Articles": {
+    "heading": "Bài viết & Chuyên mục",
+    "empty": "Chưa có bài viết.",
+    "viewAll": "Xem tất cả bài viết",
+    "untitled": "Không có tiêu đề",
+    "notice": "Hiện các bài viết chỉ có bằng tiếng Nhật."
+  },
+  "Contact": {
+    "heading": "Liên hệ",
+    "facebookName": "Kurosawa Consulting Vietnam",
+    "honeypotLabel": "Website (vui lòng không nhập)",
+    "name": "Họ và tên",
+    "namePlaceholder": "Nguyễn Văn A",
+    "company": "Tên công ty",
+    "companyPlaceholder": "Công ty TNHH ABC",
+    "email": "Email",
+    "emailPlaceholder": "example@company.com",
+    "phone": "Số điện thoại",
+    "phonePlaceholder": "028 1234 5678",
+    "service": "Dịch vụ quan tâm",
+    "serviceSelect": "Vui lòng chọn",
+    "serviceOptions": {
+      "strategy": "Tư vấn chiến lược kinh doanh",
+      "dx": "Cải cách nghiệp vụ / Chuyển đổi số (DX)",
+      "organization": "Phát triển tổ chức và nhân sự",
+      "it": "Chiến lược CNTT / PMO",
+      "marketing": "Chiến lược marketing",
+      "risk": "Quản trị rủi ro",
+      "other": "Khác"
+    },
+    "message": "Nội dung liên hệ",
+    "messagePlaceholder": "Vui lòng nhập nội dung cần tư vấn",
+    "submit": "Gửi",
+    "submitting": "Đang gửi...",
+    "download": "Tải hồ sơ công ty",
+    "downloadAlert": "Kính gửi {name},\n\nViệc tải hồ sơ công ty sẽ bắt đầu.\n\nChúng tôi đã ghi nhận thông tin quý khách đã nhập.",
+    "privacyNote": "Thông tin quý khách cung cấp chỉ được sử dụng để phản hồi liên hệ và gửi tài liệu.",
+    "requiredNote": "* Vui lòng nhập đầy đủ các mục bắt buộc (Họ và tên, Tên công ty, Email, Nội dung liên hệ).",
+    "success": "Chúng tôi đã nhận được liên hệ của quý khách. Nhân viên phụ trách sẽ phản hồi trong thời gian sớm nhất.",
+    "networkError": "Đã xảy ra lỗi mạng. Vui lòng thử lại sau.",
+    "genericError": "Gửi không thành công. Vui lòng thử lại."
+  },
+  "FAQ": {
+    "heading": "Câu hỏi thường gặp",
+    "items": [
+      {
+        "question": "Buổi tư vấn đầu tiên có miễn phí không?",
+        "answer": "Tất nhiên là miễn phí. Chúng tôi cho rằng trách nhiệm của một đơn vị tư vấn là trở thành \"người đồng hành cùng khách hàng trước những trăn trở và vấn đề\". Giá trị gia tăng của chúng tôi chính là các giải pháp được đề xuất sau khi tìm hiểu sâu những trăn trở của quý doanh nghiệp và xác định rõ vấn đề. Việc hỗ trợ cho đến khi xác định được vấn đề hoàn toàn miễn phí, vì vậy quý khách hãy thoải mái liên hệ."
+      },
+      {
+        "question": "Doanh nghiệp vừa và nhỏ có thể được tư vấn không?",
+        "answer": "Hoàn toàn được. Khoảng 80% thành viên của chúng tôi đã tích lũy kinh nghiệm chuyên môn tại các công ty tư vấn lớn thuộc nhóm Big4, nhưng mức phí dịch vụ chỉ khoảng 50–70% so với các công ty lớn này. Với danh tiếng \"chất lượng ngang Big4, chi phí hợp lý\", khoảng 80% khách hàng của chúng tôi là doanh nghiệp vừa và nhỏ hoặc cá nhân."
+      },
+      {
+        "question": "Công ty hỗ trợ những ngành nghề nào?",
+        "answer": "Chúng tôi hỗ trợ nhiều ngành nghề như sản xuất, tài chính, bán lẻ, CNTT, y tế, giáo dục... Tư vấn viên am hiểu các vấn đề đặc thù của từng ngành sẽ phụ trách."
+      },
+      {
+        "question": "Chi phí khoảng bao nhiêu?",
+        "answer": "Chi phí tùy thuộc vào nội dung, thời gian và quy mô dự án. Trước tiên chúng tôi sẽ lắng nghe vấn đề của quý khách, sau đó đề xuất phương án và báo giá phù hợp nhất. Chúng tôi luôn chú trọng sự minh bạch trong biểu phí."
+      },
+      {
+        "question": "Có thể hỗ trợ từ xa không?",
+        "answer": "Có, chúng tôi có thể hỗ trợ trực tuyến thông qua họp video và công cụ chat để giao tiếp hiệu quả. Khi cần, chúng tôi cũng có thể kết hợp hỗ trợ trực tiếp và từ xa."
+      },
+      {
+        "question": "Nghĩa vụ bảo mật có được đảm bảo không?",
+        "answer": "Tất nhiên. Khi cần, chúng tôi cũng sẽ chuẩn bị thỏa thuận bảo mật (NDA), quý khách hoàn toàn yên tâm."
+      }
+    ],
+    "ctaTitle": "Quý khách còn câu hỏi nào khác?",
+    "ctaText": "Vui lòng liên hệ với chúng tôi. Đội ngũ chuyên môn sẽ giải đáp tận tình.",
+    "ctaButton": "Liên hệ ngay"
+  },
+  "About": {
+    "metaTitle": "Giới thiệu công ty",
+    "metaDescription": "Giới thiệu Kurosawa Consulting Vietnam (KCV). Là pháp nhân tại Việt Nam của Tập đoàn Kurosawa, chúng tôi hỗ trợ toàn diện hoạt động kinh doanh tại Việt Nam của doanh nghiệp Nhật Bản với hai văn phòng tại TP. Hồ Chí Minh và Hà Nội.",
+    "title": "Giới thiệu công ty",
+    "lead": "Chúng tôi đồng hành và hỗ trợ quý doanh nghiệp mở rộng hoạt động kinh doanh tại Việt Nam."
+  },
+  "Strengths": {
+    "heading": "Thế mạnh của chúng tôi",
+    "items": [
+      {
+        "title": "Chất lượng ngang công ty lớn, chi phí hợp lý",
+        "body": "Phần lớn nhân viên của chúng tôi đã tích lũy kiến thức chuyên môn tại các công ty tư vấn lớn thuộc nhóm Big4. Chúng tôi duy trì chất lượng tương đương các công ty lớn với biểu phí hợp lý."
+      },
+      {
+        "title": "Hệ thống hỗ trợ xóa bỏ hoàn toàn rào cản ngôn ngữ",
+        "body": "Ba nhân viên người Nhật làm việc thường trú tại Việt Nam, cùng hơn năm kế toán viên và chuyên gia người Việt có năng lực tiếng Nhật từ N2 trở lên, giúp khách hàng không gặp bất kỳ rào cản ngôn ngữ nào."
+      },
+      {
+        "title": "Năng lực làm việc với cơ quan nhà nước và hỗ trợ trọn gói",
+        "body": "Với đội ngũ kế toán viên và luật sư nội bộ, chúng tôi có thể hỗ trợ trọn gói. Chúng tôi còn có luật sư từng công tác tại cơ quan nhà nước Việt Nam, đảm bảo năng lực làm việc với cơ quan chức năng một cách hiệu quả."
+      }
+    ]
+  },
+  "CompanyInfo": {
+    "heading": "Thông tin công ty",
+    "parentLabel": "Công ty mẹ tại Nhật Bản",
+    "parentName": "Tập đoàn Kurosawa (Kurosawa Joint Office Group)",
+    "parentNote": "(Tập đoàn chuyên gia pháp lý lấy thư ký tư pháp làm nòng cốt, 55 năm hoạt động tại Tokyo)",
+    "localLabel": "Pháp nhân tại Việt Nam",
+    "localNote": "",
+    "employeesLabel": "Số nhân viên",
+    "employeesValue": "95 người",
+    "employeesNote": "(Nhật Bản: 55, Việt Nam: 40)",
+    "websiteLabel": "Website",
+    "historyLabel": "Lịch sử phát triển",
+    "history": [
+      "1969: Nhà sáng lập (nay là Chủ tịch) Kurosawa Koki đăng ký hành nghề thư ký tư pháp",
+      "1972: Thành lập văn phòng thư ký tư pháp tại Nakano, Tokyo",
+      "2009: Cùng với việc mở rộng quy mô, pháp nhân hóa bộ phận thư ký tư pháp thành Kurosawa Joint Office, đồng thời mở văn phòng Yokohama",
+      "2015: Cùng với việc mở rộng quy mô, pháp nhân hóa bộ phận đo đạc đất đai và nhà ở",
+      "2016: Mở Phòng hỗ trợ thừa kế chuyên về thừa kế và giám hộ người thành niên",
+      "2016: Thành lập KCV tại TP. Hồ Chí Minh",
+      "2025: Với danh tiếng \"chất lượng cao, chi phí hợp lý\", phát triển lên hơn 75 khách hàng tư vấn thường xuyên và hơn 280 khách hàng đã giao dịch"
+    ]
+  },
+  "Members": {
+    "heading": "Đội ngũ",
+    "groups": {
+      "japanDesk": "Nhóm hỗ trợ doanh nghiệp Nhật Bản",
+      "accounting": "Bộ phận Kế toán",
+      "legal": "Bộ phận Pháp lý"
+    },
+    "people": {
+      "koei": {
+        "name": "Koei Kurosawa",
+        "sub": "",
+        "bullets": [
+          "Kế toán viên công chứng và chuyên viên tư vấn thuế (Nhật Bản).",
+          "Từ năm 1996, làm việc tại công ty kiểm toán Âu Mỹ trong lĩnh vực kiểm toán và niêm yết cổ phiếu (IPO).",
+          "Từ năm 2001, làm tư vấn tài chính chiến lược và quản trị doanh nghiệp tại công ty tư vấn Nhật Bản và doanh nghiệp Mỹ.",
+          "Năm 2004, thành lập Văn phòng tư vấn thuế Koei Kurosawa, cung cấp dịch vụ thuế và kế toán cho doanh nghiệp Nhật Bản và người không cư trú; hiện là Tổng giám đốc Tập đoàn Kurosawa."
+        ]
+      },
+      "ngan": {
+        "name": "Nguyen Ngoc Kim Ngan",
+        "sub": "",
+        "bullets": [
+          "Cử nhân ngành tiếng Nhật, có chứng chỉ năng lực tiếng Nhật (JLPT) N2.",
+          "Hơn 10 năm kinh nghiệm tư vấn doanh nghiệp trong lĩnh vực thuế, kế toán và pháp lý; từng làm việc tại công ty kiểm toán Big4.",
+          "Có nhiều kinh nghiệm làm việc trực tiếp với doanh nghiệp Nhật Bản, từng làm việc tại Nhật Bản, và đã hỗ trợ doanh nghiệp Nhật Bản cũng như doanh nghiệp FDI trong nhiều lĩnh vực."
+        ]
+      },
+      "honda": {
+        "name": "Yuya Honda",
+        "sub": "",
+        "bullets": [
+          "Chuyên viên hoạch định tài chính hạng 1 (FP hạng 1).",
+          "Sau khi tốt nghiệp đại học, làm việc tại Ngân hàng Fukuoka trong các mảng hỗ trợ thừa kế – kế thừa doanh nghiệp, M&A và tài chính cấu trúc; hai lần nhận Giải thưởng của Chủ tịch ngân hàng.",
+          "Sau đó, làm cố vấn M&A tại một công ty môi giới M&A lớn, môi giới nhiều thương vụ M&A, trong đó có ngành bảo trì tòa nhà.",
+          "Hiện phụ trách M&A xuyên biên giới và các dịch vụ tư vấn thuế, kế toán tại Kurosawa Consulting Vietnam."
+        ]
+      },
+      "morita": {
+        "name": "Teppei Morita",
+        "sub": "",
+        "bullets": [
+          "Kế toán viên công chứng (Nhật Bản).",
+          "Từ năm 2005, làm việc tại công ty kiểm toán lớn thuộc Big4 trong các mảng kiểm toán, IPO và kiểm soát nội bộ.",
+          "Từ năm 2013, làm việc khoảng 6 năm tại Việt Nam (bao gồm pháp nhân Việt Nam của công ty kiểm toán trên), hỗ trợ doanh nghiệp Nhật Bản gia nhập thị trường, tư vấn thuế – kế toán và kiểm toán công ty con Nhật Bản.",
+          "Gia nhập Kurosawa Consulting Vietnam năm 2018, hỗ trợ khách hàng từ cả phía Việt Nam và Nhật Bản.",
+          "Đặc biệt có thế mạnh về hỗ trợ kế toán hợp nhất, áp dụng IFRS và thẩm định M&A."
+        ]
+      },
+      "mai": {
+        "name": "Le Thi Thu Mai",
+        "sub": "",
+        "bullets": [
+          "Kế toán trưởng (chứng chỉ Bộ Tài chính), hội viên Hội Kiểm toán viên hành nghề Việt Nam.",
+          "Hơn 13 năm hỗ trợ kế toán – thuế cho khách hàng trong lĩnh vực sản xuất, thương mại và dịch vụ.",
+          "Phụ trách nhiều nghiệp vụ kế toán – thuế, bao gồm hoàn thuế GTGT và giải thể doanh nghiệp.",
+          "Đặc biệt giàu kinh nghiệm hỗ trợ doanh nghiệp Nhật Bản; đồng thời từng quản lý tài chính cho doanh nghiệp Thái Lan và Singapore.",
+          "Có thành tích phối hợp với các cơ quan chức năng Việt Nam hỗ trợ khách hàng trong kiểm tra và thanh tra thuế."
+        ]
+      },
+      "nhung": {
+        "name": "Nguyen Thi Phuong Nhung",
+        "sub": "",
+        "bullets": [
+          "Kiểm toán viên hành nghề tại Việt Nam, có chứng chỉ tiếng Nhật N2.",
+          "8 năm kinh nghiệm tại công ty tư vấn kế toán lớn, đảm nhận nhiều nghiệp vụ như hỗ trợ kế toán – thuế cho doanh nghiệp thương mại, sản xuất, dịch vụ, hoàn thuế GTGT, chuyển giá...",
+          "Nhiều năm kinh nghiệm lập và soát xét báo cáo tài chính, đồng thời giàu kinh nghiệm thẩm định tài chính cho doanh nghiệp Nhật Bản."
+        ]
+      },
+      "hiep": {
+        "name": "Nguyen Truong Hiep",
+        "sub": "",
+        "bullets": [
+          "Luật sư (Trường Đại học Luật TP. Hồ Chí Minh), Kế toán trưởng, hội viên Hiệp hội Kế toán công chứng Úc (CPA Australia).",
+          "Cử nhân (Quản trị kinh doanh) và Thạc sĩ (Quản lý công nghiệp) Đại học Quốc gia Moskva; từng làm việc tại công ty kế toán lớn của Âu Mỹ.",
+          "Hơn 10 năm kinh nghiệm trong các lĩnh vực gia nhập thị trường Việt Nam, thành lập công ty, kế toán – thuế, quản lý tài chính – quản trị doanh nghiệp, tổ chức lại doanh nghiệp, giao dịch xuyên biên giới và tái cấu trúc.",
+          "Giàu kinh nghiệm cung cấp dịch vụ chuyên môn cho doanh nghiệp có vốn đầu tư nước ngoài."
+        ]
+      },
+      "lanAnh": {
+        "name": "Dao Thi Lan Anh",
+        "sub": "",
+        "bullets": [
+          "Luật sư (Cử nhân Trường Đại học Luật TP. Hồ Chí Minh), có chứng chỉ hành nghề luật sư; Thạc sĩ Đại học Panthéon-Assas (Paris II).",
+          "Tư vấn các tranh chấp liên quan đến mua bán, đầu tư xuyên biên giới, giao dịch thương mại, hợp đồng dịch vụ và hợp đồng lao động.",
+          "Có kinh nghiệm rộng trong việc thành lập và rút lui pháp nhân tại Việt Nam của doanh nghiệp nước ngoài, thẩm định và xử lý các vấn đề pháp lý doanh nghiệp thường gặp."
+        ]
+      }
+    }
+  },
+  "ArticlesPage": {
+    "metaTitle": "Bài viết & Chuyên mục",
+    "metaDescription": "Các bài viết và chuyên mục về kinh doanh tại Việt Nam.",
+    "prev": "Trước",
+    "next": "Sau"
+  },
+  "ArticleDetail": {
+    "notFound": "Không tìm thấy bài viết",
+    "breadcrumb": "Điều hướng",
+    "home": "Trang chủ",
+    "updated": "Cập nhật: {date}",
+    "readingTime": "Khoảng {minutes} phút đọc",
+    "published": "Ngày đăng",
+    "updatedLabel": "Ngày cập nhật",
+    "readingTimeLabel": "Thời gian đọc",
+    "readingTimeShort": "Khoảng {minutes} phút",
+    "backToList": "Quay lại danh sách bài viết",
+    "related": "Bài viết liên quan",
+    "languageNotice": "Bài viết này hiện chỉ có bằng tiếng Nhật."
+  },
+  "Careers": {
+    "metaTitle": "Tuyển dụng",
+    "metaDescription": "Thông tin tuyển dụng của Kurosawa Consulting Vietnam (KCV) — công ty tư vấn hỗ trợ doanh nghiệp Nhật Bản tại Việt Nam.",
+    "title": "Tuyển dụng",
+    "none": "Hiện chúng tôi chưa có kế hoạch tuyển dụng."
+  },
+  "ServicesPage": {
+    "metaDescription": "Hỗ trợ toàn diện hoạt động kinh doanh tại Việt Nam: thành lập cơ sở, tư vấn M&A, tư vấn kế toán và thuế, tư vấn pháp lý và lao động, xin cấp các loại giấy phép.",
+    "lead1": "Mọi hỗ trợ cần thiết để phát triển kinh doanh tại Việt Nam,",
+    "lead2": "được cung cấp trọn gói",
+    "details": "Xem chi tiết",
+    "features": {
+      "establishment": ["Khảo sát thị trường, hoạch định chiến lược", "Thành lập công ty con, văn phòng đại diện", "Hỗ trợ xin giấy phép", "Thiết lập bộ phận hành chính – kế toán"],
+      "ma": ["Tìm kiếm doanh nghiệp mục tiêu", "Thẩm định (Due diligence)", "Định giá", "Thiết kế và triển khai PMI"],
+      "accounting": ["Ghi sổ, dịch vụ kế toán", "Quyết toán tháng, năm", "Kê khai thuế, hỗ trợ thanh tra thuế", "Báo cáo hợp nhất cho Nhật Bản"],
+      "legalLabor": ["Soạn thảo, rà soát hợp đồng", "Nội quy lao động, quy chế nội bộ", "Tư vấn luật lao động", "Xử lý tranh chấp lao động"],
+      "license": ["Giấy chứng nhận đăng ký đầu tư (IRC)", "Giấy chứng nhận đăng ký doanh nghiệp (ERC)", "Giấy phép chuyên ngành", "Giấy phép lao động"],
+      "other": ["Biên dịch, phiên dịch", "Tư vấn bất động sản", "Điều tra tín dụng, điều tra doanh nghiệp", "Dịch vụ thư ký"]
+    }
+  },
+  "ServiceDetail": {
+    "top": "TRANG CHỦ",
+    "services": "Dịch vụ",
+    "nav": {
+      "overview": "Tổng quan dịch vụ",
+      "support": "Nội dung hỗ trợ",
+      "budget": "Chi phí tham khảo",
+      "faq": "Câu hỏi thường gặp"
+    },
+    "ctaLine1": "Tư vấn về {topic}",
+    "ctaLine2": "vui lòng liên hệ tại đây",
+    "contact": "Liên hệ",
+    "establishment": {
+      "heroTitleLines": ["Thành lập cơ sở", "tại Việt Nam"],
+      "ctaTopic": "đầu tư vào Việt Nam",
+      "overview": {
+        "paragraphs": [
+          "Kurosawa Consulting Vietnam hỗ trợ toàn diện doanh nghiệp Nhật Bản gia nhập thị trường Việt Nam. Từ khảo sát thị trường đến thành lập pháp nhân, xin giấy phép, tuyển dụng nhân sự và hỗ trợ vận hành sau khi bắt đầu kinh doanh, chúng tôi cung cấp dịch vụ trọn gói.",
+          "Đội ngũ chuyên gia am hiểu chế độ và tập quán kinh doanh tại Việt Nam sẽ đề xuất hình thức đầu tư phù hợp nhất với kế hoạch kinh doanh của quý khách và giúp việc thành lập diễn ra suôn sẻ. Với kinh nghiệm thực tế phong phú tại địa phương và sự hỗ trợ tận tình bằng tiếng Nhật, quý khách có thể yên tâm ngay cả khi lần đầu đầu tư vào Việt Nam."
+        ]
+      },
+      "flow": {
+        "title": "Quy trình thành lập",
+        "intro": "Việc thành lập pháp nhân tại Việt Nam được tiến hành theo các bước dưới đây, với sự hỗ trợ của đội ngũ chuyên môn ở mỗi giai đoạn.",
+        "steps": [
+          {
+            "title": "Khảo sát sơ bộ, hoạch định chiến lược",
+            "description": "Từ khảo sát thị trường đến lựa chọn hình thức đầu tư",
+            "duration": "Dự kiến: 1–2 tháng",
+            "details": ["Khảo sát, phân tích thị trường Việt Nam", "Nghiên cứu đối thủ và xu hướng ngành", "So sánh hình thức đầu tư (công ty con / VPĐD / chi nhánh)", "Hỗ trợ xây dựng kế hoạch kinh doanh"]
+          },
+          {
+            "title": "Thủ tục thành lập pháp nhân",
+            "description": "Từ đăng ký đầu tư đến đăng ký doanh nghiệp",
+            "duration": "Dự kiến: 2–3 tháng",
+            "details": ["Xin Giấy chứng nhận đăng ký đầu tư (IRC)", "Xin Giấy chứng nhận đăng ký doanh nghiệp (ERC)", "Soạn điều lệ và quy chế nội bộ", "Mở tài khoản ngân hàng"]
+          },
+          {
+            "title": "Xin giấy phép",
+            "description": "Xin các giấy phép cần thiết theo ngành nghề",
+            "duration": "Dự kiến: 1–3 tháng",
+            "details": ["Xin giấy phép chuyên ngành", "Xin giấy phép xuất nhập khẩu", "Xin giấy phép môi trường", "Các giấy phép cần thiết khác"]
+          },
+          {
+            "title": "Thiết lập văn phòng, tuyển dụng",
+            "description": "Mở văn phòng và tuyển dụng nhân sự ban đầu",
+            "duration": "Dự kiến: 1–2 tháng",
+            "details": ["Lựa chọn và ký hợp đồng thuê văn phòng", "Bố trí nội thất, thiết bị", "Hỗ trợ tuyển dụng", "Xin giấy phép lao động"]
+          },
+          {
+            "title": "Bắt đầu kinh doanh, hỗ trợ vận hành",
+            "description": "Hỗ trợ khởi động kinh doanh suôn sẻ",
+            "duration": "Dự kiến: liên tục",
+            "details": ["Thiết lập ban đầu về kế toán – thuế", "Thủ tục tính lương, bảo hiểm xã hội", "Thay mặt nộp các hồ sơ thông báo", "Hỗ trợ vận hành liên tục"]
+          }
+        ]
+      },
+      "support": {
+        "intro": "Chúng tôi cung cấp mọi hỗ trợ cần thiết để gia nhập thị trường Việt Nam.",
+        "items": [
+          {
+            "title": "Khảo sát thị trường, chiến lược gia nhập",
+            "description": "Hiểu sâu thị trường Việt Nam và xây dựng chiến lược gia nhập tối ưu.",
+            "features": ["Phân tích quy mô, tiềm năng tăng trưởng", "Khảo sát môi trường cạnh tranh", "Xác định khách hàng mục tiêu", "So sánh hình thức đầu tư"]
+          },
+          {
+            "title": "Thành lập, đăng ký pháp nhân",
+            "description": "Hỗ trợ trọn gói các thủ tục thành lập phức tạp.",
+            "features": ["Xin IRC", "Xin ERC", "Soạn điều lệ, quy chế nội bộ", "Thay mặt nộp hồ sơ thông báo"]
+          },
+          {
+            "title": "Giấy phép",
+            "description": "Thay mặt xin các giấy phép theo ngành nghề.",
+            "features": ["Xin giấy phép chuyên ngành", "Xin giấy phép lao động", "Giấy phép xuất nhập khẩu", "Giấy phép môi trường, an toàn"]
+          },
+          {
+            "title": "Tuyển dụng, lao động",
+            "description": "Hỗ trợ từ tuyển dụng nhân tài đến quản lý lao động.",
+            "features": ["Giới thiệu, hỗ trợ tuyển dụng nhân sự", "Soạn nội quy lao động", "Tính lương, bảo hiểm xã hội", "Xử lý tranh chấp lao động"]
+          }
+        ]
+      },
+      "budget": {
+        "intro": "Chi phí tham khảo cho việc thành lập cơ sở tại Việt Nam. Chi phí thực tế thay đổi tùy theo nội dung và quy mô kinh doanh.",
+        "plans": [
+          {
+            "title": "Thành lập công ty con",
+            "price": "Từ 3.000 USD",
+            "description": "Bao gồm xin IRC, ERC, soạn điều lệ...",
+            "items": ["Thủ tục xin IRC/ERC", "Soạn điều lệ, quy chế nội bộ", "Hỗ trợ mở tài khoản ngân hàng", "Thay mặt nộp hồ sơ thông báo"]
+          },
+          {
+            "title": "Thành lập văn phòng đại diện",
+            "price": "Từ 2.000 USD",
+            "description": "Bao gồm thủ tục xin giấy phép thành lập văn phòng đại diện",
+            "items": ["Nộp hồ sơ xin giấy phép", "Chuẩn bị hồ sơ cần thiết", "Hỗ trợ mở tài khoản ngân hàng", "Thay mặt nộp hồ sơ thông báo"]
+          },
+          {
+            "title": "Thành lập chi nhánh",
+            "price": "Từ 2.500 USD",
+            "description": "Bao gồm thủ tục xin giấy phép thành lập chi nhánh",
+            "items": ["Nộp hồ sơ xin giấy phép chi nhánh", "Chuẩn bị hồ sơ cần thiết", "Hỗ trợ mở tài khoản ngân hàng", "Thay mặt nộp hồ sơ thông báo"]
+          }
+        ],
+        "note": "* Trên đây là giá tham khảo. Vui lòng liên hệ để nhận báo giá chi tiết."
+      },
+      "faq": [
+        {
+          "question": "Thành lập pháp nhân tại Việt Nam mất bao lâu?",
+          "answer": "Tùy ngành nghề và hình thức đầu tư, nhưng thông thường việc thành lập công ty con mất khoảng 3–6 tháng: khoảng 2–3 tháng để xin Giấy chứng nhận đăng ký đầu tư (IRC) và Giấy chứng nhận đăng ký doanh nghiệp (ERC), sau đó khoảng 1–3 tháng để xin các giấy phép."
+        },
+        {
+          "question": "Công ty con và văn phòng đại diện khác nhau thế nào?",
+          "answer": "Công ty con có tư cách pháp nhân độc lập, được phép hoạt động kinh doanh và ghi nhận doanh thu. Văn phòng đại diện chỉ được thực hiện khảo sát thị trường và liên lạc, không được kinh doanh. Chúng tôi sẽ đề xuất hình thức phù hợp nhất với mục đích của quý khách."
+        },
+        {
+          "question": "Có thể thành lập công ty 100% vốn nước ngoài không?",
+          "answer": "Có, nhiều ngành nghề cho phép thành lập công ty 100% vốn nước ngoài. Tuy nhiên, một số ngành (như bất động sản, quảng cáo) có hạn chế về sở hữu nước ngoài và có thể phải liên doanh với doanh nghiệp Việt Nam. Vui lòng kiểm tra theo từng ngành nghề."
+        },
+        {
+          "question": "Vốn tối thiểu cần bao nhiêu?",
+          "answer": "Việt Nam nhìn chung không quy định vốn tối thiểu, nhưng một số ngành (như ngân hàng, bảo hiểm) có quy định vốn pháp định. Trên thực tế, điều quan trọng là xác định mức vốn phù hợp với kế hoạch kinh doanh."
+        },
+        {
+          "question": "Có hỗ trợ bằng tiếng Nhật không?",
+          "answer": "Có. Chúng tôi có nhân viên người Nhật và nhân viên người Việt thông thạo tiếng Nhật, quý khách có thể yên tâm trao đổi bằng tiếng Nhật."
+        }
+      ]
+    },
+    "ma": {
+      "heroTitleLines": ["Tư vấn M&A"],
+      "ctaTopic": "M&A",
+      "overview": {
+        "paragraphs": ["Kurosawa Consulting Vietnam là đội ngũ tinh nhuệ về M&A xuyên biên giới, kết nối Nhật Bản và Việt Nam, gồm:"],
+        "list": [
+          "Kế toán viên công chứng người Nhật có kiến thức chuyên sâu về thẩm định kế toán – thuế và PMI, tích lũy tại văn phòng Nhật Bản và TP. Hồ Chí Minh của các công ty Big4",
+          "Luật sư người Việt có mạng lưới rộng với các doanh nghiệp có nhu cầu nhận đầu tư từ doanh nghiệp Nhật Bản",
+          "Chuyên viên tư vấn có kinh nghiệm hoàn tất nhiều thương vụ M&A tại công ty môi giới M&A niêm yết",
+          "Quản lý có hơn 5 năm kinh nghiệm phiên dịch thương mại Việt – Nhật"
+        ],
+        "closing": "Toàn bộ đội ngũ sẽ cùng hỗ trợ thương vụ M&A tại Việt Nam của quý doanh nghiệp."
+      },
+      "flow": {
+        "title": "Quy trình M&A",
+        "intro": "Quy trình M&A được tiến hành theo các bước dưới đây, với sự hỗ trợ của đội ngũ chuyên môn ở mỗi giai đoạn.",
+        "steps": [
+          {
+            "title": "Hoạch định chiến lược, tìm kiếm mục tiêu",
+            "description": "Xây dựng chiến lược M&A và lựa chọn doanh nghiệp mục tiêu",
+            "duration": "Dự kiến: 1–3 tháng",
+            "details": ["Làm rõ mục đích và chiến lược M&A", "Lập danh sách dài (long list) doanh nghiệp mục tiêu", "Sàng lọc và thu hẹp ban đầu", "Xem xét phương thức tiếp cận"]
+          },
+          {
+            "title": "Khảo sát thực địa, thỏa thuận cơ bản",
+            "description": "Bắt đầu đàm phán với doanh nghiệp mục tiêu",
+            "duration": "Dự kiến: 1–2 tháng",
+            "details": ["Ký thỏa thuận bảo mật (NDA)", "Khảo sát thực địa, gặp gỡ lãnh đạo", "Đàm phán điều kiện cơ bản", "Gửi LOI, ký biên bản ghi nhớ (MOU)"]
+          },
+          {
+            "title": "Thẩm định (Due diligence)",
+            "description": "Khảo sát chi tiết doanh nghiệp mục tiêu",
+            "duration": "Dự kiến: 1–2 tháng",
+            "details": ["Thẩm định tài chính", "Thẩm định pháp lý", "Thẩm định thuế", "Thẩm định hoạt động kinh doanh"]
+          },
+          {
+            "title": "Định giá, đàm phán cuối cùng",
+            "description": "Định giá doanh nghiệp và đàm phán điều kiện",
+            "duration": "Dự kiến: 1–2 tháng",
+            "details": ["Xác định giá trị doanh nghiệp", "Đàm phán cuối cùng về điều kiện giao dịch", "Soạn hợp đồng chuyển nhượng cổ phần", "Thiết lập điều kiện hoàn tất giao dịch"]
+          },
+          {
+            "title": "PMI (quá trình hợp nhất)",
+            "description": "Hỗ trợ hợp nhất sau mua lại",
+            "duration": "Dự kiến: 3–12 tháng",
+            "details": ["Hợp nhất hệ thống và quy trình nghiệp vụ", "Thực hiện kế toán hợp nhất", "Tuân thủ J-SOX", "Hoàn thiện kế hoạch nhân sự và lao động"]
+          }
+        ]
+      },
+      "support": {
+        "intro": "Chúng tôi cung cấp mọi hỗ trợ cần thiết cho M&A.",
+        "items": [
+          {
+            "title": "Tìm kiếm doanh nghiệp mục tiêu",
+            "description": "Tìm ra doanh nghiệp mục tiêu M&A tối ưu.",
+            "features": ["Lập long list, short list", "Phân tích ngành và thị trường", "Tiếp cận doanh nghiệp mục tiêu", "Hỗ trợ kết nối"]
+          },
+          {
+            "title": "Thẩm định (Due diligence)",
+            "description": "Khảo sát kỹ lưỡng rủi ro và giá trị của doanh nghiệp mục tiêu.",
+            "features": ["DD tài chính, thuế", "DD pháp lý", "DD kinh doanh", "Lập báo cáo tổng hợp"]
+          },
+          {
+            "title": "Định giá",
+            "description": "Xác định giá trị doanh nghiệp hợp lý.",
+            "features": ["Phương pháp DCF", "Phương pháp bội số EBITDA", "Phương pháp tài sản ròng + lợi thế thương mại", "Hỗ trợ đàm phán với bên bán"]
+          },
+          {
+            "title": "Hỗ trợ PMI",
+            "description": "Giúp quá trình hợp nhất sau mua lại thành công.",
+            "features": ["Hỗ trợ lập gói báo cáo hợp nhất", "Hỗ trợ áp dụng IFRS", "Hỗ trợ xây dựng vận hành J-SOX", "Hoàn thiện chế độ lao động"]
+          }
+        ]
+      },
+      "budget": {
+        "intro": "Chi phí tham khảo cho dịch vụ tư vấn M&A. Chi phí thực tế thay đổi tùy quy mô và mức độ phức tạp của thương vụ.",
+        "plans": [
+          {
+            "title": "Tìm kiếm mục tiêu, xem xét ban đầu",
+            "price": "Miễn phí",
+            "description": "Bao gồm tìm kiếm, lựa chọn doanh nghiệp mục tiêu và phân tích ban đầu",
+            "items": ["Lập long list", "Lập short list", "Phân tích doanh nghiệp ban đầu", "Hỗ trợ tiếp cận"]
+          },
+          {
+            "title": "Thẩm định (Due diligence)",
+            "price": "Từ 4.000 USD",
+            "description": "Bao gồm thẩm định tài chính, pháp lý, thuế và kinh doanh",
+            "items": ["DD tài chính", "DD pháp lý", "DD thuế", "DD kinh doanh"]
+          },
+          {
+            "title": "Tư vấn toàn diện",
+            "price": "Phí thành công (vui lòng trao đổi)",
+            "description": "Dịch vụ tư vấn cho toàn bộ quy trình M&A",
+            "items": ["Từ hoạch định chiến lược đến hoàn tất giao dịch", "Định giá", "Hỗ trợ đàm phán", "Hỗ trợ PMI"]
+          }
+        ],
+        "note": "* Trên đây là giá tham khảo, có thể thay đổi tùy quy mô và mức độ phức tạp của thương vụ. Vui lòng liên hệ để nhận báo giá chi tiết."
+      },
+      "faq": [
+        {
+          "question": "M&A doanh nghiệp Việt Nam mất bao lâu?",
+          "answer": "Tùy quy mô và mức độ phức tạp của thương vụ, thông thường khoảng 6 tháng đến 1 năm. Việc thẩm định và phê duyệt của cơ quan nhà nước có thể mất nhiều thời gian."
+        },
+        {
+          "question": "Việc nhà đầu tư nước ngoài mua lại doanh nghiệp Việt Nam có bị hạn chế không?",
+          "answer": "Có, tùy ngành nghề sẽ có hạn chế về sở hữu nước ngoài. Một số ngành như ngân hàng, truyền thông, bất động sản bị giới hạn tỷ lệ sở hữu nước ngoài. Vui lòng kiểm tra cụ thể từng trường hợp."
+        },
+        {
+          "question": "Thẩm định bao gồm những nội dung gì?",
+          "answer": "Chúng tôi khảo sát các lĩnh vực tài chính, thuế, pháp lý và kinh doanh, đồng thời đặc biệt lưu ý các rủi ro đặc thù của Việt Nam (quyền sử dụng đất, luật lao động, rủi ro thuế...)."
+        },
+        {
+          "question": "Có thể yêu cầu hỗ trợ PMI sau M&A không?",
+          "answer": "Có, chúng tôi cung cấp hỗ trợ PMI (hợp nhất sau mua lại), đồng hành liên tục từ hợp nhất tổ chức, hợp nhất hệ thống đến hiện thực hóa hiệu quả cộng hưởng."
+        },
+        {
+          "question": "Có hỗ trợ bằng tiếng Nhật không?",
+          "answer": "Có. Đội ngũ song ngữ có khả năng làm việc với cả trụ sở chính tại Nhật Bản và phía Việt Nam sẽ phụ trách."
+        }
+      ]
+    },
+    "accounting": {
+      "heroTitleLines": ["Tư vấn", "kế toán và thuế"],
+      "ctaTopic": "kế toán và thuế",
+      "overview": {
+        "paragraphs": [
+          "Kurosawa Consulting Vietnam hỗ trợ toàn diện nghiệp vụ kế toán – thuế cho pháp nhân tại Việt Nam của doanh nghiệp Nhật Bản. Từ dịch vụ ghi sổ đến quyết toán tháng/năm, kê khai thuế và hỗ trợ kiểm toán, chúng tôi cung cấp dịch vụ trọn gói.",
+          "Đội ngũ am hiểu cả Chuẩn mực kế toán Việt Nam (VAS) lẫn chuẩn mực Nhật Bản đảm bảo xử lý đúng theo chuẩn mực địa phương và báo cáo thông suốt cho trụ sở chính tại Nhật Bản."
+        ]
+      },
+      "flow": {
+        "title": "Quy trình nghiệp vụ",
+        "intro": "Nghiệp vụ kế toán – thuế được thực hiện theo quy trình sau.",
+        "steps": [
+          {
+            "title": "Thiết lập ban đầu, chuyển đổi dữ liệu",
+            "description": "Thiết lập hệ thống kế toán và chuyển dữ liệu hiện có",
+            "duration": "1–2 tháng",
+            "details": ["Thiết kế hệ thống tài khoản", "Triển khai phần mềm kế toán", "Chuyển đổi dữ liệu hiện có", "Xây dựng quy trình nghiệp vụ"]
+          },
+          {
+            "title": "Ghi sổ, xử lý hằng tháng",
+            "description": "Ghi nhận giao dịch hằng ngày và xử lý hằng tháng",
+            "duration": "Hằng tháng",
+            "details": ["Hạch toán, dịch vụ ghi sổ", "Quản lý hóa đơn, chứng từ", "Đối chiếu ngân hàng", "Lập bảng cân đối số phát sinh hằng tháng"]
+          },
+          {
+            "title": "Quyết toán, báo cáo hằng tháng",
+            "description": "Quyết toán tháng và lập báo cáo quản trị",
+            "duration": "Hằng tháng",
+            "details": ["Khóa sổ hằng tháng", "Lập báo cáo tài chính", "Báo cáo cho trụ sở chính Nhật Bản", "Cung cấp tài liệu phân tích quản trị"]
+          },
+          {
+            "title": "Quyết toán năm, kê khai thuế",
+            "description": "Quyết toán năm và kê khai các loại thuế",
+            "duration": "Mỗi năm 1 lần",
+            "details": ["Quyết toán năm", "Quyết toán thuế TNDN", "Kê khai thuế giá trị gia tăng (GTGT)", "Hỗ trợ kiểm toán"]
+          }
+        ]
+      },
+      "support": {
+        "items": [
+          {
+            "title": "Dịch vụ ghi sổ",
+            "description": "Xử lý chính xác các giao dịch hằng ngày.",
+            "features": ["Hạch toán, ghi sổ", "Sắp xếp chứng từ", "Đối chiếu ngân hàng", "Lập bảng cân đối số phát sinh"]
+          },
+          {
+            "title": "Quyết toán, báo cáo tài chính",
+            "description": "Quyết toán tháng/năm và lập báo cáo tài chính.",
+            "features": ["Khóa sổ hằng tháng", "Quyết toán năm", "Lập báo cáo tài chính", "Báo cáo cho trụ sở chính Nhật Bản"]
+          },
+          {
+            "title": "Kê khai thuế",
+            "description": "Thay mặt kê khai các loại thuế.",
+            "features": ["Quyết toán thuế TNDN", "Kê khai thuế GTGT", "Kê khai thuế TNCN", "Hỗ trợ thanh tra thuế"]
+          },
+          {
+            "title": "Hỗ trợ kiểm toán",
+            "description": "Hỗ trợ làm việc với kiểm toán độc lập.",
+            "features": ["Chuẩn bị tài liệu kiểm toán", "Phối hợp với công ty kiểm toán", "Xử lý các điểm kiểm toán lưu ý", "Hỗ trợ kiểm soát nội bộ"]
+          }
+        ]
+      },
+      "budget": {
+        "intro": "Chi phí tham khảo cho dịch vụ tư vấn kế toán – thuế. Chi phí thực tế thay đổi tùy số lượng giao dịch và nội dung công việc.",
+        "plans": [
+          {
+            "title": "Dịch vụ ghi sổ (hằng tháng)",
+            "price": "Từ 300 USD/tháng",
+            "description": "Thay mặt thực hiện công việc ghi sổ hằng tháng",
+            "items": ["Hạch toán, ghi sổ", "Sắp xếp chứng từ", "Đối chiếu ngân hàng", "Lập bảng cân đối số phát sinh hằng tháng"]
+          },
+          {
+            "title": "Quyết toán, kê khai thuế (hằng năm)",
+            "price": "Từ 1.000 USD/năm",
+            "description": "Thay mặt quyết toán năm và kê khai thuế",
+            "items": ["Quyết toán năm", "Quyết toán thuế TNDN", "Lập báo cáo tài chính", "Hỗ trợ kiểm toán"]
+          },
+          {
+            "title": "Tư vấn kế toán thường xuyên (hằng tháng)",
+            "price": "Từ 200 USD/tháng",
+            "description": "Dịch vụ tổng hợp gồm ghi sổ, quyết toán tháng và tư vấn thuế",
+            "items": ["Dịch vụ ghi sổ", "Quyết toán, báo cáo hằng tháng", "Tư vấn thuế", "Báo cáo cho trụ sở chính Nhật Bản"]
+          }
+        ],
+        "note": "* Trên đây là giá tham khảo, có thể thay đổi tùy số lượng giao dịch và nội dung công việc. Vui lòng liên hệ để nhận báo giá chi tiết."
+      },
+      "faq": [
+        {
+          "question": "Chuẩn mực kế toán Việt Nam có khác Nhật Bản không?",
+          "answer": "Có. Việt Nam áp dụng Chuẩn mực kế toán Việt Nam (VAS), có một số điểm khác với chuẩn mực Nhật Bản và IFRS. Đội ngũ của chúng tôi am hiểu cả hai chuẩn mực."
+        },
+        {
+          "question": "Có thể lập báo cáo hợp nhất cho trụ sở chính Nhật Bản không?",
+          "answer": "Có, chúng tôi lập gói báo cáo cần thiết cho việc hợp nhất của trụ sở chính tại Nhật Bản, bao gồm cả việc điều chỉnh sang chuẩn mực Nhật Bản."
+        },
+        {
+          "question": "Có thể chỉ thuê dịch vụ ghi sổ không?",
+          "answer": "Có, chúng tôi nhận yêu cầu chỉ dịch vụ ghi sổ. Quý khách có thể lựa chọn dịch vụ phù hợp với nhu cầu."
+        },
+        {
+          "question": "Thuế suất thuế TNDN tại Việt Nam là bao nhiêu?",
+          "answer": "Thuế suất thuế TNDN phổ thông tại Việt Nam là 20%. Tuy nhiên, khi được hưởng ưu đãi thuế, có thể áp dụng thuế suất ưu đãi như 10% hoặc 15%."
+        },
+        {
+          "question": "Có hỗ trợ bằng tiếng Nhật không?",
+          "answer": "Có. Nhân viên thông thạo tiếng Nhật sẽ phụ trách và chúng tôi có thể lập báo cáo bằng tiếng Nhật."
+        }
+      ]
+    },
+    "legalLabor": {
+      "heroTitleLines": ["Tư vấn pháp lý", "và lao động"],
+      "ctaTopic": "pháp lý và lao động",
+      "overview": {
+        "paragraphs": [
+          "Kurosawa Consulting Vietnam hỗ trợ toàn diện nghiệp vụ pháp lý – lao động cho pháp nhân tại Việt Nam của doanh nghiệp Nhật Bản: từ soạn thảo, rà soát hợp đồng đến xây dựng nội quy lao động, tuân thủ luật lao động và xử lý tranh chấp.",
+          "Các chuyên gia am hiểu pháp luật Việt Nam giúp giảm thiểu rủi ro và hỗ trợ doanh nghiệp vận hành suôn sẻ."
+        ]
+      },
+      "flow": {
+        "title": "Quy trình xử lý",
+        "intro": "Các vụ việc pháp lý – lao động được xử lý theo quy trình sau.",
+        "steps": [
+          {
+            "title": "Trao đổi, nắm bắt hiện trạng",
+            "description": "Kiểm tra tình hình pháp lý – lao động hiện tại",
+            "duration": "1–2 tuần",
+            "details": ["Trao đổi về các vấn đề hiện tại", "Kiểm tra hợp đồng, quy chế hiện có", "Đánh giá rủi ro", "Đề xuất phương án xử lý"]
+          },
+          {
+            "title": "Nghiên cứu, phân tích",
+            "description": "Nghiên cứu và phân tích pháp luật áp dụng",
+            "duration": "1–2 tuần",
+            "details": ["Nghiên cứu văn bản pháp luật liên quan", "Tham khảo án lệ và thực tiễn", "Phân tích rủi ro", "Xem xét các phương án"]
+          },
+          {
+            "title": "Soạn thảo, rà soát văn bản",
+            "description": "Soạn thảo, rà soát hợp đồng và quy chế",
+            "duration": "2–4 tuần",
+            "details": ["Soạn dự thảo hợp đồng", "Soạn, sửa đổi nội quy lao động", "Hoàn thiện các quy chế", "Rà soát, chỉnh sửa"]
+          },
+          {
+            "title": "Triển khai, giám sát",
+            "description": "Hỗ trợ và giám sát liên tục",
+            "duration": "Liên tục",
+            "details": ["Hỗ trợ triển khai", "Hỗ trợ giải thích cho người lao động", "Tư vấn liên tục", "Cập nhật khi pháp luật thay đổi"]
+          }
+        ]
+      },
+      "support": {
+        "items": [
+          {
+            "title": "Soạn thảo, rà soát hợp đồng",
+            "description": "Soạn thảo và rà soát các loại hợp đồng.",
+            "features": ["Hợp đồng mua bán", "Hợp đồng dịch vụ", "Thỏa thuận bảo mật", "Hợp đồng lao động"]
+          },
+          {
+            "title": "Nội quy lao động, chế độ nhân sự",
+            "description": "Hỗ trợ xây dựng nội quy lao động và chế độ nhân sự.",
+            "features": ["Soạn, sửa đổi nội quy lao động", "Quy chế lương", "Thiết kế chế độ đánh giá", "Chế độ phúc lợi"]
+          },
+          {
+            "title": "Tuân thủ luật lao động",
+            "description": "Hỗ trợ tuân thủ Bộ luật Lao động Việt Nam.",
+            "features": ["Quản lý hợp đồng lao động", "Quản lý thời giờ làm việc", "Bảo hiểm xã hội", "An toàn, vệ sinh lao động"]
+          },
+          {
+            "title": "Xử lý tranh chấp",
+            "description": "Hỗ trợ giải quyết tranh chấp lao động.",
+            "features": ["Sa thải, nghỉ việc", "Xử lý kỷ luật", "Tranh chấp lao động", "Quấy rối nơi làm việc"]
+          }
+        ]
+      },
+      "budget": {
+        "intro": "Chi phí tham khảo cho dịch vụ tư vấn pháp lý – lao động. Chi phí thực tế thay đổi tùy nội dung và mức độ phức tạp của vụ việc.",
+        "plans": [
+          {
+            "title": "Soạn thảo, rà soát hợp đồng",
+            "price": "Từ 300 USD/hợp đồng",
+            "description": "Soạn thảo và rà soát các loại hợp đồng",
+            "items": ["Hợp đồng mua bán", "Hợp đồng dịch vụ", "Hợp đồng lao động", "Thỏa thuận bảo mật"]
+          },
+          {
+            "title": "Soạn, sửa đổi nội quy lao động",
+            "price": "Từ 1.000 USD",
+            "description": "Soạn và sửa đổi nội quy lao động, quy chế nội bộ",
+            "items": ["Soạn nội quy lao động", "Quy chế lương", "Thiết kế chế độ đánh giá", "Các quy chế nội bộ khác"]
+          },
+          {
+            "title": "Tư vấn pháp lý – lao động thường xuyên (hằng tháng)",
+            "price": "Từ 200 USD/tháng",
+            "description": "Dịch vụ tư vấn pháp lý – lao động liên tục",
+            "items": ["Tư vấn pháp lý", "Tư vấn lao động", "Rà soát hợp đồng (tối đa 2 hợp đồng/tháng)", "Hỗ trợ xử lý tranh chấp"]
+          }
+        ],
+        "note": "* Trên đây là giá tham khảo, có thể thay đổi tùy nội dung vụ việc. Vui lòng liên hệ để nhận báo giá chi tiết."
+      },
+      "faq": [
+        {
+          "question": "Luật lao động Việt Nam có khác nhiều so với Nhật Bản không?",
+          "answer": "Có, khác ở nhiều điểm như loại hợp đồng lao động, thời gian thử việc, quy định về sa thải, bảo hiểm xã hội... Chuyên gia của chúng tôi sẽ tư vấn dựa trên Bộ luật Lao động Việt Nam."
+        },
+        {
+          "question": "Hợp đồng bằng tiếng Nhật có hiệu lực không?",
+          "answer": "Tại Việt Nam, nên lập hợp đồng bằng tiếng Việt hoặc đính kèm bản dịch tiếng Việt. Khi xảy ra tranh chấp, bản tiếng Việt có thể được ưu tiên áp dụng."
+        },
+        {
+          "question": "Có hỗ trợ xin giấy phép lao động cho người nước ngoài không?",
+          "answer": "Có, chúng tôi hỗ trợ thủ tục xin giấy phép lao động (work permit) cho người nước ngoài. Chi tiết vui lòng xem dịch vụ Xin cấp các loại giấy phép."
+        },
+        {
+          "question": "Khi xảy ra tranh chấp lao động, có thể hỗ trợ ngay không?",
+          "answer": "Có, chúng tôi xử lý nhanh chóng cả các vấn đề lao động khẩn cấp. Trước tiên, vui lòng liên hệ qua điện thoại hoặc email."
+        },
+        {
+          "question": "Có thể ký hợp đồng tư vấn thường xuyên không?",
+          "answer": "Có, chúng tôi nhận hợp đồng tư vấn với phí cố định hằng tháng, phù hợp với doanh nghiệp cần tư vấn pháp lý – lao động liên tục."
+        }
+      ]
+    },
+    "license": {
+      "heroTitleLines": ["Xin cấp", "các loại giấy phép"],
+      "ctaTopic": "xin giấy phép",
+      "overview": {
+        "paragraphs": [
+          "Kurosawa Consulting Vietnam hỗ trợ toàn diện việc xin các loại giấy phép cần thiết để kinh doanh tại Việt Nam — từ Giấy chứng nhận đăng ký đầu tư (IRC), Giấy chứng nhận đăng ký doanh nghiệp (ERC) đến giấy phép chuyên ngành và giấy phép lao động.",
+          "Các chuyên gia am hiểu hệ thống cấp phép của Việt Nam thay mặt quý khách thực hiện các thủ tục phức tạp, giúp khởi động kinh doanh suôn sẻ."
+        ]
+      },
+      "flow": {
+        "title": "Quy trình xin phép",
+        "intro": "Việc xin giấy phép được tiến hành theo quy trình sau.",
+        "steps": [
+          {
+            "title": "Xác nhận yêu cầu, chuẩn bị",
+            "description": "Xác định giấy phép cần thiết và điều kiện",
+            "duration": "1–2 tuần",
+            "details": ["Trao đổi về nội dung kinh doanh", "Xác định giấy phép cần thiết", "Kiểm tra điều kiện cấp phép", "Lập danh mục hồ sơ cần thiết"]
+          },
+          {
+            "title": "Chuẩn bị, soạn hồ sơ",
+            "description": "Chuẩn bị và soạn hồ sơ xin phép",
+            "duration": "2–4 tuần",
+            "details": ["Soạn hồ sơ xin phép", "Dịch thuật, công chứng", "Thu thập giấy tờ cần thiết", "Kiểm tra hồ sơ lần cuối"]
+          },
+          {
+            "title": "Nộp hồ sơ, thẩm định",
+            "description": "Nộp hồ sơ lên cơ quan nhà nước và xử lý thẩm định",
+            "duration": "2–8 tuần",
+            "details": ["Nộp hồ sơ", "Theo dõi tình trạng thẩm định", "Bổ sung hồ sơ khi được yêu cầu", "Làm việc với cơ quan chức năng"]
+          },
+          {
+            "title": "Nhận giấy phép",
+            "description": "Cấp giấy phép và các thủ tục sau cấp phép",
+            "duration": "1–2 tuần",
+            "details": ["Nhận giấy phép", "Kiểm tra nội dung", "Thực hiện các thông báo liên quan", "Quản lý lịch gia hạn"]
+          }
+        ]
+      },
+      "support": {
+        "items": [
+          {
+            "title": "Giấy chứng nhận đăng ký đầu tư (IRC)",
+            "description": "Xin giấy chứng nhận đăng ký cho dự án đầu tư nước ngoài.",
+            "features": ["Đăng ký đầu tư mới", "Điều chỉnh nội dung đăng ký", "Thủ tục tăng vốn", "Bổ sung ngành nghề"]
+          },
+          {
+            "title": "Giấy chứng nhận đăng ký doanh nghiệp (ERC)",
+            "description": "Xin ERC cần thiết để thành lập doanh nghiệp.",
+            "features": ["Đăng ký doanh nghiệp mới", "Thay đổi ngành nghề kinh doanh", "Thay đổi người đại diện", "Thay đổi địa chỉ"]
+          },
+          {
+            "title": "Giấy phép chuyên ngành",
+            "description": "Xin các giấy phép theo ngành nghề.",
+            "features": ["Giấy phép sản xuất", "Giấy phép bán lẻ", "Giấy phép xuất nhập khẩu", "Giấy phép liên quan đến thực phẩm"]
+          },
+          {
+            "title": "Giấy phép lao động",
+            "description": "Xin giấy phép lao động cho nhân viên nước ngoài.",
+            "features": ["Xin giấy phép lao động", "Gia hạn giấy phép lao động", "Thủ tục thị thực", "Thẻ tạm trú"]
+          }
+        ]
+      },
+      "budget": {
+        "intro": "Chi phí tham khảo cho dịch vụ xin cấp giấy phép. Chi phí thực tế thay đổi tùy nội dung hồ sơ.",
+        "plans": [
+          {
+            "title": "Điều chỉnh Giấy chứng nhận đăng ký đầu tư (IRC)",
+            "price": "Từ 800 USD",
+            "description": "Các thủ tục điều chỉnh IRC",
+            "items": ["Thay đổi vốn", "Bổ sung ngành nghề", "Thay đổi địa chỉ", "Các thay đổi khác"]
+          },
+          {
+            "title": "Giấy phép lao động (work permit)",
+            "price": "Từ 1.000 USD/người",
+            "description": "Xin giấy phép lao động cho nhân viên nước ngoài",
+            "items": ["Cấp mới", "Gia hạn", "Hỗ trợ chuẩn bị hồ sơ", "Thủ tục thị thực"]
+          },
+          {
+            "title": "Giấy phép chuyên ngành",
+            "price": "Theo thỏa thuận (thay đổi nhiều tùy loại)",
+            "description": "Xin các giấy phép theo ngành nghề",
+            "items": ["Giấy phép sản xuất", "Giấy phép bán lẻ", "Giấy phép xuất nhập khẩu", "Giấy phép chuyên ngành khác"]
+          }
+        ],
+        "note": "* Trên đây là giá tham khảo, có thể thay đổi tùy nội dung hồ sơ. Vui lòng liên hệ để nhận báo giá chi tiết."
+      },
+      "faq": [
+        {
+          "question": "Xin Giấy chứng nhận đăng ký đầu tư (IRC) mất bao lâu?",
+          "answer": "Thông thường khoảng 2–4 tuần, nhưng thay đổi tùy ngành nghề và quy mô đầu tư. Với ngành nghề kinh doanh có điều kiện, cần thẩm định bổ sung nên thời gian có thể dài hơn."
+        },
+        {
+          "question": "Giấy phép cần thiết có khác nhau theo ngành nghề không?",
+          "answer": "Có, giấy phép cần thiết khác nhau rất nhiều tùy ngành. Sản xuất, bán lẻ, ăn uống, CNTT... mỗi ngành đều cần giấy phép riêng."
+        },
+        {
+          "question": "Điều kiện xin giấy phép lao động cho người nước ngoài là gì?",
+          "answer": "Thông thường cần có bằng đại học trở lên và ít nhất 3 năm kinh nghiệm liên quan, hoặc có chứng chỉ chuyên môn. Ngoài ra, vị trí công việc phải là vị trí mà người Việt Nam chưa đáp ứng được."
+        },
+        {
+          "question": "Có hỗ trợ thủ tục gia hạn giấy phép không?",
+          "answer": "Có, chúng tôi hỗ trợ thủ tục gia hạn và điều chỉnh giấy phép, bao gồm cả quản lý thời hạn gia hạn."
+        },
+        {
+          "question": "Có thể chuẩn bị hồ sơ bằng tiếng Nhật không?",
+          "answer": "Hồ sơ nộp cho cơ quan nhà nước Việt Nam phải được lập bằng tiếng Việt. Chúng tôi sẽ đảm nhận cả việc dịch thuật và công chứng."
+        }
+      ]
+    },
+    "other": {
+      "heroTitleLines": ["Dịch vụ khác"],
+      "ctaTopic": "các dịch vụ khác",
+      "overview": {
+        "paragraphs": [
+          "Ngoài các dịch vụ chính, Kurosawa Consulting Vietnam còn cung cấp nhiều hỗ trợ khác liên quan đến kinh doanh tại Việt Nam như biên dịch – phiên dịch, bất động sản, điều tra tín dụng, dịch vụ thư ký..., linh hoạt theo nhu cầu của quý khách.",
+          "Ngay cả khi quý khách băn khoăn \"không biết có thể nhờ việc này không\", hãy cứ thoải mái liên hệ. Với vai trò là đối tác hỗ trợ toàn diện cho hoạt động kinh doanh tại Việt Nam, chúng tôi sẽ đáp ứng trong khả năng có thể."
+        ]
+      },
+      "support": {
+        "items": [
+          {
+            "title": "Biên dịch, phiên dịch",
+            "description": "Từ dịch tài liệu kinh doanh đến phiên dịch hội họp.",
+            "features": ["Dịch hợp đồng, văn bản pháp lý", "Dịch tài liệu kỹ thuật", "Phiên dịch họp, đàm phán", "Phiên dịch song song, phiên dịch nối tiếp"]
+          },
+          {
+            "title": "Tư vấn bất động sản",
+            "description": "Hỗ trợ từ lựa chọn văn phòng, đất nhà xưởng đến ký hợp đồng.",
+            "features": ["Tìm kiếm văn phòng", "Lựa chọn đất nhà xưởng", "Đàm phán hợp đồng thuê", "Sắp xếp thi công nội thất"]
+          },
+          {
+            "title": "Điều tra tín dụng, điều tra doanh nghiệp",
+            "description": "Điều tra tín dụng và thông tin doanh nghiệp của đối tác.",
+            "features": ["Điều tra tín dụng doanh nghiệp", "Điều tra tình hình tài chính", "Điều tra người quản lý", "Hỗ trợ thẩm định"]
+          },
+          {
+            "title": "Dịch vụ thư ký",
+            "description": "Thay mặt thực hiện các công việc tại địa phương.",
+            "features": ["Xử lý điện thoại, email", "Quản lý lịch trình", "Tiếp khách", "Sắp xếp, đặt chỗ"]
+          },
+          {
+            "title": "Khảo sát, nghiên cứu thị trường",
+            "description": "Khảo sát và phân tích thị trường Việt Nam.",
+            "features": ["Khảo sát quy mô thị trường", "Phân tích đối thủ", "Khảo sát người tiêu dùng", "Báo cáo xu hướng ngành"]
+          },
+          {
+            "title": "Hỗ trợ khác",
+            "description": "Các hỗ trợ khác liên quan đến kinh doanh tại Việt Nam.",
+            "features": ["Kết nối kinh doanh", "Hỗ trợ tham gia triển lãm", "Làm việc với cơ quan nhà nước", "Dịch vụ theo yêu cầu"]
+          }
+        ]
+      },
+      "budget": {
+        "intro": "Chi phí tham khảo cho các dịch vụ khác. Chi phí thực tế thay đổi tùy nội dung dịch vụ.",
+        "plans": [
+          {
+            "title": "Dịch vụ biên dịch",
+            "price": "Từ 15 USD/trang",
+            "description": "Dịch các loại tài liệu kinh doanh",
+            "items": ["Hợp đồng, văn bản pháp lý", "Tài liệu kỹ thuật", "Tài liệu marketing", "Tài liệu kinh doanh thông thường"]
+          },
+          {
+            "title": "Dịch vụ phiên dịch",
+            "price": "Từ 150 USD/nửa ngày",
+            "description": "Phiên dịch họp và đàm phán",
+            "items": ["Phiên dịch đàm phán", "Phiên dịch hội họp", "Tháp tùng tham quan nhà máy", "Phiên dịch hội thảo"]
+          },
+          {
+            "title": "Khảo sát thị trường, điều tra tín dụng",
+            "price": "Từ 500 USD",
+            "description": "Dịch vụ khảo sát thị trường và doanh nghiệp Việt Nam",
+            "items": ["Khảo sát thị trường", "Phân tích đối thủ", "Điều tra tín dụng doanh nghiệp", "Báo cáo ngành"]
+          }
+        ],
+        "note": "* Trên đây là giá tham khảo, có thể thay đổi tùy nội dung dịch vụ. Vui lòng liên hệ để nhận báo giá chi tiết."
+      },
+      "faq": [
+        {
+          "question": "Thời gian dịch thuật mất bao lâu?",
+          "answer": "Tùy khối lượng và mức độ chuyên môn của tài liệu, với tài liệu kinh doanh thông thường khoảng 1–3 ngày làm việc. Chúng tôi cũng nhận xử lý gấp, vui lòng trao đổi."
+        },
+        {
+          "question": "Có thể chỉ nhờ giới thiệu văn phòng không?",
+          "answer": "Có, chúng tôi nhận yêu cầu chỉ giới thiệu bất động sản và sẽ giới thiệu văn phòng phù hợp với nhu cầu của quý khách."
+        },
+        {
+          "question": "Điều tra tín dụng cung cấp những thông tin gì?",
+          "answer": "Chúng tôi điều tra và báo cáo các thông tin theo yêu cầu như thông tin cơ bản của doanh nghiệp, tình hình tài chính, thông tin người quản lý, uy tín trong ngành..."
+        },
+        {
+          "question": "Có nhận dự án ngắn hạn không?",
+          "answer": "Có, chúng tôi nhận cả dự án ngắn hạn và yêu cầu đơn lẻ. Vui lòng liên hệ."
+        },
+        {
+          "question": "Có thể hỏi về dịch vụ không được nêu ở đây không?",
+          "answer": "Có. Nếu liên quan đến kinh doanh tại Việt Nam, xin quý khách cứ liên hệ trước. Chúng tôi sẽ hỗ trợ trong khả năng có thể."
+        }
+      ]
+    }
+  }
+}

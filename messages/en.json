@@ -1,0 +1,1020 @@
+{
+  "Meta": {
+    "defaultTitle": "Kurosawa Consulting Vietnam | Vietnam Business Consulting",
+    "description": "A full-service consulting firm supporting Japanese and foreign companies entering and operating in Vietnam — from company establishment and M&A advisory to accounting, tax, legal and labor matters.",
+    "keywords": [
+      "Vietnam market entry",
+      "Vietnam consulting",
+      "Japanese companies in Vietnam",
+      "Vietnam M&A",
+      "company establishment in Vietnam",
+      "Vietnam accounting",
+      "Vietnam tax",
+      "Ho Chi Minh City consulting",
+      "Hanoi consulting",
+      "Kurosawa Consulting Vietnam"
+    ],
+    "orgDescription": "A full-service consulting firm supporting companies entering and operating in Vietnam"
+  },
+  "LanguageSwitcher": {
+    "label": "Select language"
+  },
+  "ServiceNames": {
+    "list": "All Services",
+    "establishment": "Business Establishment in Vietnam",
+    "establishmentSub": "Subsidiary / Representative Office / Branch",
+    "ma": "M&A Advisory",
+    "accounting": "Accounting & Tax Consulting",
+    "legalLabor": "Legal & Labor Advisory",
+    "license": "License Applications",
+    "other": "Other Services"
+  },
+  "ServiceDescriptions": {
+    "establishment": "From market research and entry strategy to incorporation, licensing, recruitment and back-office setup. Our team, well versed in local regulations and business practices, supports you from strategy through execution.",
+    "ma": "From target search, due diligence and valuation to contract work and PMI design. With a team that understands both your Japanese headquarters and the Vietnamese market, we accelerate decision-making and execution.",
+    "accounting": "From bookkeeping, monthly/annual closing and tax filing to audit support and consolidated reporting for Japan. One team bridges Vietnamese and Japanese accounting standards.",
+    "legalLabor": "From contract review and labor law compliance to work rules and labor dispute resolution. Specialists with deep knowledge of local regulations help you manage risk and run your business smoothly.",
+    "license": "From Investment and Enterprise Registration Certificates to sector-specific licenses and work permits. We handle complex application procedures on your behalf so you can start business smoothly.",
+    "other": "Translation and interpretation, real estate consulting, credit investigations, secretarial services and more. We respond to a wide range of needs related to doing business in Vietnam."
+  },
+  "Header": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "members": "Our Team",
+    "articles": "Articles",
+    "careers": "Careers",
+    "consultation": "Free Consultation",
+    "menu": "Menu"
+  },
+  "Footer": {
+    "tagline": "A full-service consulting firm supporting Japanese companies doing business in Vietnam",
+    "companyInfo": "Company Overview",
+    "members": "Our Team",
+    "faq": "FAQ",
+    "news": "News / Columns",
+    "careers": "Careers",
+    "articles": "Articles",
+    "facebookName": "Kurosawa Consulting Vietnam",
+    "privacy": "Privacy Policy",
+    "sitemap": "Sitemap"
+  },
+  "Hero": {
+    "lead1": "From market entry, company setup, M&A and employer-of-record services to resolving concerns after you launch,",
+    "lead2": "we provide comprehensive support for your Vietnam business across accounting, tax, legal and labor matters.",
+    "ctaConsult": "Book a Free Consultation",
+    "ctaServices": "Our Services"
+  },
+  "News": {
+    "heading": "News",
+    "defaultCategory": "Notice",
+    "untitled": "Untitled"
+  },
+  "HomeServices": {
+    "heading": "Our Services",
+    "titleLines": {
+      "establishment": ["One-stop support for", "setting up a subsidiary,", "representative office or branch"],
+      "ma": ["Cross-border M&A,", "from strategy to PMI,", "end to end"],
+      "accounting": ["Vietnamese accounting & tax,", "handled accurately", "and smoothly to local standards"],
+      "legalLabor": ["Legal and labor matters", "in Vietnam, fully supported", "by our team of specialists"],
+      "license": ["Obtain the licenses", "and permits your business needs,", "quickly"],
+      "other": ["A support system", "that flexibly meets", "diverse needs"]
+    },
+    "viewMore": "View more",
+    "showAll": "View all services",
+    "goTo": "Go to service {number}",
+    "prev": "Previous service",
+    "next": "Next service"
+  },
+  "Achievement": {
+    "stats": [
+      { "value": "40", "suffix": "", "label": "Staff members" },
+      { "value": "8", "suffix": "", "label": "Japanese speakers" },
+      { "value": "280", "suffix": "+", "label": "Clients served" },
+      { "value": "75", "suffix": "+", "label": "Retainer clients" },
+      { "value": "70", "suffix": "%", "label": "Japanese clients (Chinese 20%, Korean & Western 10%)" },
+      { "value": "5", "suffix": "", "label": "Certified public accountants (incl. 2 Japanese CPAs)" },
+      { "value": "2", "suffix": "", "label": "Lawyers" },
+      { "value": "7", "suffix": "%", "label": "Avg. annual net growth in retainer contracts (past 5 years)" }
+    ]
+  },
+  "Articles": {
+    "heading": "Articles & Columns",
+    "empty": "No articles yet.",
+    "viewAll": "View all articles",
+    "untitled": "Untitled",
+    "notice": "Articles are currently available in Japanese only."
+  },
+  "Contact": {
+    "heading": "Contact Us",
+    "facebookName": "Kurosawa Consulting Vietnam",
+    "honeypotLabel": "Website (please leave blank)",
+    "name": "Name",
+    "namePlaceholder": "John Smith",
+    "company": "Company",
+    "companyPlaceholder": "Sample Co., Ltd.",
+    "email": "Email",
+    "emailPlaceholder": "example@company.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+84 28 1234 5678",
+    "service": "Service of interest",
+    "serviceSelect": "Please select",
+    "serviceOptions": {
+      "strategy": "Business strategy consulting",
+      "dx": "Business transformation / DX",
+      "organization": "Organization & talent development",
+      "it": "IT strategy / PMO",
+      "marketing": "Marketing strategy",
+      "risk": "Risk management",
+      "other": "Other"
+    },
+    "message": "Inquiry details",
+    "messagePlaceholder": "Please describe your inquiry",
+    "submit": "Send",
+    "submitting": "Sending...",
+    "download": "Download company profile",
+    "downloadAlert": "Dear {name},\n\nYour company profile download will begin shortly.\n\nThank you — we have recorded the information you entered.",
+    "privacyNote": "The information you provide will be used solely to respond to your inquiry and to send you materials.",
+    "requiredNote": "* Please fill in all required fields (Name, Company, Email, Inquiry details).",
+    "success": "Thank you for your inquiry. A member of our team will get back to you shortly.",
+    "networkError": "A network error occurred. Please try again later.",
+    "genericError": "Failed to send. Please try again."
+  },
+  "FAQ": {
+    "heading": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "Is the initial consultation free?",
+        "answer": "Yes, it is free of charge. We believe our role as consultants is to be a partner who works alongside you on your concerns and challenges. Our added value lies in the solutions we propose once we have explored your concerns in depth and identified the underlying issues. We help you identify those issues at no cost, so please feel free to contact us."
+      },
+      {
+        "question": "We are a small or medium-sized company. Can we still consult with you?",
+        "answer": "Absolutely. Around 80% of our members have built their professional experience at major consulting firms known as the Big Four, yet our fees are roughly 50–70% of what those large firms charge. Thanks to our reputation for \"Big Four quality at reasonable prices,\" about 80% of our clients are small and medium-sized businesses or individuals."
+      },
+      {
+        "question": "Which industries do you support?",
+        "answer": "We support a wide range of industries, including manufacturing, finance, retail, IT, healthcare and education. Consultants familiar with industry-specific challenges will take charge of your project."
+      },
+      {
+        "question": "How much does it cost?",
+        "answer": "Costs vary depending on the scope, duration and scale of the project. We will first listen to your needs and then propose the best plan along with a quotation. We are committed to transparent pricing."
+      },
+      {
+        "question": "Can you provide support remotely?",
+        "answer": "Yes, we can support you online. We use video conferencing and chat tools to communicate efficiently, and we can also offer a hybrid of in-person and remote support as needed."
+      },
+      {
+        "question": "Is confidentiality guaranteed?",
+        "answer": "Of course. We can also prepare a non-disclosure agreement (NDA) if needed, so you can rest assured."
+      }
+    ],
+    "ctaTitle": "Have any other questions?",
+    "ctaText": "Please feel free to contact us. Our specialists will be happy to answer your questions.",
+    "ctaButton": "Contact Us"
+  },
+  "About": {
+    "metaTitle": "About Us",
+    "metaDescription": "Company overview of Kurosawa Consulting Vietnam (KCV). As the Vietnamese subsidiary of the Kurosawa Group, we provide comprehensive support for Japanese companies' business in Vietnam from our offices in Ho Chi Minh City and Hanoi.",
+    "title": "About Us",
+    "lead": "We support the growth of your business in Vietnam as a partner who works alongside you."
+  },
+  "Strengths": {
+    "heading": "Our Strengths",
+    "items": [
+      {
+        "title": "Big Four quality at reasonable prices",
+        "body": "Most of our staff gained their expertise at the major consulting firms known as the Big Four. We maintain Big Four–level quality while offering services at reasonable fees."
+      },
+      {
+        "title": "Support with no language barrier",
+        "body": "Three Japanese staff are based in Vietnam, and more than five Vietnamese accountants and specialists hold Japanese proficiency of JLPT N2 or higher, so our clients never feel a language barrier."
+      },
+      {
+        "title": "Proven negotiation with Vietnamese authorities and one-stop support",
+        "body": "With accountants and lawyers in-house, we can provide one-stop support. Our team also includes lawyers with experience working at Vietnamese authorities, giving you reliable negotiating strength with government agencies."
+      }
+    ]
+  },
+  "CompanyInfo": {
+    "heading": "Company Overview",
+    "parentLabel": "Parent company (Japan)",
+    "parentName": "Kurosawa Group",
+    "parentNote": "(A professional services group centered on judicial scriveners, with 55 years of history in Tokyo)",
+    "localLabel": "Local entity",
+    "localNote": "",
+    "employeesLabel": "Employees",
+    "employeesValue": "95",
+    "employeesNote": "(Japan: 55, Vietnam: 40)",
+    "websiteLabel": "Website",
+    "historyLabel": "History",
+    "history": [
+      "1969: Founder (now Chairman) Koki Kurosawa registers as a judicial scrivener",
+      "1972: Establishes a judicial scrivener office in Nakano, Tokyo",
+      "2009: With business expansion, incorporates the judicial scrivener division as Kurosawa Joint Office and opens the Yokohama office",
+      "2015: With business expansion, incorporates the land and house investigator division",
+      "2016: Opens the Inheritance Support Office specializing in inheritance and adult guardianship",
+      "2016: Establishes KCV in Ho Chi Minh City",
+      "2025: Known for \"high quality at reasonable prices,\" grows to more than 75 retainer clients and more than 280 clients served"
+    ]
+  },
+  "Members": {
+    "heading": "Our Team",
+    "groups": {
+      "japanDesk": "Japanese Business Support Team",
+      "accounting": "Accounting Division",
+      "legal": "Legal Division"
+    },
+    "people": {
+      "koei": {
+        "name": "Koei Kurosawa",
+        "sub": "",
+        "bullets": [
+          "Certified Public Accountant and Certified Tax Accountant (Japan).",
+          "From 1996, engaged in audit and IPO services at a Western audit firm.",
+          "From 2001, engaged in strategic finance and management consulting at a Japanese consulting firm and a U.S. company.",
+          "In 2004, founded Koei Kurosawa Tax Accountant Office, providing tax and accounting services to Japanese companies and non-residents; currently President of the Kurosawa Group."
+        ]
+      },
+      "ngan": {
+        "name": "Nguyen Ngoc Kim Ngan",
+        "sub": "",
+        "bullets": [
+          "Bachelor's degree in Japanese; holds JLPT N2.",
+          "Over 10 years of corporate consulting experience in tax, accounting and legal matters; formerly with a Big Four accounting firm.",
+          "Extensive experience working directly with Japanese companies, including work experience in Japan; has supported Japanese and FDI companies across a wide range of fields."
+        ]
+      },
+      "honda": {
+        "name": "Yuya Honda",
+        "sub": "",
+        "bullets": [
+          "Certified Skilled Worker of Financial Planning, Grade 1 (FP Grade 1).",
+          "After university, joined The Bank of Fukuoka, working on inheritance and business succession support, M&A and structured finance; twice received the President's Award.",
+          "Later, as an M&A advisor at a major M&A brokerage firm, brokered various deals including in the building maintenance industry.",
+          "Currently handles cross-border M&A and tax and accounting consulting at Kurosawa Consulting Vietnam."
+        ]
+      },
+      "morita": {
+        "name": "Teppei Morita",
+        "sub": "",
+        "bullets": [
+          "Certified Public Accountant (Japan).",
+          "From 2005, engaged in audit, IPO and internal control services at a Big Four audit firm.",
+          "From 2013, worked in Vietnam for about six years, including at the same firm's Vietnamese entity, supporting Japanese companies' market entry, providing tax and accounting consulting, and auditing Japanese subsidiaries.",
+          "Joined Kurosawa Consulting Vietnam in 2018, providing support from both the Vietnamese and Japanese sides.",
+          "Specializes in consolidated accounting support, IFRS implementation and M&A due diligence."
+        ]
+      },
+      "mai": {
+        "name": "Le Thi Thu Mai",
+        "sub": "",
+        "bullets": [
+          "Chief Accountant certified by the Ministry of Finance; member of the Vietnam Association of Certified Public Accountants.",
+          "Over 13 years of accounting and tax support for clients in manufacturing, trading and services.",
+          "Handles a wide range of accounting and tax work, including VAT refunds and business closures.",
+          "Particularly experienced in supporting Japanese companies; has also handled financial management for Thai and Singaporean companies.",
+          "Has a track record of supporting clients in tax audits and tax inspections in coordination with Vietnamese authorities."
+        ]
+      },
+      "nhung": {
+        "name": "Nguyen Thi Phuong Nhung",
+        "sub": "",
+        "bullets": [
+          "Vietnamese Certified Public Accountant; holds JLPT N2.",
+          "Eight years of experience at a major accounting consulting firm, covering accounting and tax support for trading, manufacturing and service companies, VAT refunds, transfer pricing and more.",
+          "Long experience in preparing and reviewing financial statements, and extensive experience in financial due diligence for Japanese companies."
+        ]
+      },
+      "hiep": {
+        "name": "Nguyen Truong Hiep",
+        "sub": "",
+        "bullets": [
+          "Lawyer (Ho Chi Minh City University of Law), Chief Accountant, and member of CPA Australia.",
+          "Bachelor's degree (Business Administration) and master's degree (Industrial Management) from Moscow State University; formerly with a major Western accounting firm.",
+          "Over 10 years of experience in market entry, company establishment, accounting and tax, financial and business management, business reorganization, cross-border transactions and restructuring.",
+          "Extensive experience providing professional services to foreign-invested companies."
+        ]
+      },
+      "lanAnh": {
+        "name": "Dao Thi Lan Anh",
+        "sub": "",
+        "bullets": [
+          "Lawyer (Bachelor of Law, Ho Chi Minh City University of Law), licensed to practice; master's degree from Panthéon-Assas University (Paris II).",
+          "Advises on disputes relating to sales and cross-border investment, commercial transactions, service contracts and labor contracts.",
+          "Broad experience with foreign companies' establishment of and exit from Vietnamese entities, due diligence, and legal issues companies commonly face."
+        ]
+      }
+    }
+  },
+  "ArticlesPage": {
+    "metaTitle": "Articles & Columns",
+    "metaDescription": "Articles and columns about doing business in Vietnam.",
+    "prev": "Previous",
+    "next": "Next"
+  },
+  "ArticleDetail": {
+    "notFound": "Article not found",
+    "breadcrumb": "Breadcrumb",
+    "home": "Home",
+    "updated": "Updated: {date}",
+    "readingTime": "{minutes} min read",
+    "published": "Published",
+    "updatedLabel": "Updated",
+    "readingTimeLabel": "Reading time",
+    "readingTimeShort": "{minutes} min",
+    "backToList": "Back to articles",
+    "related": "Related Articles",
+    "languageNotice": "This article is available in Japanese only."
+  },
+  "Careers": {
+    "metaTitle": "Careers",
+    "metaDescription": "Careers at Kurosawa Consulting Vietnam (KCV), a consulting firm supporting Japanese companies in Vietnam.",
+    "title": "Careers",
+    "none": "There are currently no open positions."
+  },
+  "ServicesPage": {
+    "metaDescription": "Comprehensive support for your business in Vietnam, including business establishment, M&A advisory, accounting and tax consulting, legal and labor advisory, and license applications.",
+    "lead1": "Everything you need to grow your business in Vietnam,",
+    "lead2": "delivered as a one-stop service",
+    "details": "Learn more",
+    "features": {
+      "establishment": ["Market research & entry strategy", "Subsidiary / representative office setup", "Licensing support", "Back-office setup"],
+      "ma": ["Target company search", "Due diligence", "Valuation", "PMI design & execution"],
+      "accounting": ["Bookkeeping services", "Monthly & annual closing", "Tax filing & tax inspection support", "Consolidated reporting for Japan"],
+      "legalLabor": ["Contract drafting & review", "Work rules & internal regulations", "Labor law advice", "Labor dispute support"],
+      "license": ["Investment Registration Certificate (IRC)", "Enterprise Registration Certificate (ERC)", "Sector-specific licenses", "Work permit applications"],
+      "other": ["Translation & interpretation", "Real estate consulting", "Credit & corporate investigations", "Secretarial services"]
+    }
+  },
+  "ServiceDetail": {
+    "top": "TOP",
+    "services": "Services",
+    "nav": {
+      "overview": "Overview",
+      "support": "What We Offer",
+      "budget": "Reference Fees",
+      "faq": "FAQ"
+    },
+    "ctaLine1": "Questions about {topic}?",
+    "ctaLine2": "Feel free to contact us.",
+    "contact": "Contact Us",
+    "establishment": {
+      "heroTitleLines": ["Business Establishment", "in Vietnam"],
+      "ctaTopic": "entering Vietnam",
+      "overview": {
+        "paragraphs": [
+          "Kurosawa Consulting Vietnam provides comprehensive support for Japanese companies entering Vietnam. From market research to incorporation, licensing, recruitment and post-launch operational support, we offer a one-stop service.",
+          "Our team of specialists, well versed in Vietnam's regulations and business practices, proposes the entry structure best suited to your business plan and ensures a smooth setup. With our extensive local track record and attentive support in Japanese, even first-time entrants can rely on us with confidence."
+        ]
+      },
+      "flow": {
+        "title": "Establishment Process",
+        "intro": "Company establishment in Vietnam proceeds in the following steps, with our specialists supporting you at every phase.",
+        "steps": [
+          {
+            "title": "Preliminary research & strategy",
+            "description": "From market research to choosing an entry structure",
+            "duration": "Approx. 1–2 months",
+            "details": ["Vietnam market research & analysis", "Competitor & industry trend research", "Comparison of entry structures (subsidiary / representative office / branch)", "Business plan development support"]
+          },
+          {
+            "title": "Incorporation procedures",
+            "description": "From investment registration to enterprise registration",
+            "duration": "Approx. 2–3 months",
+            "details": ["Obtaining the Investment Registration Certificate (IRC)", "Obtaining the Enterprise Registration Certificate (ERC)", "Drafting the charter & internal regulations", "Opening bank accounts"]
+          },
+          {
+            "title": "Permits & licenses",
+            "description": "Obtaining sector-specific permits",
+            "duration": "Approx. 1–3 months",
+            "details": ["Applying for sector-specific licenses", "Obtaining import/export licenses", "Obtaining environmental permits", "Other required permits"]
+          },
+          {
+            "title": "Office setup & recruitment",
+            "description": "Opening the office and hiring initial staff",
+            "duration": "Approx. 1–2 months",
+            "details": ["Office selection & lease", "Fit-out & equipment arrangements", "Recruitment support", "Obtaining work permits"]
+          },
+          {
+            "title": "Launch & operational support",
+            "description": "Supporting a smooth business launch",
+            "duration": "Ongoing",
+            "details": ["Initial accounting & tax setup", "Payroll & social insurance procedures", "Handling various filings", "Ongoing operational support"]
+          }
+        ]
+      },
+      "support": {
+        "intro": "We provide all the support you need to enter Vietnam.",
+        "items": [
+          {
+            "title": "Market research & entry strategy",
+            "description": "We develop a deep understanding of the Vietnamese market and formulate the optimal entry strategy.",
+            "features": ["Market size & growth analysis", "Competitive landscape research", "Target customer identification", "Comparison of entry structures"]
+          },
+          {
+            "title": "Incorporation & registration",
+            "description": "One-stop support for complex incorporation procedures.",
+            "features": ["Obtaining the IRC", "Obtaining the ERC", "Charter & internal regulations", "Handling various filings"]
+          },
+          {
+            "title": "Permits & licenses",
+            "description": "We obtain the permits required for your industry on your behalf.",
+            "features": ["Sector-specific license applications", "Obtaining work permits", "Import/export licenses", "Environmental & safety permits"]
+          },
+          {
+            "title": "Recruitment & labor",
+            "description": "Support from hiring talented people to labor management.",
+            "features": ["Recruitment & placement support", "Drafting work rules", "Payroll & social insurance", "Labor dispute support"]
+          }
+        ]
+      },
+      "budget": {
+        "intro": "Reference fees for business establishment in Vietnam. Actual fees vary depending on the nature and scale of your business.",
+        "plans": [
+          {
+            "title": "Subsidiary establishment",
+            "price": "From USD 3,000",
+            "description": "Includes obtaining the IRC and ERC, drafting the charter, etc.",
+            "items": ["IRC/ERC procedures", "Charter & internal regulations", "Bank account opening support", "Handling various filings"]
+          },
+          {
+            "title": "Representative office establishment",
+            "price": "From USD 2,000",
+            "description": "Includes obtaining the representative office license",
+            "items": ["License application", "Preparation of required documents", "Bank account opening support", "Handling various filings"]
+          },
+          {
+            "title": "Branch establishment",
+            "price": "From USD 2,500",
+            "description": "Includes obtaining the branch license",
+            "items": ["Branch license application", "Preparation of required documents", "Bank account opening support", "Handling various filings"]
+          }
+        ],
+        "note": "* The above are reference prices. Please contact us for a detailed quotation."
+      },
+      "faq": [
+        {
+          "question": "How long does it take to establish a company in Vietnam?",
+          "answer": "It depends on the industry and entry structure, but establishing a typical subsidiary takes about 3–6 months: roughly 2–3 months to obtain the Investment Registration Certificate (IRC) and Enterprise Registration Certificate (ERC), followed by about 1–3 months for licenses and permits."
+        },
+        {
+          "question": "What is the difference between a subsidiary and a representative office?",
+          "answer": "A subsidiary is an independent legal entity that can conduct sales activities and record revenue. A representative office, by contrast, is limited to market research and liaison activities and cannot conduct sales. We will propose the most suitable structure for your objectives."
+        },
+        {
+          "question": "Can a company be 100% foreign-owned?",
+          "answer": "Yes, 100% foreign ownership is possible in many industries. However, some industries (such as real estate and advertising) have foreign ownership restrictions and may require a joint venture with a Vietnamese company. Please check the requirements for your industry."
+        },
+        {
+          "question": "What is the minimum capital requirement?",
+          "answer": "Vietnam generally has no minimum capital requirement, although some industries (such as banking and insurance) do. In practice, it is important to set capital appropriate to your business plan."
+        },
+        {
+          "question": "Is support available in Japanese?",
+          "answer": "Yes. We have Japanese staff and Vietnamese staff fluent in Japanese, so you can work with us comfortably in Japanese."
+        }
+      ]
+    },
+    "ma": {
+      "heroTitleLines": ["M&A Advisory"],
+      "ctaTopic": "M&A",
+      "overview": {
+        "paragraphs": ["Kurosawa Consulting Vietnam is an elite cross-border M&A team connecting Japan and Vietnam, made up of:"],
+        "list": [
+          "Japanese CPAs with specialist accounting expertise in accounting and tax due diligence and PMI, gained at Big Four firms in Japan and Ho Chi Minh City",
+          "Vietnamese lawyers with broad networks among companies seeking investment from Japanese firms",
+          "Consultants who have closed multiple M&A deals at a listed M&A brokerage firm",
+          "A manager with over five years of experience in Vietnamese–Japanese business interpretation"
+        ],
+        "closing": "Our whole team works together to support your M&A in Vietnam."
+      },
+      "flow": {
+        "title": "M&A Process",
+        "intro": "The M&A process proceeds in the following steps, with our specialists supporting you at every phase.",
+        "steps": [
+          {
+            "title": "Strategy & target search",
+            "description": "Formulating an M&A strategy and selecting targets",
+            "duration": "Approx. 1–3 months",
+            "details": ["Clarifying M&A objectives & strategy", "Creating a long list of targets", "Initial screening & shortlisting", "Planning the approach"]
+          },
+          {
+            "title": "Site visits & basic agreement",
+            "description": "Starting negotiations with the target",
+            "duration": "Approx. 1–2 months",
+            "details": ["Signing an NDA", "Site visits & top-management meetings", "Negotiating basic terms", "Submitting an LOI and signing an MOU"]
+          },
+          {
+            "title": "Due diligence",
+            "description": "Detailed investigation of the target company",
+            "duration": "Approx. 1–2 months",
+            "details": ["Financial due diligence", "Legal due diligence", "Tax due diligence", "Business due diligence"]
+          },
+          {
+            "title": "Valuation & final negotiation",
+            "description": "Valuing the company and negotiating terms",
+            "duration": "Approx. 1–2 months",
+            "details": ["Calculating enterprise value", "Final negotiation of deal terms", "Drafting the share purchase agreement", "Setting closing conditions"]
+          },
+          {
+            "title": "PMI (post-merger integration)",
+            "description": "Integration support after the acquisition",
+            "duration": "Approx. 3–12 months",
+            "details": ["Integrating systems & business processes", "Implementing consolidated accounting", "J-SOX compliance", "Staffing & labor planning"]
+          }
+        ]
+      },
+      "support": {
+        "intro": "We provide all the support you need for M&A.",
+        "items": [
+          {
+            "title": "Target search",
+            "description": "We identify the best M&A targets for you.",
+            "features": ["Long list & short list creation", "Industry & market analysis", "Approaching target companies", "Matching support"]
+          },
+          {
+            "title": "Due diligence",
+            "description": "A thorough investigation of the target's risks and value.",
+            "features": ["Financial & tax DD", "Legal DD", "Business DD", "Integrated report"]
+          },
+          {
+            "title": "Valuation",
+            "description": "We calculate a fair enterprise value.",
+            "features": ["DCF method", "EBITDA multiple method", "Net assets + goodwill (years-of-profit) method", "Negotiation support with the seller"]
+          },
+          {
+            "title": "PMI support",
+            "description": "We help make post-acquisition integration a success.",
+            "features": ["Consolidation reporting package support", "IFRS implementation support", "J-SOX implementation support", "Labor framework development"]
+          }
+        ]
+      },
+      "budget": {
+        "intro": "Reference fees for M&A advisory. Actual fees vary depending on deal size and complexity.",
+        "plans": [
+          {
+            "title": "Target search & initial review",
+            "price": "Free",
+            "description": "Includes searching for and selecting targets and initial analysis",
+            "items": ["Long list creation", "Short list creation", "Initial company analysis", "Approach support"]
+          },
+          {
+            "title": "Due diligence",
+            "price": "From USD 4,000",
+            "description": "Includes financial, legal, tax and business due diligence",
+            "items": ["Financial DD", "Legal DD", "Tax DD", "Business DD"]
+          },
+          {
+            "title": "Full-scope advisory",
+            "price": "Success fee (please consult us)",
+            "description": "Advisory services covering the entire M&A process",
+            "items": ["Strategy through closing", "Valuation", "Negotiation support", "PMI support"]
+          }
+        ],
+        "note": "* The above are reference prices and vary with deal size and complexity. Please contact us for a detailed quotation."
+      },
+      "faq": [
+        {
+          "question": "How long does an M&A of a Vietnamese company take?",
+          "answer": "It depends on the size and complexity of the deal, but generally takes about 6 months to 1 year. Due diligence and government approvals can take time."
+        },
+        {
+          "question": "Are there restrictions on foreign acquisitions of Vietnamese companies?",
+          "answer": "Yes, foreign ownership restrictions apply depending on the industry. Some industries, such as banking, media and real estate, have limits on foreign ownership ratios. Please check each case individually."
+        },
+        {
+          "question": "What does due diligence cover?",
+          "answer": "We investigate financial, tax, legal and business aspects, paying close attention to Vietnam-specific risks such as land use rights, labor law and tax risks."
+        },
+        {
+          "question": "Can you also support PMI after the M&A?",
+          "answer": "Yes, we also provide PMI (post-merger integration) support, continuing through organizational integration, system integration and realizing synergies."
+        },
+        {
+          "question": "Is support available in Japanese?",
+          "answer": "Yes. A bilingual team able to work with both your Japanese headquarters and the Vietnamese side will handle your project."
+        }
+      ]
+    },
+    "accounting": {
+      "heroTitleLines": ["Accounting & Tax", "Consulting"],
+      "ctaTopic": "accounting & tax",
+      "overview": {
+        "paragraphs": [
+          "Kurosawa Consulting Vietnam provides comprehensive accounting and tax support for the Vietnamese subsidiaries of Japanese companies. From bookkeeping to monthly and annual closing, tax filing and audit support, we offer a one-stop service.",
+          "Our staff, versed in both Vietnamese Accounting Standards (VAS) and Japanese GAAP, ensure proper processing under local standards and smooth reporting to your Japanese headquarters."
+        ]
+      },
+      "flow": {
+        "title": "Workflow",
+        "intro": "Our accounting and tax services proceed as follows.",
+        "steps": [
+          {
+            "title": "Initial setup & migration",
+            "description": "Accounting system setup and migration of existing data",
+            "duration": "1–2 months",
+            "details": ["Chart of accounts design", "Accounting system implementation", "Migration of existing data", "Building workflows"]
+          },
+          {
+            "title": "Monthly bookkeeping",
+            "description": "Recording daily transactions and monthly processing",
+            "duration": "Monthly",
+            "details": ["Journal entries & bookkeeping", "Invoice & receipt management", "Bank reconciliation", "Monthly trial balance"]
+          },
+          {
+            "title": "Monthly closing & reporting",
+            "description": "Monthly closing and management reports",
+            "duration": "Monthly",
+            "details": ["Monthly closing", "Financial statements", "Reports for Japanese headquarters", "Management analysis materials"]
+          },
+          {
+            "title": "Annual closing & tax filing",
+            "description": "Annual closing and various tax filings",
+            "duration": "Annually",
+            "details": ["Annual closing", "Corporate income tax filing", "Value-added tax (VAT) filing", "Audit support"]
+          }
+        ]
+      },
+      "support": {
+        "items": [
+          {
+            "title": "Bookkeeping",
+            "description": "We record your daily transactions accurately.",
+            "features": ["Journal entries & bookkeeping", "Organizing supporting documents", "Bank reconciliation", "Trial balance preparation"]
+          },
+          {
+            "title": "Closing & financial reporting",
+            "description": "Monthly and annual closing and financial reporting.",
+            "features": ["Monthly closing", "Annual closing", "Financial statements", "Reports for Japanese headquarters"]
+          },
+          {
+            "title": "Tax filing",
+            "description": "We handle various tax filings on your behalf.",
+            "features": ["Corporate income tax filing", "VAT filing", "Personal income tax filing", "Tax inspection support"]
+          },
+          {
+            "title": "Audit support",
+            "description": "We support you in dealing with external audits.",
+            "features": ["Preparing audit documents", "Coordinating with auditors", "Addressing audit findings", "Internal control support"]
+          }
+        ]
+      },
+      "budget": {
+        "intro": "Reference fees for accounting and tax consulting. Actual fees vary depending on transaction volume and scope of work.",
+        "plans": [
+          {
+            "title": "Bookkeeping (monthly)",
+            "price": "From USD 300/month",
+            "description": "Monthly bookkeeping on your behalf",
+            "items": ["Journal entries & bookkeeping", "Organizing supporting documents", "Bank reconciliation", "Monthly trial balance"]
+          },
+          {
+            "title": "Closing & tax filing (annual)",
+            "price": "From USD 1,000/year",
+            "description": "Annual closing and tax filing on your behalf",
+            "items": ["Annual closing", "Corporate income tax filing", "Financial statements", "Audit support"]
+          },
+          {
+            "title": "Accounting advisory (monthly)",
+            "price": "From USD 200/month",
+            "description": "Comprehensive service including bookkeeping, monthly closing and tax consultation",
+            "items": ["Bookkeeping", "Monthly closing & reports", "Tax consultation", "Reports for Japanese headquarters"]
+          }
+        ],
+        "note": "* The above are reference prices and vary with transaction volume and scope of work. Please contact us for a detailed quotation."
+      },
+      "faq": [
+        {
+          "question": "Are Vietnamese accounting standards different from Japan's?",
+          "answer": "Yes. Vietnam uses Vietnamese Accounting Standards (VAS), which differ in some respects from Japanese GAAP and IFRS. Our staff are well versed in both."
+        },
+        {
+          "question": "Can you prepare consolidation reports for our Japanese headquarters?",
+          "answer": "Yes, we prepare the reporting packages needed for your headquarters' consolidated accounts, including reclassification to Japanese GAAP."
+        },
+        {
+          "question": "Can we request bookkeeping only?",
+          "answer": "Yes, we accept bookkeeping-only engagements. You can choose just the services you need."
+        },
+        {
+          "question": "What is the corporate income tax rate in Vietnam?",
+          "answer": "The standard corporate income tax rate in Vietnam is 20%. Where tax incentives apply, reduced rates such as 10% or 15% may be available."
+        },
+        {
+          "question": "Is support available in Japanese?",
+          "answer": "Yes. Staff fluent in Japanese will handle your account, and we can also prepare reports in Japanese."
+        }
+      ]
+    },
+    "legalLabor": {
+      "heroTitleLines": ["Legal & Labor Advisory"],
+      "ctaTopic": "legal & labor matters",
+      "overview": {
+        "paragraphs": [
+          "Kurosawa Consulting Vietnam provides comprehensive legal and labor support for the Vietnamese subsidiaries of Japanese companies — from drafting and reviewing contracts to developing work rules, labor law compliance and dispute resolution.",
+          "Specialists well versed in Vietnamese regulations help minimize risk and keep your business running smoothly."
+        ]
+      },
+      "flow": {
+        "title": "Our Process",
+        "intro": "We handle legal and labor matters through the following process.",
+        "steps": [
+          {
+            "title": "Interview & assessment",
+            "description": "Reviewing your current legal and labor situation",
+            "duration": "1–2 weeks",
+            "details": ["Interviewing on current issues", "Reviewing existing contracts & regulations", "Risk assessment", "Proposing an approach"]
+          },
+          {
+            "title": "Research & analysis",
+            "description": "Researching and analyzing applicable laws",
+            "duration": "1–2 weeks",
+            "details": ["Researching relevant laws", "Reviewing precedents & practice", "Risk analysis", "Considering options"]
+          },
+          {
+            "title": "Drafting & review",
+            "description": "Drafting and reviewing contracts and regulations",
+            "duration": "2–4 weeks",
+            "details": ["Drafting contracts", "Drafting & revising work rules", "Developing internal regulations", "Review & revisions"]
+          },
+          {
+            "title": "Implementation & monitoring",
+            "description": "Ongoing support and monitoring",
+            "duration": "Ongoing",
+            "details": ["Implementation support", "Support for explaining changes to employees", "Ongoing advice", "Responding to legal amendments"]
+          }
+        ]
+      },
+      "support": {
+        "items": [
+          {
+            "title": "Contract drafting & review",
+            "description": "We draft and review all kinds of contracts.",
+            "features": ["Sales contracts", "Service agreements", "Non-disclosure agreements", "Employment contracts"]
+          },
+          {
+            "title": "Work rules & HR systems",
+            "description": "We help develop work rules and HR systems.",
+            "features": ["Drafting & revising work rules", "Salary regulations", "Evaluation system design", "Employee benefit programs"]
+          },
+          {
+            "title": "Labor law compliance",
+            "description": "We help you comply with Vietnamese labor law.",
+            "features": ["Labor contract management", "Working hours management", "Social insurance", "Occupational safety & health"]
+          },
+          {
+            "title": "Dispute resolution",
+            "description": "We help resolve labor disputes.",
+            "features": ["Dismissals & resignations", "Disciplinary actions", "Labor disputes", "Harassment cases"]
+          }
+        ]
+      },
+      "budget": {
+        "intro": "Reference fees for legal and labor advisory. Actual fees vary depending on the nature and complexity of the matter.",
+        "plans": [
+          {
+            "title": "Contract drafting & review",
+            "price": "From USD 300/contract",
+            "description": "Drafting and review of all kinds of contracts",
+            "items": ["Sales contracts", "Service agreements", "Employment contracts", "Non-disclosure agreements"]
+          },
+          {
+            "title": "Work rules drafting & revision",
+            "price": "From USD 1,000",
+            "description": "Drafting and revising work rules and internal regulations",
+            "items": ["Drafting work rules", "Salary regulations", "Evaluation system design", "Other internal regulations"]
+          },
+          {
+            "title": "Legal & labor advisory (monthly)",
+            "price": "From USD 200/month",
+            "description": "Ongoing legal and labor consultation service",
+            "items": ["Legal consultation", "Labor consultation", "Contract review (up to 2 per month)", "Dispute support"]
+          }
+        ],
+        "note": "* The above are reference prices and vary with the matter. Please contact us for a detailed quotation."
+      },
+      "faq": [
+        {
+          "question": "Is Vietnamese labor law very different from Japan's?",
+          "answer": "Yes, it differs in many respects, including types of labor contracts, probation periods, dismissal rules and social insurance. Our specialists provide advice based on Vietnamese labor law."
+        },
+        {
+          "question": "Are contracts written in Japanese valid?",
+          "answer": "In Vietnam, it is recommended to prepare contracts in Vietnamese or attach a Vietnamese translation. In a dispute, the Vietnamese version may take precedence."
+        },
+        {
+          "question": "Do you also support work permits for foreign employees?",
+          "answer": "Yes, we support work permit applications for foreign nationals. Please see our License Applications service for details."
+        },
+        {
+          "question": "If a labor dispute arises, can you respond immediately?",
+          "answer": "Yes, we respond promptly to urgent labor issues. Please contact us by phone or email first."
+        },
+        {
+          "question": "Do you offer retainer contracts?",
+          "answer": "Yes, we offer fixed monthly retainer contracts, recommended for companies that need ongoing legal and labor advice."
+        }
+      ]
+    },
+    "license": {
+      "heroTitleLines": ["License Applications"],
+      "ctaTopic": "license applications",
+      "overview": {
+        "paragraphs": [
+          "Kurosawa Consulting Vietnam provides comprehensive support for obtaining the licenses and permits needed to do business in Vietnam — from the Investment Registration Certificate (IRC) and Enterprise Registration Certificate (ERC) to sector-specific licenses and work permits.",
+          "Specialists well versed in Vietnam's licensing system handle complex application procedures for you, enabling a smooth business launch."
+        ]
+      },
+      "flow": {
+        "title": "Application Process",
+        "intro": "License applications proceed as follows.",
+        "steps": [
+          {
+            "title": "Requirements check & preparation",
+            "description": "Confirming the required licenses and requirements",
+            "duration": "1–2 weeks",
+            "details": ["Interview on business activities", "Identifying required licenses", "Confirming application requirements", "Preparing a document checklist"]
+          },
+          {
+            "title": "Document preparation",
+            "description": "Preparing and drafting application documents",
+            "duration": "2–4 weeks",
+            "details": ["Drafting application documents", "Translation & notarization", "Collecting required documents", "Final document check"]
+          },
+          {
+            "title": "Application & review",
+            "description": "Filing with the authorities and handling the review",
+            "duration": "2–8 weeks",
+            "details": ["Submitting documents", "Following up on review status", "Responding to requests for additional documents", "Negotiating with the authorities"]
+          },
+          {
+            "title": "License issuance",
+            "description": "License issuance and follow-up procedures",
+            "duration": "1–2 weeks",
+            "details": ["Receiving the license", "Verifying its contents", "Related filings", "Managing renewal schedules"]
+          }
+        ]
+      },
+      "support": {
+        "items": [
+          {
+            "title": "Investment Registration Certificate (IRC)",
+            "description": "We obtain registration certificates for foreign investment projects.",
+            "features": ["New investment registration", "Amendments to registration", "Capital increase procedures", "Adding business lines"]
+          },
+          {
+            "title": "Enterprise Registration Certificate (ERC)",
+            "description": "We obtain the ERC required to establish a company.",
+            "features": ["New enterprise registration", "Changes to business activities", "Change of legal representative", "Change of address"]
+          },
+          {
+            "title": "Sector-specific licenses",
+            "description": "We obtain the permits required for your industry.",
+            "features": ["Manufacturing licenses", "Retail licenses", "Import/export licenses", "Food-related permits"]
+          },
+          {
+            "title": "Work permits",
+            "description": "We obtain work permits for foreign employees.",
+            "features": ["Work permit applications", "Work permit renewals", "Visa procedures", "Temporary residence cards"]
+          }
+        ]
+      },
+      "budget": {
+        "intro": "Reference fees for license applications. Actual fees vary depending on the application.",
+        "plans": [
+          {
+            "title": "IRC amendment",
+            "price": "From USD 800",
+            "description": "Various IRC amendment procedures",
+            "items": ["Change of capital", "Adding business lines", "Change of address", "Other amendments"]
+          },
+          {
+            "title": "Work permit",
+            "price": "From USD 1,000/person",
+            "description": "Obtaining work permits for foreign employees",
+            "items": ["New applications", "Renewals", "Document preparation support", "Visa procedures"]
+          },
+          {
+            "title": "Sector-specific licenses",
+            "price": "Upon consultation (varies greatly by type)",
+            "description": "Obtaining permits required for your industry",
+            "items": ["Manufacturing licenses", "Retail licenses", "Import/export licenses", "Other sector-specific permits"]
+          }
+        ],
+        "note": "* The above are reference prices and vary with the application. Please contact us for a detailed quotation."
+      },
+      "faq": [
+        {
+          "question": "How long does it take to obtain an Investment Registration Certificate (IRC)?",
+          "answer": "Usually about 2–4 weeks, though it varies by industry and investment size. Conditional business lines require additional review and may take longer."
+        },
+        {
+          "question": "Do required licenses differ by industry?",
+          "answer": "Yes, required licenses vary greatly by industry. Manufacturing, retail, food & beverage, IT and other sectors each require their own permits."
+        },
+        {
+          "question": "What are the requirements for a foreign national's work permit?",
+          "answer": "Generally, a university degree or higher and at least three years of relevant work experience, or professional qualifications, are required. The position must also be one that cannot be filled by a Vietnamese national."
+        },
+        {
+          "question": "Do you also support license renewals?",
+          "answer": "Yes, we support renewals and amendments, including managing renewal deadlines."
+        },
+        {
+          "question": "Can we prepare documents in Japanese?",
+          "answer": "Applications to Vietnamese authorities must be prepared in Vietnamese. We handle translation and notarization for you."
+        }
+      ]
+    },
+    "other": {
+      "heroTitleLines": ["Other Services"],
+      "ctaTopic": "other services",
+      "overview": {
+        "paragraphs": [
+          "Beyond our core services, Kurosawa Consulting Vietnam offers a wide range of support related to doing business in Vietnam, including translation and interpretation, real estate, credit investigations and secretarial services, tailored flexibly to your needs.",
+          "Even if you are unsure whether something is within our scope, please feel free to ask. As your partner for doing business in Vietnam, we will help wherever we can."
+        ]
+      },
+      "support": {
+        "items": [
+          {
+            "title": "Translation & interpretation",
+            "description": "From translating business documents to interpreting at meetings.",
+            "features": ["Contracts & legal documents", "Technical documents", "Meeting & negotiation interpretation", "Simultaneous & consecutive interpretation"]
+          },
+          {
+            "title": "Real estate consulting",
+            "description": "Support from selecting offices and factory sites to signing leases.",
+            "features": ["Office search", "Factory site selection", "Lease negotiation", "Fit-out arrangements"]
+          },
+          {
+            "title": "Credit & corporate investigations",
+            "description": "Credit and corporate investigations of business partners.",
+            "features": ["Corporate credit checks", "Financial condition checks", "Management background checks", "Due diligence support"]
+          },
+          {
+            "title": "Secretarial services",
+            "description": "We handle various local tasks on your behalf.",
+            "features": ["Phone & email handling", "Schedule management", "Visitor reception", "Arrangements & bookings"]
+          },
+          {
+            "title": "Market research",
+            "description": "Research and analysis of the Vietnamese market.",
+            "features": ["Market size research", "Competitor analysis", "Consumer research", "Industry trend reports"]
+          },
+          {
+            "title": "Other support",
+            "description": "Other support related to doing business in Vietnam.",
+            "features": ["Business matching", "Trade show support", "Liaison with government agencies", "Custom services"]
+          }
+        ]
+      },
+      "budget": {
+        "intro": "Reference fees for other services. Actual fees vary depending on the service.",
+        "plans": [
+          {
+            "title": "Translation",
+            "price": "From USD 15/page",
+            "description": "Translation of business documents",
+            "items": ["Contracts & legal documents", "Technical documents", "Marketing materials", "General business documents"]
+          },
+          {
+            "title": "Interpretation",
+            "price": "From USD 150/half day",
+            "description": "Interpretation for meetings and negotiations",
+            "items": ["Business negotiations", "Meetings", "Factory visits", "Seminars"]
+          },
+          {
+            "title": "Market research & credit checks",
+            "price": "From USD 500",
+            "description": "Research on the Vietnamese market and companies",
+            "items": ["Market research", "Competitor analysis", "Corporate credit checks", "Industry reports"]
+          }
+        ],
+        "note": "* The above are reference prices and vary with the service. Please contact us for a detailed quotation."
+      },
+      "faq": [
+        {
+          "question": "What is the turnaround time for translation?",
+          "answer": "It depends on the volume and technical level of the documents, but general business documents usually take about 1–3 business days. Urgent requests are also possible, so please ask."
+        },
+        {
+          "question": "Can we request office property introductions only?",
+          "answer": "Yes, we accept requests for property introductions only and will introduce properties that match your requirements."
+        },
+        {
+          "question": "What information does a credit check provide?",
+          "answer": "We investigate and report on information tailored to your needs, such as basic company information, financial condition, management background and industry reputation."
+        },
+        {
+          "question": "Can you handle short-term projects?",
+          "answer": "Yes, we also handle short-term projects and one-off requests. Please feel free to contact us."
+        },
+        {
+          "question": "Can we ask about services not listed here?",
+          "answer": "Yes. If it relates to doing business in Vietnam, please ask us first. We will help wherever possible."
+        }
+      ]
+    }
+  }
+}

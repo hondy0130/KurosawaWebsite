@@ -1,6 +1,10 @@
 'use client';
 
 import { useState, useRef, useEffect, useCallback } from 'react';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
+
+type ServiceKey = 'establishment' | 'ma' | 'accounting' | 'legalLabor' | 'license' | 'other';
 
 type ServiceItem = {
   title: string;
@@ -13,75 +17,73 @@ type ServiceItem = {
   href: string;
 };
 
+// 言語に依存しない設定（文言は messages/*.json の HomeServices / ServiceNames）
+const SERVICE_CONFIG: {
+  key: ServiceKey;
+  subtitle: string;
+  accentStrong: string;
+  accentSoft: string;
+  href: string;
+}[] = [
+  {
+    key: 'establishment',
+    subtitle: '01 ESTABLISHMENT',
+    accentStrong: 'rgba(102,187,106,0.40)',
+    accentSoft: 'rgba(165,214,167,0.25)',
+    href: '/services/establishment',
+  },
+  {
+    key: 'ma',
+    subtitle: '02 M&A ADVISORY',
+    accentStrong: 'rgba(132,171,82,0.42)',
+    accentSoft: 'rgba(160,200,112,0.22)',
+    href: '/services/ma',
+  },
+  {
+    key: 'accounting',
+    subtitle: '03 ACCOUNTING & TAX',
+    accentStrong: 'rgba(76,175,80,0.40)',
+    accentSoft: 'rgba(129,199,132,0.25)',
+    href: '/services/accounting',
+  },
+  {
+    key: 'legalLabor',
+    subtitle: '04 LEGAL & LABOR',
+    accentStrong: 'rgba(33,150,243,0.40)',
+    accentSoft: 'rgba(100,181,246,0.25)',
+    href: '/services/legal-labor',
+  },
+  {
+    key: 'license',
+    subtitle: '05 LICENSE APPLICATION',
+    accentStrong: 'rgba(255,152,0,0.40)',
+    accentSoft: 'rgba(255,183,77,0.25)',
+    href: '/services/license',
+  },
+  {
+    key: 'other',
+    subtitle: '06 OTHER SERVICES',
+    accentStrong: 'rgba(158,158,158,0.40)',
+    accentSoft: 'rgba(224,224,224,0.25)',
+    href: '/services/other',
+  },
+];
+
 export default function Services() {
+  const t = useTranslations('HomeServices');
+  const tn = useTranslations('ServiceNames');
+  const td = useTranslations('ServiceDescriptions');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [desktopIndex, setDesktopIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
   const desktopCarouselRef = useRef<HTMLDivElement>(null);
 
-  const services: ServiceItem[] = [
-    {
-      title: 'ベトナム拠点設立',
-      subtitle: '01 ESTABLISHMENT',
-      titleLines: ['現地法人・駐在員事務所', '支店設立を', 'ワンストップ支援'],
-      description:
-        '市場調査・進出戦略・法人設立・許認可・採用・バックオフィスまで。現地の制度と商習慣に精通したチームが、戦略から実行まで伴走します。',
-      accentStrong: 'rgba(102,187,106,0.40)',
-      accentSoft: 'rgba(165,214,167,0.25)',
-      notes: [],
-      href: '/services/establishment',
-    },
-    {
-      title: 'M&Aアドバイザリー',
-      subtitle: '02 M&A ADVISORY',
-      titleLines: ['クロスボーダーM&Aを', '戦略立案からPMIまで', '一気通貫で'],
-      description:
-        'ターゲット探索・DD・バリュエーション・契約実務・PMI設計まで。日本本社とベトナム現地の双方に通じたチームで、意思決定と推進を高速化します。',
-      accentStrong: 'rgba(132,171,82,0.42)',
-      accentSoft: 'rgba(160,200,112,0.22)',
-      href: '/services/ma',
-    },
-    {
-      title: '会計税務コンサルティング',
-      subtitle: '03 ACCOUNTING & TAX',
-      titleLines: ['ベトナム会計・税務を', '現地基準で', '正確かつスムーズに'],
-      description:
-        '帳簿作成・月次/年次決算・税務申告・監査対応・日本連結レポーティングまで。現地基準と日本基準の「橋渡し」をワンチームで提供します。',
-      accentStrong: 'rgba(76,175,80,0.40)',
-      accentSoft: 'rgba(129,199,132,0.25)',
-      href: '/services/accounting',
-    },
-    {
-      title: '法務及び労務相談',
-      subtitle: '04 LEGAL & LABOR',
-      titleLines: ['ベトナムの法務・労務を', '専門家チームが', 'トータルサポート'],
-      description:
-        '契約書レビュー・労働法対応・就業規則整備・労務トラブル対応まで。現地法規制を熟知した専門家が、リスク管理と円滑な事業運営を支援します。',
-      accentStrong: 'rgba(33,150,243,0.40)',
-      accentSoft: 'rgba(100,181,246,0.25)',
-      href: '/services/legal-labor',
-    },
-    {
-      title: '各種ライセンス申請',
-      subtitle: '05 LICENSE APPLICATION',
-      titleLines: ['事業に必要な', '各種許認可を', '迅速に取得'],
-      description:
-        '投資登録証明書・事業登録証明書・業種別ライセンス・労働許可証まで。複雑な申請手続きを代行し、スムーズな事業開始をサポートします。',
-      accentStrong: 'rgba(255,152,0,0.40)',
-      accentSoft: 'rgba(255,183,77,0.25)',
-      href: '/services/license',
-    },
-    {
-      title: 'その他業務',
-      subtitle: '06 OTHER SERVICES',
-      titleLines: ['多様なニーズに', '柔軟に対応する', 'サポート体制'],
-      description:
-        '翻訳・通訳サービス、不動産コンサルティング、信用調査、秘書代行など。ベトナムでのビジネスに関わる様々なご要望にお応えします。',
-      accentStrong: 'rgba(158,158,158,0.40)',
-      accentSoft: 'rgba(224,224,224,0.25)',
-      href: '/services/other',
-    },
-  ];
+  const services: ServiceItem[] = SERVICE_CONFIG.map((c) => ({
+    ...c,
+    title: tn(c.key),
+    titleLines: t.raw(`titleLines.${c.key}`) as string[],
+    description: td(c.key),
+  }));
 
   // モバイル: スクロール位置に基づいてcurrentIndexを更新
   useEffect(() => {
@@ -151,7 +153,7 @@ export default function Services() {
           Services
         </p>
         <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-gray-600 tracking-wide mb-8 sm:mb-10 md:mb-12">
-          サービス紹介
+          {t('heading')}
         </h2>
 
         {/* サービス一覧ナビゲーション */}
@@ -203,7 +205,7 @@ export default function Services() {
             };
 
             return (
-              <a
+              <Link
                 key={index}
                 href={service.href}
                 className="group flex flex-col items-center p-7 sm:p-9 md:p-10 rounded-2xl bg-white border border-[#deead5] shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 min-h-[160px] sm:min-h-[190px] md:min-h-[210px]"
@@ -218,7 +220,7 @@ export default function Services() {
                 <span className="text-sm sm:text-base md:text-lg text-gray-800 group-hover:text-[#84ab52] transition-colors text-center font-medium leading-snug">
                   {service.title}
                 </span>
-              </a>
+              </Link>
             );
           })}
         </div>
@@ -272,12 +274,12 @@ export default function Services() {
                     {service.description}
                   </p>
                   <div className="flex flex-wrap gap-3">
-                    <a
+                    <Link
                       href={service.href}
                       className="inline-flex items-center justify-center bg-[#2B2C30] text-white px-6 py-2.5 text-xs tracking-wide transition-colors hover:bg-black select-none"
                     >
-                      View more
-                    </a>
+                      {t('viewMore')}
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -294,19 +296,19 @@ export default function Services() {
               className={`w-2 h-2 rounded-full transition-all duration-300 ${
                 currentIndex === index ? 'bg-[#84ab52] w-6' : 'bg-gray-300 hover:bg-gray-400'
               }`}
-              aria-label={`サービス ${index + 1} へ移動`}
+              aria-label={t('goTo', { number: index + 1 })}
             />
           ))}
         </div>
 
         {/* サービス一覧ボタン（モバイル） */}
         <div className="mt-8 flex justify-center px-6">
-          <a
+          <Link
             href="/services"
             className="inline-block w-full text-center px-8 py-3 bg-[#84ab52] text-white text-sm font-light tracking-[0.15em] hover:bg-[#6d9143] transition-all duration-300 shadow-lg"
           >
-            サービス一覧を表示
-          </a>
+            {t('showAll')}
+          </Link>
         </div>
       </div>
 
@@ -316,7 +318,7 @@ export default function Services() {
         <button
           onClick={goToPrev}
           className="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-white/90 backdrop-blur-sm shadow-lg border border-gray-100 flex items-center justify-center text-gray-600 hover:text-[#84ab52] hover:border-[#84ab52]/30 transition-all duration-300 group"
-          aria-label="前のサービスへ"
+          aria-label={t('prev')}
         >
           <svg
             className="w-5 h-5 lg:w-6 lg:h-6 group-hover:-translate-x-0.5 transition-transform"
@@ -337,7 +339,7 @@ export default function Services() {
         <button
           onClick={goToNext}
           className="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-white/90 backdrop-blur-sm shadow-lg border border-gray-100 flex items-center justify-center text-gray-600 hover:text-[#84ab52] hover:border-[#84ab52]/30 transition-all duration-300 group"
-          aria-label="次のサービスへ"
+          aria-label={t('next')}
         >
           <svg
             className="w-5 h-5 lg:w-6 lg:h-6 group-hover:translate-x-0.5 transition-transform"
@@ -379,12 +381,12 @@ export default function Services() {
                       {service.description}
                     </p>
                     <div className="flex flex-wrap gap-4">
-                      <a
+                      <Link
                         href={service.href}
                         className="inline-flex items-center justify-center bg-[#2B2C30] text-white px-8 sm:px-10 py-2.5 sm:py-3 text-xs sm:text-sm tracking-wide transition-colors hover:bg-black select-none"
                       >
-                        View more
-                      </a>
+                        {t('viewMore')}
+                      </Link>
                     </div>
                     {Array.isArray(service.notes) && service.notes.length > 0 && (
                       <div className="pt-2 sm:pt-3 space-y-1">
@@ -440,19 +442,19 @@ export default function Services() {
               className={`h-2 rounded-full transition-all duration-300 ${
                 desktopIndex === index ? 'bg-[#84ab52] w-8' : 'bg-gray-300 hover:bg-gray-400 w-2'
               }`}
-              aria-label={`サービス ${index + 1} へ移動`}
+              aria-label={t('goTo', { number: index + 1 })}
             />
           ))}
         </div>
 
         {/* サービス一覧ボタン */}
         <div className="mt-10 flex justify-center">
-          <a
+          <Link
             href="/services"
             className="inline-block px-8 sm:px-10 md:px-12 py-3 sm:py-3.5 md:py-4 bg-[#84ab52] text-white text-xs sm:text-sm md:text-base font-light tracking-[0.2em] sm:tracking-widest hover:bg-[#6d9143] transition-all duration-300 shadow-lg hover:shadow-xl"
           >
-            サービス一覧を表示
-          </a>
+            {t('showAll')}
+          </Link>
         </div>
       </div>
     </section>

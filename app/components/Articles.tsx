@@ -1,8 +1,12 @@
-import { fetchNiltoArticles } from '../lib/nilto';
-import Link from 'next/link';
 import Image from 'next/image';
+import { getLocale, getTranslations } from 'next-intl/server';
+import { fetchNiltoArticles } from '../lib/nilto';
+import { Link } from '@/i18n/navigation';
+import { DATE_LOCALES, type Locale } from '@/i18n/routing';
 
 export default async function Articles() {
+  const t = await getTranslations('Articles');
+  const locale = (await getLocale()) as Locale;
   let articles: {
     id: number;
     title: string;
@@ -15,9 +19,13 @@ export default async function Articles() {
     const data = await fetchNiltoArticles({ limit: 6, order: '-_published_at' });
     articles = data.data.map((a) => ({
       id: a._id,
-      title: a.title || a._title || '無題',
+      title: a.title || a._title || t('untitled'),
       date: new Date(a._published_at)
-        .toLocaleDateString('ja-JP', { year: 'numeric', month: '2-digit', day: '2-digit' })
+        .toLocaleDateString(DATE_LOCALES[locale], {
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+        })
         .replace(/\//g, '-'),
       thumb: a.eyecatch?.url ?? '',
       alt: a.eyecatch?.alt ?? '',
@@ -26,19 +34,25 @@ export default async function Articles() {
     console.error('NILTO articles 取得失敗:', error);
   }
 
+  const header = (
+    <div className="text-center mb-10 sm:mb-12 md:mb-14 lg:mb-16">
+      <p className="text-xs sm:text-sm md:text-base text-[#84ab52] tracking-[0.25em] sm:tracking-[0.3em] uppercase font-light mb-2 sm:mb-3">
+        Articles
+      </p>
+      <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-gray-600 tracking-wide">
+        {t('heading')}
+      </h2>
+      {/* 記事本文は日本語のみのため、他言語では注記を表示 */}
+      {t('notice') && <p className="mt-3 text-xs sm:text-sm text-gray-400">{t('notice')}</p>}
+    </div>
+  );
+
   if (articles.length === 0) {
     return (
       <section id="articles" className="py-16 sm:py-20 md:py-24 lg:py-32 bg-white">
         <div className="px-6 sm:px-8 lg:px-12">
-          <div className="text-center mb-10 sm:mb-12 md:mb-14 lg:mb-16">
-            <p className="text-xs sm:text-sm md:text-base text-[#84ab52] tracking-[0.25em] sm:tracking-[0.3em] uppercase font-light mb-2 sm:mb-3">
-              Articles
-            </p>
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-gray-600 tracking-wide">
-              記事・コラム
-            </h2>
-          </div>
-          <div className="text-center text-gray-500">記事はまだありません。</div>
+          {header}
+          <div className="text-center text-gray-500">{t('empty')}</div>
         </div>
       </section>
     );
@@ -47,14 +61,7 @@ export default async function Articles() {
   return (
     <section id="articles" className="py-16 sm:py-20 md:py-24 lg:py-32 bg-white">
       <div className="px-6 sm:px-8 lg:px-12">
-        <div className="text-center mb-10 sm:mb-12 md:mb-14 lg:mb-16">
-          <p className="text-xs sm:text-sm md:text-base text-[#84ab52] tracking-[0.25em] sm:tracking-[0.3em] uppercase font-light mb-2 sm:mb-3">
-            Articles
-          </p>
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-gray-600 tracking-wide">
-            記事・コラム
-          </h2>
-        </div>
+        {header}
 
         <div className="relative">
           <div
@@ -97,7 +104,7 @@ export default async function Articles() {
             href="/articles"
             className="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-2.5 sm:py-3 border border-[#6B6B6B] text-[#6B6B6B] text-xs sm:text-sm md:text-base font-light tracking-wide hover:border-[#2E2E2E] hover:text-[#2E2E2E] transition-colors duration-300"
           >
-            記事一覧を見る
+            {t('viewAll')}
             <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
             </svg>

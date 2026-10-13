@@ -1,18 +1,10 @@
-export default function Strengths() {
-  const items = [
-    {
-      title: '品質は大手並み、料金はリーズナブル',
-      body: '我々スタッフの大半はBig4と呼ばれる大手コンサルティングファームで専門知識を積んできたメンバーです。　品質は大手並みを遵守しつつリーズナブルな料金体系でサービスをご提供しております。',
-    },
-    {
-      title: '言語の壁を完全に払拭したサポート体制',
-      body: '日本人3名がベトナムに常駐、N2（日本語検定2級）以上の日本語能力を持ったベトナム人会計士および専門家が5名以上在籍しており、クライアントに言語の壁を感じさせないサポート体制をご用意しております。',
-    },
-    {
-      title: '確かなベトナム当局交渉力、ワンストップサポート',
-      body: '自社で会計士と弁護士が在籍しているためワンストップでサポート可能です。　またベトナム当局で勤務経験のある弁護士も在籍しているため、確かな当局交渉力でサポートさせていただきます。',
-    },
-  ];
+import { getTranslations } from 'next-intl/server';
+
+type Item = { title: string; body: string };
+
+export default async function Strengths() {
+  const t = await getTranslations('Strengths');
+  const items = t.raw('items') as Item[];
 
   return (
     <section
@@ -25,7 +17,7 @@ export default function Strengths() {
             Strengths
           </p>
           <h2 className="text-xl sm:text-2xl md:text-3xl font-light text-gray-700 tracking-wide">
-            私たちの強み
+            {t('heading')}
           </h2>
         </div>
 

@@ -1,6 +1,31 @@
 import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 
-export default function Footer() {
+export default async function Footer() {
+  const t = await getTranslations('Footer');
+  const ts = await getTranslations('ServiceNames');
+
+  const linkClass = 'text-gray-400 hover:text-white transition-colors font-light tracking-wide';
+
+  const serviceLinks = [
+    { href: '/services/establishment', name: ts('establishment'), sub: ts('establishmentSub') },
+    { href: '/services/ma', name: ts('ma') },
+    { href: '/services/accounting', name: ts('accounting') },
+    { href: '/services/legal-labor', name: ts('legalLabor') },
+    { href: '/services/license', name: ts('license') },
+    { href: '/services/other', name: ts('other') },
+  ];
+
+  const companyLinks = [
+    { href: '/about#company-info', name: t('companyInfo') },
+    { href: '/about#members', name: t('members') },
+    { href: '/#faq', name: t('faq') },
+    { href: '/#news', name: t('news') },
+    { href: '/careers', name: t('careers') },
+    { href: '/articles', name: t('articles') },
+  ];
+
   return (
     <footer className="bg-[#2E2E2E] text-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-12 sm:py-16">
@@ -20,7 +45,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed font-light tracking-wide">
-              日本企業のベトナムビジネスを支援する総合コンサルティングファーム
+              {t('tagline')}
             </p>
           </div>
 
@@ -30,55 +55,14 @@ export default function Footer() {
               Services
             </h3>
             <ul className="space-y-3 text-sm">
-              <li>
-                <a
-                  href="/services/establishment"
-                  className="text-gray-400 hover:text-white transition-colors font-light tracking-wide"
-                >
-                  ベトナム拠点設立
-                  <span className="block text-xs text-gray-500">現地法人/駐在員事務所/支店</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/services/ma"
-                  className="text-gray-400 hover:text-white transition-colors font-light tracking-wide"
-                >
-                  M&Aアドバイザリー
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/services/accounting"
-                  className="text-gray-400 hover:text-white transition-colors font-light tracking-wide"
-                >
-                  会計税務コンサルティング
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/services/legal-labor"
-                  className="text-gray-400 hover:text-white transition-colors font-light tracking-wide"
-                >
-                  法務及び労務相談
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/services/license"
-                  className="text-gray-400 hover:text-white transition-colors font-light tracking-wide"
-                >
-                  各種ライセンス申請
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/services/other"
-                  className="text-gray-400 hover:text-white transition-colors font-light tracking-wide"
-                >
-                  その他業務
-                </a>
-              </li>
+              {serviceLinks.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className={linkClass}>
+                    {item.name}
+                    {item.sub && <span className="block text-xs text-gray-500">{item.sub}</span>}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -88,54 +72,13 @@ export default function Footer() {
               Company
             </h3>
             <ul className="space-y-3 text-sm">
-              <li>
-                <a
-                  href="/about#company-info"
-                  className="text-gray-400 hover:text-white transition-colors font-light tracking-wide"
-                >
-                  会社概要
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/about#members"
-                  className="text-gray-400 hover:text-white transition-colors font-light tracking-wide"
-                >
-                  メンバー紹介
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/faq"
-                  className="text-gray-400 hover:text-white transition-colors font-light tracking-wide"
-                >
-                  よくある質問
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/news"
-                  className="text-gray-400 hover:text-white transition-colors font-light tracking-wide"
-                >
-                  ニュース/コラム
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/careers"
-                  className="text-gray-400 hover:text-white transition-colors font-light tracking-wide"
-                >
-                  採用
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/articles"
-                  className="text-gray-400 hover:text-white transition-colors font-light tracking-wide"
-                >
-                  記事コラム
-                </a>
-              </li>
+              {companyLinks.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className={linkClass}>
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -202,9 +145,7 @@ export default function Footer() {
               </li>
               <li className="text-gray-400 space-y-2">
                 <div className="font-light text-white tracking-wide">Facebook</div>
-                <div className="font-light">
-                  Kurosawa Consulting Vietnam（クロサワコンサルティングベトナム）
-                </div>
+                <div className="font-light">{t('facebookName')}</div>
               </li>
             </ul>
           </div>
@@ -221,13 +162,13 @@ export default function Footer() {
                 href="#"
                 className="text-gray-500 hover:text-white transition-colors font-light tracking-wide"
               >
-                プライバシーポリシー
+                {t('privacy')}
               </a>
               <a
                 href="#"
                 className="text-gray-500 hover:text-white transition-colors font-light tracking-wide"
               >
-                サイトマップ
+                {t('sitemap')}
               </a>
             </div>
           </div>
