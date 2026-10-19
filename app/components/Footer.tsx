@@ -158,18 +158,18 @@ export default async function Footer() {
               © {new Date().getFullYear()} Kurosawa Consulting Vietnam. All rights reserved.
             </div>
             <div className="flex gap-8 text-xs">
-              <a
-                href="#"
+              <Link
+                href="/privacy"
                 className="text-gray-500 hover:text-white transition-colors font-light tracking-wide"
               >
                 {t('privacy')}
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/sitemap"
                 className="text-gray-500 hover:text-white transition-colors font-light tracking-wide"
               >
                 {t('sitemap')}
-              </a>
+              </Link>
             </div>
           </div>
         </div>

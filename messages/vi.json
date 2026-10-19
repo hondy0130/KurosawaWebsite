@@ -1016,5 +1016,87 @@
         }
       ]
     }
+  },
+  "Privacy": {
+    "metaDescription": "Chính sách bảo mật thông tin cá nhân của Kurosawa Consulting Vietnam (KCV).",
+    "title": "Chính sách bảo mật",
+    "intro": "Kurosawa Consulting Vietnam (sau đây gọi là \"Công ty\") nhận thức rằng việc bảo vệ nghiêm ngặt và xử lý phù hợp thông tin cá nhân mà khách hàng, đối tác và các bên liên quan giao phó là trách nhiệm quan trọng trong hoạt động kinh doanh. Công ty tuân thủ pháp luật Việt Nam về bảo vệ dữ liệu cá nhân cùng các quy định hiện hành khác, và xử lý thông tin cá nhân theo chính sách dưới đây.",
+    "sections": [
+      {
+        "title": "Thông tin cá nhân được thu thập",
+        "paragraphs": [
+          "Công ty có thể thu thập các thông tin sau thông qua biểu mẫu liên hệ, email, điện thoại, buổi gặp mặt và các hình thức khác:"
+        ],
+        "items": [
+          "Họ tên, tên công ty, địa chỉ email, số điện thoại",
+          "Nội dung liên hệ, yêu cầu tư vấn",
+          "Thông tin quý khách cung cấp trong phạm vi cần thiết để thực hiện dịch vụ",
+          "Thông tin về việc truy cập website này (trang đã xem, môi trường sử dụng... thông qua công cụ phân tích)"
+        ]
+      },
+      {
+        "title": "Mục đích sử dụng",
+        "paragraphs": [
+          "Thông tin cá nhân được sử dụng trong phạm vi các mục đích sau:"
+        ],
+        "items": [
+          "Để trả lời và liên lạc về các yêu cầu liên hệ, tư vấn",
+          "Để thực hiện các dịch vụ quý khách yêu cầu",
+          "Để cung cấp tài liệu, thông tin về dịch vụ",
+          "Để xét tuyển ứng viên và liên lạc liên quan đến tuyển dụng",
+          "Để phân tích và cải thiện việc sử dụng website"
+        ]
+      },
+      {
+        "title": "Cung cấp cho bên thứ ba",
+        "paragraphs": [
+          "Công ty không cung cấp thông tin cá nhân cho bên thứ ba khi chưa có sự đồng ý của chủ thể dữ liệu, trừ các trường hợp sau:"
+        ],
+        "items": [
+          "Theo quy định của pháp luật",
+          "Khi cần thiết để bảo vệ tính mạng, sức khỏe hoặc tài sản của con người mà khó có thể xin sự đồng ý",
+          "Khi cần hợp tác với cơ quan nhà nước trong việc thực hiện nhiệm vụ theo quy định của pháp luật"
+        ]
+      },
+      {
+        "title": "Thuê ngoài xử lý và chuyển dữ liệu ra nước ngoài",
+        "paragraphs": [
+          "Trong phạm vi cần thiết để đạt được mục đích sử dụng, Công ty có thể ủy thác việc xử lý thông tin cá nhân cho các đơn vị bên ngoài (như dịch vụ gửi email, nhà cung cấp lưu trữ website). Trong trường hợp này, Công ty lựa chọn và giám sát đơn vị được ủy thác một cách phù hợp.",
+          "Do tính chất công việc, thông tin cá nhân có thể được xử lý bên ngoài lãnh thổ Việt Nam, chẳng hạn khi phối hợp với công ty mẹ tại Nhật Bản (Tập đoàn Kurosawa) hoặc do vị trí máy chủ của đơn vị được ủy thác. Khi đó, Công ty áp dụng các biện pháp bảo vệ phù hợp theo quy định của pháp luật."
+        ]
+      },
+      {
+        "title": "Công cụ phân tích truy cập",
+        "paragraphs": [
+          "Website này có thể sử dụng Google Analytics để nắm bắt tình hình sử dụng. Google Analytics sử dụng cookie để thu thập dữ liệu dưới dạng không xác định danh tính cá nhân. Quý khách có thể tắt cookie trong phần cài đặt trình duyệt."
+        ]
+      },
+      {
+        "title": "Biện pháp bảo mật",
+        "paragraphs": [
+          "Công ty áp dụng các biện pháp bảo mật cần thiết và phù hợp nhằm ngăn chặn việc truy cập trái phép, mất mát, phá hủy, sửa đổi và rò rỉ thông tin cá nhân, đồng thời phổ biến, đào tạo nhân viên về bảo vệ thông tin cá nhân."
+        ]
+      },
+      {
+        "title": "Yêu cầu truy cập, chỉnh sửa, ngừng sử dụng",
+        "paragraphs": [
+          "Khi chủ thể dữ liệu yêu cầu truy cập, chỉnh sửa, xóa, ngừng sử dụng hoặc ngừng cung cấp cho bên thứ ba thông tin cá nhân của mình, Công ty sẽ xác minh danh tính và xử lý trong phạm vi, thời hạn hợp lý theo quy định của pháp luật."
+        ]
+      },
+      {
+        "title": "Sửa đổi chính sách",
+        "paragraphs": [
+          "Công ty có thể sửa đổi chính sách này khi pháp luật hoặc hoạt động kinh doanh thay đổi. Chính sách sửa đổi có hiệu lực kể từ thời điểm được đăng trên website."
+        ]
+      }
+    ],
+    "contactTitle": "Đầu mối liên hệ về thông tin cá nhân",
+    "established": "Ban hành: Tháng 10 năm 2026"
+  },
+  "SitemapPage": {
+    "metaDescription": "Danh sách các trang trên website Kurosawa Consulting Vietnam.",
+    "title": "Sơ đồ trang",
+    "main": "Trang chính",
+    "other": "Khác"
   }
 }

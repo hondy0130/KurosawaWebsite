@@ -11,6 +11,7 @@ const STATIC_DATES = {
   servicePages: new Date('2026-10-13'),
   articles: new Date('2026-04-29'),
   careers: new Date('2026-04-29'),
+  legal: new Date('2026-10-19'),
 } as const;
 
 type Entry = MetadataRoute.Sitemap[number];
@@ -65,6 +66,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.5,
     }),
+    ...['/privacy', '/sitemap'].flatMap((path) =>
+      localizedEntries(path, {
+        lastModified: STATIC_DATES.legal,
+        changeFrequency: 'yearly',
+        priority: 0.3,
+      })
+    ),
   ];
 
   /* ─── 動的ページ（NILTO記事）─── */

@@ -1016,5 +1016,87 @@
         }
       ]
     }
+  },
+  "Privacy": {
+    "metaDescription": "Privacy policy of Kurosawa Consulting Vietnam (KCV).",
+    "title": "Privacy Policy",
+    "intro": "Kurosawa Consulting Vietnam (the \"Company\") recognizes that strictly protecting and properly handling the personal information entrusted to us by clients, business partners and others is an important responsibility in our business operations. The Company complies with Vietnam’s laws on personal data protection and other applicable laws and standards, and handles personal information in accordance with the following policy.",
+    "sections": [
+      {
+        "title": "Personal information we collect",
+        "paragraphs": [
+          "The Company may collect the following information through our contact form, email, telephone, meetings and other means:"
+        ],
+        "items": [
+          "Name, company name, email address and telephone number",
+          "Details of your inquiry or consultation",
+          "Information you provide to the extent necessary for us to perform our services",
+          "Information about your use of this website (pages viewed, browsing environment, etc., via analytics tools)"
+        ]
+      },
+      {
+        "title": "Purposes of use",
+        "paragraphs": [
+          "We use personal information within the scope of the following purposes:"
+        ],
+        "items": [
+          "To respond to and communicate with you about inquiries and consultations",
+          "To perform the services you have requested",
+          "To provide materials and information about our services",
+          "To screen job applicants and communicate with them about recruitment",
+          "To analyze and improve the use of this website"
+        ]
+      },
+      {
+        "title": "Provision to third parties",
+        "paragraphs": [
+          "The Company will not provide personal information to third parties without your consent, except in the following cases:"
+        ],
+        "items": [
+          "Where required by law",
+          "Where necessary to protect a person’s life, body or property and it is difficult to obtain your consent",
+          "Where necessary to cooperate with government agencies carrying out duties prescribed by law"
+        ]
+      },
+      {
+        "title": "Outsourcing and transfers outside Vietnam",
+        "paragraphs": [
+          "To the extent necessary to achieve the purposes of use, the Company may entrust the handling of personal information to external service providers (such as email delivery services and website hosting providers). In such cases, we select and supervise these providers appropriately.",
+          "Due to the nature of our business, personal information may be handled outside Vietnam, for example through cooperation with our Japanese parent, the Kurosawa Group, or because of the location of our service providers’ servers. In such cases, we take appropriate protective measures in accordance with applicable laws."
+        ]
+      },
+      {
+        "title": "Analytics tools",
+        "paragraphs": [
+          "This website may use Google Analytics to understand how it is used. Google Analytics uses cookies to collect data in a form that does not identify individuals. You can disable cookies in your browser settings."
+        ]
+      },
+      {
+        "title": "Security measures",
+        "paragraphs": [
+          "The Company takes necessary and appropriate security measures to prevent unauthorized access to, loss, destruction, alteration and leakage of personal information, and informs and trains its employees on personal information protection."
+        ]
+      },
+      {
+        "title": "Requests for disclosure, correction, suspension of use, etc.",
+        "paragraphs": [
+          "If you request disclosure, correction, deletion, suspension of use or suspension of provision to third parties of your personal information, we will respond within a reasonable scope and period in accordance with the law, after verifying your identity."
+        ]
+      },
+      {
+        "title": "Revisions to this policy",
+        "paragraphs": [
+          "The Company may revise this policy in response to changes in laws or in our business. The revised policy takes effect when it is posted on this website."
+        ]
+      }
+    ],
+    "contactTitle": "Contact for personal information inquiries",
+    "established": "Established: October 2026"
+  },
+  "SitemapPage": {
+    "metaDescription": "List of pages on the Kurosawa Consulting Vietnam website.",
+    "title": "Sitemap",
+    "main": "Main",
+    "other": "Other"
   }
 }
