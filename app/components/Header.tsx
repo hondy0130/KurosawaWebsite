@@ -3,7 +3,7 @@
 import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
+import { Link, usePathname } from '@/i18n/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Header() {
@@ -12,6 +12,9 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+  // 透明ヘッダー（白文字）はトップページのヒーロー画像上のみ。他のページは常に白背景＋濃い文字
+  const isHome = pathname === '/';
   const closeServicesTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // スクロール位置を監視
@@ -63,8 +66,10 @@ export default function Header() {
     { name: ts('other'), href: '/services/other' },
   ];
 
+  const isSolid = isScrolled || !isHome;
+
   const navLinkClass = `text-[13px] xl:text-[14px] 2xl:text-[15px] font-light tracking-wide transition-colors duration-300 whitespace-nowrap px-1.5 py-2 ${
-    isScrolled ? 'text-gray-600 hover:text-[#84ab52]' : 'text-white/90 hover:text-white'
+    isSolid ? 'text-gray-600 hover:text-[#84ab52]' : 'text-white/90 hover:text-white'
   }`;
 
   const mobileLinkClass =
@@ -73,7 +78,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        isSolid
           ? 'bg-white border-b border-gray-100'
           : 'bg-transparent border-b border-transparent'
       }`}
@@ -81,7 +86,7 @@ export default function Header() {
       {/* 背景装飾 */}
       <div
         className={`absolute inset-0 overflow-hidden pointer-events-none transition-opacity duration-300 ${
-          isScrolled ? 'opacity-100' : 'opacity-0'
+          isSolid ? 'opacity-100' : 'opacity-0'
         }`}
       >
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-bl from-[#A5D6A7]/20 via-[#C8E6C9]/10 to-transparent rounded-full blur-3xl"></div>
@@ -98,7 +103,7 @@ export default function Header() {
               width={250}
               height={75}
               className={`h-12 xl:h-14 w-auto transition-all duration-300 ${
-                isScrolled ? '' : 'brightness-0 invert'
+                isSolid ? '' : 'brightness-0 invert'
               }`}
               priority
             />
@@ -182,7 +187,7 @@ export default function Header() {
             <Link
               href="/#contact"
               className={`px-5 xl:px-8 2xl:px-10 py-2.5 xl:py-3 text-[13px] xl:text-[14px] 2xl:text-[15px] font-light tracking-wide transition-all duration-300 whitespace-nowrap ${
-                isScrolled
+                isSolid
                   ? 'bg-[#84ab52] text-white hover:bg-[#6d9143]'
                   : 'bg-white text-[#2E2E2E] hover:bg-white/90'
               }`}
@@ -191,15 +196,15 @@ export default function Header() {
             </Link>
 
             {/* 言語切替（右上） */}
-            <LanguageSwitcher isScrolled={isScrolled} />
+            <LanguageSwitcher isScrolled={isSolid} />
           </nav>
 
           {/* モバイル：言語切替 + メニューボタン */}
           <div className="lg:hidden flex items-center gap-1 ml-auto">
-            <LanguageSwitcher isScrolled={isScrolled} />
+            <LanguageSwitcher isScrolled={isSolid} />
             <button
               className={`p-3 rounded transition-colors duration-300 ${
-                isScrolled ? 'hover:bg-gray-50' : 'hover:bg-white/10'
+                isSolid ? 'hover:bg-gray-50' : 'hover:bg-white/10'
               }`}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label={t('menu')}
@@ -208,17 +213,17 @@ export default function Header() {
               <div className="w-6 h-5 flex flex-col justify-between">
                 <span
                   className={`block h-px transition-all duration-300 ease-out ${
-                    isScrolled ? 'bg-gray-600' : 'bg-white'
+                    isSolid ? 'bg-gray-600' : 'bg-white'
                   } ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}
                 ></span>
                 <span
                   className={`block h-px transition-all duration-300 ease-out ${
-                    isScrolled ? 'bg-gray-600' : 'bg-white'
+                    isSolid ? 'bg-gray-600' : 'bg-white'
                   } ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}
                 ></span>
                 <span
                   className={`block h-px transition-all duration-300 ease-out ${
-                    isScrolled ? 'bg-gray-600' : 'bg-white'
+                    isSolid ? 'bg-gray-600' : 'bg-white'
                   } ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}
                 ></span>
               </div>
@@ -230,7 +235,7 @@ export default function Header() {
         <div
           className={`lg:hidden overflow-hidden transition-all duration-300 ease-out absolute left-0 right-0 top-full ${
             isMenuOpen ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'
-          } ${isScrolled ? 'border-t border-gray-100 bg-white' : 'border-t border-transparent bg-black/30 backdrop-blur-lg'}`}
+          } ${isSolid ? 'border-t border-gray-100 bg-white' : 'border-t border-transparent bg-black/30 backdrop-blur-lg'}`}
         >
           <div className="py-4 px-6 sm:px-8">
             <nav className="flex flex-col">
