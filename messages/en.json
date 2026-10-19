@@ -89,11 +89,11 @@
   "Achievement": {
     "stats": [
       { "value": "40", "suffix": "", "label": "Staff members" },
-      { "value": "8", "suffix": "", "label": "Japanese speakers" },
-      { "value": "280", "suffix": "+", "label": "Clients served" },
-      { "value": "75", "suffix": "+", "label": "Retainer clients" },
+      { "value": "10", "suffix": "", "label": "Japanese speakers" },
+      { "value": "350", "suffix": "+", "label": "Clients served" },
+      { "value": "100", "suffix": "+", "label": "Clients per year (incl. 75+ ongoing retainer clients)" },
       { "value": "70", "suffix": "%", "label": "Japanese clients (Chinese 20%, Korean & Western 10%)" },
-      { "value": "5", "suffix": "", "label": "Certified public accountants (incl. 2 Japanese CPAs)" },
+      { "value": "6", "suffix": "", "label": "Certified public accountants (incl. 2 Japanese CPAs)" },
       { "value": "2", "suffix": "", "label": "Lawyers" },
       { "value": "7", "suffix": "%", "label": "Avg. annual net growth in retainer contracts (past 5 years)" }
     ]
@@ -209,12 +209,12 @@
     "historyLabel": "History",
     "history": [
       "1969: Founder (now Chairman) Koki Kurosawa registers as a judicial scrivener",
-      "1972: Establishes a judicial scrivener office in Nakano, Tokyo",
-      "2009: With business expansion, incorporates the judicial scrivener division as Kurosawa Joint Office and opens the Yokohama office",
+      "1972: Founds Kurosawa Joint Office, made up of judicial scriveners, in Nakano, Tokyo",
+      "2009: Incorporates the judicial scrivener division and opens the Yokohama office",
       "2015: With business expansion, incorporates the land and house investigator division",
       "2016: Opens the Inheritance Support Office specializing in inheritance and adult guardianship",
-      "2016: Establishes KCV in Ho Chi Minh City",
-      "2025: Known for \"high quality at reasonable prices,\" grows to more than 75 retainer clients and more than 280 clients served"
+      "2016: Founds KCV (Kurosawa Consulting Vietnam), the Vietnamese subsidiary",
+      "2025: Known for \"high quality at reasonable prices,\" grows rapidly to more than 100 clients and more than 350 clients served"
     ]
   },
   "Members": {
@@ -295,13 +295,13 @@
           "Extensive experience providing professional services to foreign-invested companies."
         ]
       },
-      "lanAnh": {
-        "name": "Dao Thi Lan Anh",
+      "duong": {
+        "name": "Tran Thi Thuy Duong",
         "sub": "",
         "bullets": [
-          "Lawyer (Bachelor of Law, Ho Chi Minh City University of Law), licensed to practice; master's degree from Panthéon-Assas University (Paris II).",
-          "Advises on disputes relating to sales and cross-border investment, commercial transactions, service contracts and labor contracts.",
-          "Broad experience with foreign companies' establishment of and exit from Vietnamese entities, due diligence, and legal issues companies commonly face."
+          "Lawyer (Bachelor of Law, Ho Chi Minh City University of Law), licensed to practice; Bachelor of Finance, University of Economics Ho Chi Minh City.",
+          "Over 10 years of practical experience supporting international clients on a wide range of matters, including entry into the Vietnamese market, company establishment, M&A, business restructuring and offshore loan procedures.",
+          "Drawing on specialist knowledge and extensive practical experience, consistently delivers high-quality, reliable services and is highly regarded by clients."
         ]
       }
     }

@@ -38,7 +38,7 @@ const GROUPS: { key: string; members: { id: string; image: string; zoom?: boolea
     key: 'legal',
     members: [
       { id: 'hiep', image: '/images/nguyen-truong-hiep.jpg' },
-      { id: 'lanAnh', image: '/images/dao-thi-lan-anh.jpg' },
+      { id: 'duong', image: '/images/tran-thi-thuy-duong.jpg' },
     ],
   },
 ];

@@ -89,11 +89,11 @@
   "Achievement": {
     "stats": [
       { "value": "40", "suffix": "", "label": "Nhân viên" },
-      { "value": "8", "suffix": "", "label": "Nhân viên nói tiếng Nhật" },
-      { "value": "280", "suffix": "+", "label": "Khách hàng đã giao dịch" },
-      { "value": "75", "suffix": "+", "label": "Khách hàng tư vấn thường xuyên" },
+      { "value": "10", "suffix": "", "label": "Nhân viên nói tiếng Nhật" },
+      { "value": "350", "suffix": "+", "label": "Khách hàng đã giao dịch" },
+      { "value": "100", "suffix": "+", "label": "Khách hàng mỗi năm (trong đó hơn 75 khách hàng tư vấn thường xuyên)" },
       { "value": "70", "suffix": "%", "label": "Khách hàng Nhật Bản (Trung Quốc/Hoa kiều 20%, Hàn Quốc & Âu Mỹ 10%)" },
-      { "value": "5", "suffix": "", "label": "Kiểm toán viên / Kế toán viên công chứng (trong đó 2 người Nhật Bản)" },
+      { "value": "6", "suffix": "", "label": "Kiểm toán viên / Kế toán viên công chứng (trong đó 2 người Nhật Bản)" },
       { "value": "2", "suffix": "", "label": "Luật sư" },
       { "value": "7", "suffix": "%", "label": "Tỷ lệ tăng ròng hợp đồng tư vấn thường xuyên bình quân năm (5 năm gần nhất)" }
     ]
@@ -209,12 +209,12 @@
     "historyLabel": "Lịch sử phát triển",
     "history": [
       "1969: Nhà sáng lập (nay là Chủ tịch) Kurosawa Koki đăng ký hành nghề thư ký tư pháp",
-      "1972: Thành lập văn phòng thư ký tư pháp tại Nakano, Tokyo",
-      "2009: Cùng với việc mở rộng quy mô, pháp nhân hóa bộ phận thư ký tư pháp thành Kurosawa Joint Office, đồng thời mở văn phòng Yokohama",
+      "1972: Thành lập Kurosawa Joint Office gồm các thư ký tư pháp tại Nakano, Tokyo",
+      "2009: Pháp nhân hóa bộ phận thư ký tư pháp, đồng thời mở văn phòng Yokohama",
       "2015: Cùng với việc mở rộng quy mô, pháp nhân hóa bộ phận đo đạc đất đai và nhà ở",
       "2016: Mở Phòng hỗ trợ thừa kế chuyên về thừa kế và giám hộ người thành niên",
-      "2016: Thành lập KCV tại TP. Hồ Chí Minh",
-      "2025: Với danh tiếng \"chất lượng cao, chi phí hợp lý\", phát triển lên hơn 75 khách hàng tư vấn thường xuyên và hơn 280 khách hàng đã giao dịch"
+      "2016: Thành lập pháp nhân tại Việt Nam – Kurosawa Consulting Vietnam (KCV)",
+      "2025: Với danh tiếng \"chất lượng cao, chi phí hợp lý\", phát triển nhanh chóng lên hơn 100 khách hàng và hơn 350 khách hàng đã giao dịch"
     ]
   },
   "Members": {
@@ -295,13 +295,13 @@
           "Giàu kinh nghiệm cung cấp dịch vụ chuyên môn cho doanh nghiệp có vốn đầu tư nước ngoài."
         ]
       },
-      "lanAnh": {
-        "name": "Dao Thi Lan Anh",
+      "duong": {
+        "name": "Tran Thi Thuy Duong",
         "sub": "",
         "bullets": [
-          "Luật sư (Cử nhân Trường Đại học Luật TP. Hồ Chí Minh), có chứng chỉ hành nghề luật sư; Thạc sĩ Đại học Panthéon-Assas (Paris II).",
-          "Tư vấn các tranh chấp liên quan đến mua bán, đầu tư xuyên biên giới, giao dịch thương mại, hợp đồng dịch vụ và hợp đồng lao động.",
-          "Có kinh nghiệm rộng trong việc thành lập và rút lui pháp nhân tại Việt Nam của doanh nghiệp nước ngoài, thẩm định và xử lý các vấn đề pháp lý doanh nghiệp thường gặp."
+          "Luật sư (Cử nhân Luật, Trường Đại học Luật TP. Hồ Chí Minh), có chứng chỉ hành nghề luật sư; Cử nhân Tài chính, Trường Đại học Kinh tế TP. Hồ Chí Minh.",
+          "Hơn 10 năm kinh nghiệm thực tiễn, hỗ trợ khách hàng quốc tế trong nhiều vụ việc như gia nhập thị trường Việt Nam, thành lập công ty, M&A, tái cấu trúc doanh nghiệp và thủ tục vay nước ngoài.",
+          "Với kiến thức chuyên môn và kinh nghiệm thực tiễn phong phú, luôn cung cấp dịch vụ chất lượng cao, đáng tin cậy và được khách hàng đánh giá cao."
         ]
       }
     }
